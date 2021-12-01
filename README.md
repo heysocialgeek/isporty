@@ -1,6 +1,8 @@
+**iSporty** te invita a ser canchero si te sentís de 15 a 30 años, te gusta entrenar, caminar al aire libre, salir a pasear pero por sobre todo, estar cómodo y en onda.
+
 en iSporty podés comprar en línea  la mejor ropa deportiva del mercado para que entrenar también sea cómodo y canchero.
 
-Artículos que ofrece iSporty:
+**Artículos que ofrece iSporty:**
 
 - Zapatillas
 - Camperas
@@ -14,19 +16,17 @@ Artículos que ofrece iSporty:
 - Shorts
 - Joggins
 
-iSporty te invita a ser canchero si te sentís de 15 a 30 años, te gusta entrenar, caminar al aire libre, salir a pasear pero por sobre todo, estar cómodo y en onda.
+**Facundo Mayuri:** Trabajo para el sector aerocomercial y estoy con muchas ganas de adentrarme en el mundo de la programación.
 
-Facundo Mayuri: Trabajo para el sector aerocomercial y estoy con muchas ganas de adentrarme en el mundo de la programación.
+**Joaquín Serra Caggiano:** Licenciado en kinesiologia y fisiatria. Me gusta leer, ver películas y mi hobbie es tocar la batería.
 
-Joaquín Serra Caggiano: Licenciado en kinesiologia y fisiatria. Me gusta leer, ver películas y mi hobbie es tocar la batería.
+**Juan Carlos Muñoz:** Estratega digital para empresas y líder académico de Marketing Digital.
 
-Juan Carlos Muñoz: Estratega digital para empresas y líder académico de Marketing Digital.
+**María Sol Fernández:** Licenciada en Criminalística y trabajo en Científica identificando a las personas por sus huellas dactilares. Entre en este mundo nuevo de la programación, la cual me entusiasma y quiero seguir aprendiendo. 
 
-María Sol Fernández: Licenciada en Criminalística y trabajo en Científica identificando a las personas por sus huellas dactilares. Entre en este mundo nuevo de la programación, la cual me entusiasma y quiero seguir aprendiendo. 
+**Lista de referentes para el diseño del website de iSporty:**
 
-Lista de referentes para el diseño del website de iSporty:
-
-Estos sitios web cumplen con buena experiencia de navegación, accesibilidad y facilidad al momento de buscar artículos deportivos:
+**Estos sitios web cumplen con buena experiencia de navegación, accesibilidad y facilidad al momento de buscar artículos deportivos:**
 
 - http://touchesport.com
 - https://www.adidas.com.ar
