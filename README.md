@@ -1,3 +1,5 @@
+![alt text](https://github.com/heysocialgeek/isporty/blob/ea8198a808d476d779aa9244d57aa1a460adde4c/design/logotipo-isporty.png?raw=true) 
+
 **iSporty** te invita a ser canchero si te sentís de 15 a 30 años, te gusta entrenar, caminar al aire libre, salir a pasear pero por sobre todo, estar cómodo y en onda.
 
 en iSporty podés comprar en línea  la mejor ropa deportiva del mercado para que entrenar también sea cómodo y canchero.
