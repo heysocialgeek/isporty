@@ -28,7 +28,7 @@ en iSporty podés comprar en línea  la mejor ropa deportiva del mercado para qu
 
 **Lista de referentes para el diseño del website de iSporty:**
 
-**Estos sitios web cumplen con buena experiencia de navegación, accesibilidad y facilidad al momento de buscar artículos deportivos:**
+Estos sitios web cumplen con buena experiencia de navegación, accesibilidad y facilidad al momento de buscar artículos deportivos.
 
 - http://touchesport.com
 - https://www.adidas.com.ar
