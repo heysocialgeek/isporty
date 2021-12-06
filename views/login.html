@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSporty-login</title>
+    <link rel="stylesheet" href="/css/styles-login.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+</head>
+<body>
+    <header class="main-header">
+    <div class="header-container">
+      <div class="burger-and-search">
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="features-search">
+        <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+        <div class="logo-div">
+            <img src="/img/isotipo-isporty.png" alt="logo de isporty">
+        </div>
+
+        <div class="carrito-login">
+            <div class="shopping-cart">
+            <i class="fas fa-shopping-cart"></i>
+            </div>
+            <i class="far fa-user-circle"></i>
+        </div>
+    </div>
+    </header>
+
+    <main class="box-main">
+        <div class="welcome">
+        <h2>Bienvenid@ <i class="fas fa-sign-in-alt"></i></h2>
+        </div>
+
+        <form action="/login" method="POST">
+          <div class="form-container">
+
+              <div class="input-user">
+            <input type="text" name="usuario" placeholder="Usuario">
+              </div>
+
+              <div class="input-password">
+            <input type="password" name="password" placeholder="Contraseña">
+              </div>
+
+            <button class="button-style" type="submit">Login</button>
+
+            <div class="remind-me">
+            <label class="remind-text">Recordarme</label>
+            <input type="checkbox" name="recordar-usuario" value="recordarme">
+            <div>
+
+          </div>
+        </form>
+
+        <div class="questions-of-users">
+        <h3><a href="">¿No recuerdas tu contraseña?</a></h3>
+        <h3><a href="">¿No tienes cuenta? Regístrate</a></h3>
+        </div>
+    </main>
+
+    <footer class="box-footer">
+
+      <form action="/login" method="POST">
+        <div class="">
+        <input type="email" name="email" placeholder="Correo electrónico">
+        <input value="Suscribirse" type="submit">
+        </div>
+      </form>
+
+    </footer>
+</body>
+</html>

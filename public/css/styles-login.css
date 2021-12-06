@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+/* header */
+
+.main-header {
+    background-color: white;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burger-and-search {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 15px;
+}
+
+.burger-menu {
+    margin: 0px 10px;
+}
+
+.carrito-login {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 15px;
+}
+
+.shopping-cart {
+    margin-right: 10px;
+}
+
+/* main */
+
+.box-main {
+    background-color: #53a6f3;
+    padding: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.input-user, .input-password {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 5px;
+}
+
+.button-style {
+    background-color: #21313f;
+    padding: 5px 25px;
+    color: rgb(250, 250, 250);
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.remind-me {
+    display: flex;
+    display: block;
+    align-items:center;
+}
+
+.remind-text {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* footer */
+.box-footer {
+    padding: 20px;
+    background-color: rgb(29, 83, 155);
+}
+
+.questions-of-users {
+    font-size: 13px;
+}
+
+
