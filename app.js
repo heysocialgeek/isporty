@@ -7,3 +7,6 @@ app.use (express.static (path.resolve (__dirname, "./public")))
 
 app.get('/login', (req,res)=>{
     res.sendFile(path.resolve (__dirname,'views/login.html'))})
+
+app.get('/cart', (req,res)=>{
+    res.sendFile(path.resolve (__dirname,'views/cart.html'))})

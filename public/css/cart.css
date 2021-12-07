@@ -150,22 +150,24 @@ input {
     font-size: 25px;
 }
 
+
+
 /*Mobile*/
 
 @media (max-width:480px) {
 
-    .logo {
+.logo {
+    display: none;
+}
+
+}
+
+/*Ipad*/
+
+@media (min-width:480px) {
+
+    .iso {
         display: none;
     }
     
     }
-    
-    /*Ipad*/
-    
-    @media (min-width:480px) {
-    
-        .iso {
-            display: none;
-        }
-        
-        }
