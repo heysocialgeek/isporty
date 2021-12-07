@@ -22,10 +22,9 @@ rel="stylesheet" />
         <i class="fas fa-search"></i>
         </div>
       </div>
-
-        <div class="logo-div">
-            <img src="/img/isotipo-isporty.png" alt="logo de isporty">
-        </div>
+      
+      <img class="logo-div" src="/img/isotipo-isporty.png" alt="logo de isporty">
+        
 
         <div class="carrito-login">
             <div class="shopping-cart">
@@ -55,8 +54,8 @@ rel="stylesheet" />
             <button class="button-style" type="submit">Login</button>
 
             <div class="remind-me">
-            <label class="remind-text">Recordarme</label>
-            <input type="checkbox" name="recordar-usuario" value="recordarme">
+            <input type="checkbox" name="recordar-usuario" value="recordarme" id="remindMe">
+            <label class="remind-text" for="remindMe">Recordarme</label>
             <div>
 
           </div>
@@ -71,11 +70,30 @@ rel="stylesheet" />
     <footer class="box-footer">
 
       <form action="/login" method="POST">
-        <div class="">
-        <input type="email" name="email" placeholder="Correo electrónico">
-        <input value="Suscribirse" type="submit">
+        <div class="email-and-buttom">
+        <input class="email" type="email" name="email" placeholder="Correo electrónico">
+        <input class="buttom-footer" value="Suscribirse" type="submit">
         </div>
       </form>
+
+      <div class="footer-container">
+       <img class="logo-footer" src="/img/isotipo-isporty.png" alt="logo de isporty">
+         <div class="h3-footer">
+           <h3><a href="">Privacidad</a></h3>
+           <h3><a href="">Comunidad</a></h3>
+           <h3><a href="">Contacto</a></h3>
+           <h3><a href="">Blog</a></h3>
+           <h3><a href="">Términos y condiciones</a></h3>
+         </div>
+      </div>
+
+      <div class="social-medias">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-whatsapp"></i>
+      </div>
 
     </footer>
 </body>
