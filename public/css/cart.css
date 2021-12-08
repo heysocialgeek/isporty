@@ -1,3 +1,7 @@
+*{
+font-family: 'Roboto';
+}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -177,5 +181,5 @@ hr{
 	font-size: 16px;
 	font-family: 'Roboto';
 	font-weight: 600;
-	color: #202020;
+	color:white;
 }
