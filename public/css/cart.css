@@ -4,11 +4,8 @@ box-sizing: border-box;
 }
 
 .CartContainer{
-	width: 70%;
-	height: 90%;
 	background-color: #ffffff;
     border-radius: 20px;
-	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: auto;
@@ -42,15 +39,6 @@ box-sizing: border-box;
     align-items: center;
 }
 
-.burger-and-search {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 15px;
-}
-
-.burger-menu {
-    margin: 0px 10px;
-}
 
 .search-bar{
     display: none;
@@ -209,17 +197,18 @@ ul {
 	margin-top: 5px;
 }
 
-hr{
-	width: 66%;
-	float: right;
-	margin-right: 5%;
-}
+
 .checkout{
-	border: solid black 0.1px;
 	width: 30%;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 50px;	
+	padding: 50px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+.checkout2{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 .total{
 	width: 100%;
