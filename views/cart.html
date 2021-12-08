@@ -4,8 +4,17 @@
 	<title>iSporty - Carrito de compra</title>
 	<link rel="stylesheet" type="text/css" href="/css/cart.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="/css/normalize.css">
 </head>
 <body>
+	<header class="main-header">
+		<h2 class="title-header">Envío gratis a todo el país en compras mayores a $6500</h2>
+	  
+		<img class="iso" src="/img/isotipo-isporty.png" alt="logo de isporty">
+		<img class="logo" src="/img/logotipo-isporty.png" alt="logo de isporty">
+  
+	  </header>
+	<section></section>
    <div class="CartContainer">
    	   <div class="Header">
    	   	<h3 class="Heading">Carrito de compra</h3>
@@ -17,9 +26,8 @@
    	   	  	<img src="https://essential.vteximg.com.br/arquivos/ids/305737-1000-1000/266-0710_1.jpg" style={{ height="120px" }} />
    	   	  </div>
    	   	  <div class="about">
-   	   	  	<h1 class="title">Remera Adidas</h1>
+   	   	  	<h1 class="title">Remera </h1>
    	   	  	<h3 class="subtitle">M</h3>
-   	   	  	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/2560px-Adidas_Logo.svg.png" style={{ height="30px" }}/>
    	   	  </div>
    	   	  <div class="counter">
    	   	  	<div class="btn">+</div>
@@ -38,9 +46,8 @@
    	   	  	<img src="https://falabella.scene7.com/is/image/FalabellaAR/2864252_1?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70" style={{ height="120px" }} />
    	   	  </div>
    	   	  <div class="about">
-   	   	  	<h1 class="title">Jogging Puma</h1>
+   	   	  	<h1 class="title">Jogging</h1>
    	   	  	<h3 class="subtitle">32</h3>
-   	   	  	<img src="https://logos-marcas.com/wp-content/uploads/2020/04/Puma-Logo-650x366.png" style={{ height="30px" }}/>
    	   	  </div>
    	   	  <div class="counter">
    	   	  	<div class="btn">+</div>
@@ -53,30 +60,38 @@
    	   	  	<div class="remove"><u>Remover</u></div>
    	   	  </div>
    	   </div>
-   	 <hr> 
+  
    	 <div class="checkout">
-   	 <div class="total">
+		<input class="email" type="text" name="descuento" placeholder="Cupón de descuento">
+		<input class="buttom-footer" value="Validar" type="submit">
+   	 <div class="subtotal">
    	 	<div>
    	 		<div class="Subtotal">Subtotal</div>
-   	 		<div class="items">3 artículos</div>
+   	 	</div>
+   	 	<div class="subtotal-amount">$11.189</div>
+   	 </div>
+		<div class="total">
+   	 	<div>
+			<div class="totalfinal">Total</div>
    	 	</div>
    	 	<div class="total-amount">$11.189</div>
    	 </div>
    	 <button class="button">Proceder a método de pago</button></div>
    </div>
-<section>
-   <footer class="box-footer">
+</section>
 
-	<form action="/login" method="POST">
-	  <div class="email-and-buttom">
-	  <label class="title-suscription">Recibí las ofertas en tu mail</label>
-	  <input class="email" type="email" name="email" placeholder="Correo electrónico">
-	  <input class="buttom-footer" value="Suscribirse" type="submit">
-	  </div>
-	</form>
+<section class="footerx">
+   <footer class="box-footer">
 
 	<div class="footer-container">
 	 <img class="logo-footer" src="/img/isotipo-isporty.png" alt="logo de isporty">
+	 <form action="/login" method="POST">
+		<div class="email-and-buttom">
+		<h3>¡Registrate a nuestro newsletter para recibir las últimas novedades y acceder a mejores beneficios!	</h3>
+		<input class="email" type="email" name="email" placeholder="Correo electrónico">
+		<input class="buttom-footer" value="Suscribirse" type="submit">
+		</div>
+	  </form>
 	   <div class="h3-footer">
 		 <h3><a href="">Privacidad</a></h3>
 		 <h3><a href="">Comunidad</a></h3>
