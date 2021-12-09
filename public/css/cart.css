@@ -44,20 +44,6 @@ box-sizing: border-box;
     display: none;
 }
 
-.nav-bar {
-    display: none;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.ul-bar {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
 .iso {
     width: 40px;
 }
@@ -65,21 +51,6 @@ ul {
 .logo {
     width: 10%;
 }
-
-.carrito-login {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 15px;
-}
-
-.shopping-cart {
-    margin-right: 10px;
-}
-
-.link-login {
-    display: none;
-}
-
 
 .Header{
 	margin: auto;
@@ -118,10 +89,42 @@ ul {
 	width: 15%;
 	text-align: center;
 }
-.about{
+.descripcion{
 	height: 100%;
-	width: 24%;
+	width: 40%;
 }
+
+.cupon-input {
+    display: flex;
+  }
+
+input {
+    padding: .8rem 1rem;
+    width: 70%;
+    border-radius: 5rem;
+    outline: none;
+    border: .1rem solid #d1d1d1;
+    font-size: 11.2px;
+  }
+  
+  ::placeholder {
+    color: #d1d1d1;
+  }
+  
+  .btn-cupon {
+    padding: .8rem 2rem;
+    width: 30%;
+    border-radius: 5rem;
+    background-color: #c4225f;
+    color: #fff;
+    font-size: 11.2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .9rem;
+  }
+
+ 
 .title{
 	padding-top: 10px;
 	line-height: 10px;
@@ -204,11 +207,8 @@ ul {
     display:flex;
     flex-wrap: wrap;
     justify-content: right;
-}
-.checkout2{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: right;
+    position: relative;
+    left: 70%;
 }
 .total{
 	width: 100%;
@@ -287,6 +287,20 @@ ul {
     font-size: 16px;
     color: white;
 }
+
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size: 48px;
+    
+  }
 
 .email, .buttom-footer {
     border-radius: 5px;

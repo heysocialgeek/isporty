@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/cart.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="/css/normalize.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<header class="main-header">
@@ -17,15 +19,15 @@
 	<section></section>
    <div class="CartContainer">
    	   <div class="Header">
-   	   	<h3 class="Heading">Carrito de compra</h3>
-   	   	<h5 class="Action">Remover todo</h5>
+   	   	<h3 class="Heading">Productos en el carrito</h3>
+   	   	<h5 class="remover">Remover todo</h5>
    	   </div>
 
    	   <div class="Cart-Items">
    	   	  <div class="image-box">
    	   	  	<img src="https://essential.vteximg.com.br/arquivos/ids/305737-1000-1000/266-0710_1.jpg" style={{ height="120px" }} />
    	   	  </div>
-   	   	  <div class="about">
+   	   	  <div class="descripcion">
    	   	  	<h1 class="title">Remera X-Xtration</h1>
    	   	  	<h3 class="subtitle">M</h3>
    	   	  </div>
@@ -45,7 +47,7 @@
    	   	  <div class="image-box">
    	   	  	<img src="https://falabella.scene7.com/is/image/FalabellaAR/2864252_1?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70" style={{ height="120px" }} />
    	   	  </div>
-   	   	  <div class="about">
+   	   	  <div class="descripcion">
    	   	  	<h1 class="title">Jogging D-Formation</h1>
    	   	  	<h3 class="subtitle">32</h3>
    	   	  </div>
@@ -60,10 +62,15 @@
    	   	  	<div class="remove"><u>Remover</u></div>
    	   	  </div>
    	   </div>
-      <div class="checkout2">
    	 <div class="checkout">
-		<input class="email" type="text" name="descuento" placeholder="Cupón de descuento">
-		<input class="buttom-footer" value="Validar" type="submit">
+        <div>
+          <form action="/cart" method="get">
+            <div class="cupon-input">
+              <label for="text"></label>
+              <input type="text" placeholder="Cupón">
+              <button class="btn-cupon">Validar</button>
+  </form>
+  </div>
    	 <div class="subtotal">
    	 	<div>
    	 		<div class="Subtotal">Subtotal</div>
@@ -78,13 +85,13 @@
    	 </div>
    	 <button class="button">Proceder a método de pago</button></div>
    </div>
-  </div>
 </section>
 
 <section class="footerx">
    <footer class="box-footer">
 
 	<div class="footer-container">
+    <a href="https://wa.me/5491127682598?text=Me%20gustar%C3%ADa%20contactar%20con%20un%20asesor%20comercial" class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
 	 <img class="logo-footer" src="/img/isotipo-isporty.png" alt="logo de isporty">
 	 <form action="/login" method="POST">
 		<div class="email-and-buttom">
