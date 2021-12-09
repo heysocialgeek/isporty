@@ -80,7 +80,7 @@ ul {
 /* main del register*/
 
 .main-form {
-    padding-bottom: 10px
+    padding: 0px 5px 50px 5px;
 }
 
 .main-navbar {
@@ -151,7 +151,19 @@ ul {
     padding: 0px 15px;
 }
 
-
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size: 48px;
+    
+  }
 
 /* footer */
 
@@ -315,10 +327,6 @@ ul {
 
 @media (min-width:1200px) {
     /* header */
-
-    .logo {
-        width: 200px;
-    }
 
     .search-bar {
         display: block;
