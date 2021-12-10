@@ -79,7 +79,32 @@ ul {
 
 /* main */
 
+.title-news {
+    font-size: 18px;
+}
 
+.img-products {
+    width: 200px;
+}
+
+.product-article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.suscription-box {
+    border: solid 2px black;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.suscription-box h2 {
+    font-size: 16px;
+    text-align: center;
+}
 
 /* footer */
 .h3-footer-desktop {
