@@ -81,6 +81,17 @@ ul {
 main {
     background-color: #53a6f3;
     padding: 20px;
+
+    margin: auto
+
+}
+
+.article-ipad {
+    display: none
+}
+
+.article-desktop {
+    display: none
 }
 
 .title-news {
@@ -110,6 +121,10 @@ main {
     padding: 8px;
     margin-bottom: 20px;
     box-shadow: 10px 10px 10px rgb(31, 31, 31);
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
 }
 
 .suscription-box {
@@ -215,6 +230,8 @@ main {
     .iso {
     display: none;
         }
+
+
         
     }
 
@@ -253,6 +270,21 @@ main {
     .logo {
         order: -1;
     }
+
+    /* main */ 
+
+    .article-ipad {
+        display: block
+    }
+
+    .productos {
+        display: flex;
+        justify-content: space-around;
+        width: 750px;
+        margin: auto
+    }
+
+    
     
     /* footer */
     
@@ -290,6 +322,27 @@ main {
     .features-search i {
         margin-left: 5px;
     }
+
+    /* main */
+
+
+    .article-ipad {
+        display: block
+    }
+
+    .article-desktop {
+        display: block
+    }
+
+    .productos {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 1000px;
+        border: solid 5px red
+    }
+
+
 
     /* footer */
     
