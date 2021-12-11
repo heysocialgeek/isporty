@@ -80,8 +80,7 @@ ul {
 /* main */
 main {
     background-color: #53a6f3;
-    padding: 20px;
-
+    padding: 20px 0px;
     margin: auto
 
 }
@@ -165,6 +164,30 @@ main {
     font-size: 16px;
     text-align: center;
 }
+
+.actividad {
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 450px;
+    margin: auto;
+
+}
+
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size: 48px;
+    
+  }
 
 /* footer */
 .h3-footer-desktop {
@@ -284,6 +307,13 @@ main {
         margin: auto
     }
 
+    .productos2 {
+        display: flex;
+        justify-content: space-around;
+        width: 750px;
+        margin: auto
+    }
+
     
     
     /* footer */
@@ -338,10 +368,17 @@ main {
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        max-width: 1200px;
+        border: solid 5px red
+    }
+    
+    .productos2 {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         max-width: 1000px;
         border: solid 5px red
     }
-
 
 
     /* footer */
