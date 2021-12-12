@@ -117,7 +117,8 @@ ul {
 
 .control {
     width: 100%;
-    padding: 8px
+    padding: 8px;
+    border: 1px solid rgb(196, 196, 196)
 }
 
 .main-form h1 {
@@ -143,11 +144,13 @@ ul {
     color: white;
     padding: 10px 10px;
     border-radius: 5px;
-    margin: center
+    align-self: flex-end
+    
 }
 
 .boton {
     align-self: flex-end;
+    align-items: flex-end;
     padding: 0px 15px;
 }
 
