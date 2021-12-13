@@ -15,9 +15,14 @@ body {
 }
 
 .title-header {
+    margin: auto;
+	padding-bottom: 5px;
+	padding-top: 5px;
     font-size: 13px;
     text-align: center;
     display: none;
+	color: rgb(255, 255, 255);
+	background-color: #4678f4;
 }
 
 .header-container {
