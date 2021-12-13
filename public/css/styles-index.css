@@ -146,7 +146,7 @@ main {
 
 .suscription-box button {
     position: absolute;
-    left: 210px;
+    left: 250px;
     bottom: 50px;
     border-radius: 8px;
 }
@@ -158,6 +158,7 @@ main {
 
 .suscription-input input {
     margin: 5px 0px;
+    width: 60%
 }
 
 .suscription-box h2 {
@@ -314,6 +315,21 @@ main {
         margin: auto
     }
 
+    .suscription-box h2 {
+        font-size: 20px;
+    }
+
+    .suscription-input{
+        align-items: center;
+    }
+    
+    .suscription-input input {
+        width:50%;
+    }
+    
+    .suscription-box button {
+        left:600px;
+    }
     
     
     /* footer */
@@ -378,6 +394,22 @@ main {
         justify-content: space-evenly;
         max-width: 1000px;
         border: solid 5px red
+    }
+
+    .suscription-box h2 {
+        font-size: 24px;
+    }
+
+    .suscription-input{
+        align-items: center;
+    }
+    
+    .suscription-input input {
+        width:40%;
+    }
+    
+    .suscription-box button {
+        left:850px;
     }
 
 
