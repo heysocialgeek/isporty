@@ -114,7 +114,7 @@ main {
         text-align: center;
         color: rgb(56, 56, 56);
         border-bottom: solid 2px rgb(56, 56, 56);
-        margin-top: 90px;
+        margin-top: 50px;
 }
 
 .img-products {
@@ -314,6 +314,10 @@ main {
 
     /* main */ 
 
+    .title-news-first {
+        margin-top: 90px;
+    }
+
     .article-ipad {
         display: block
     }
@@ -388,6 +392,9 @@ main {
 
     /* main */
 
+    .title-news-first {
+        margin-top: 100px;
+    }
 
     .article-ipad {
         display: block
