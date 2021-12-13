@@ -12,12 +12,21 @@ body {
 
 .main-header {
     background-color: white;
+    position: fixed;
+    top:25;
+    width: 100%;
+    z-index: 20;
 }
 
 .title-header {
+    margin: auto;
+	padding-bottom: 5px;
+	padding-top: 5px;
     font-size: 13px;
     text-align: center;
     display: none;
+	color: rgb(255, 255, 255);
+	background-color: #4678f4;
 }
 
 .header-container {
@@ -98,6 +107,14 @@ main {
     text-align: center;
     color: rgb(56, 56, 56);
     border-bottom: solid 2px rgb(56, 56, 56);
+}
+
+.title-news-first {
+        font-size: 22px;
+        text-align: center;
+        color: rgb(56, 56, 56);
+        border-bottom: solid 2px rgb(56, 56, 56);
+        margin-top: 90px;
 }
 
 .img-products {
@@ -409,7 +426,7 @@ main {
     }
     
     .suscription-box button {
-        left:850px;
+        left:900px;
     }
 
 
