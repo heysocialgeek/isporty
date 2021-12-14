@@ -10,6 +10,10 @@ body {
 
 /* header */
 
+.banner {
+
+}
+
 .main-header {
     background-color: white;
     position: fixed;
