@@ -16,13 +16,13 @@ body {
 
 .title-header {
     margin: auto;
-	padding-bottom: 5px;
-	padding-top: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-size: 13px;
     text-align: center;
     display: none;
-	color: rgb(255, 255, 255);
-	background-color: #4678f4;
+    color: rgb(255, 255, 255);
+    background-color: #4678f4;
 }
 
 .header-container {
@@ -42,7 +42,7 @@ body {
     margin: 0px 10px;
 }
 
-.search-bar{
+.search-bar {
     display: none;
 }
 
@@ -83,39 +83,42 @@ ul {
 }
 
 .whatsapp {
-    position:fixed;
-    width:60px;
-    height:60px;
-    bottom:40px;
-    right:40px;
-    background-color:#25d366;
-    color:#FFF;
-    border-radius:50px;
-    text-align:center;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
     font-size: 48px;
-    
+
 }
 
 /* footer */
 
 .h3-footer-desktop {
-    display: none}
+    display: none
+}
 
 .logotipo {
     display: none
 }
+
 .box-footer {
     padding: 20px;
     background-color: rgb(46, 83, 131);
 }
 
-.title-suscription{
+.title-suscription {
     display: none;
     font-size: 16px;
     color: white;
 }
 
-.email, .buttom-footer {
+.email,
+.buttom-footer {
     border-radius: 5px;
 }
 
@@ -160,20 +163,21 @@ ul {
     .logo {
         display: none;
     }
-    
-    }
-    
-    /*Ipad*/
-    
+
+}
+
+/*Ipad*/
+
 @media (min-width:480px) {
-    
+
     .iso {
-    display: none;
-        }
-        
+        display: none;
     }
 
+}
+
 @media (min-width:768px) {
+
     /* header */
     .title-header {
         display: block;
@@ -208,9 +212,9 @@ ul {
     .logo {
         order: -1;
     }
-    
+
     /* footer */
-    
+
     .email {
         width: 300px;
     }
@@ -245,10 +249,10 @@ ul {
     }
 
     /* footer */
-    
+
 
     .title-suscription {
-        display:block;
+        display: block;
         align-self: flex-end
     }
 
@@ -267,7 +271,7 @@ ul {
         flex-direction: column;
         order: -1;
         text-align: center;
-        font-size: 13px;        
+        font-size: 13px;
     }
 
     .h3-footer-desktop a {
@@ -302,7 +306,7 @@ ul {
     }
 
     .email-and-buttom {
-        display: flex; 
+        display: flex;
         justify-content: center;
         height: 110px;
     }
@@ -310,20 +314,20 @@ ul {
     .box-footer form {
         max-width: 350px;
     }
-    
+
 }
 
 /*************************************************/
 
-*{
+* {
     box-sizing: border-box;
- }
+}
 
 .main-container {
-   width: 95%;
-   margin: auto;
-   border-radius: 50px;
-   max-width: 400px;
+    width: 95%;
+    margin: auto;
+    border-radius: 50px;
+    max-width: 400px;
 }
 
 
@@ -334,30 +338,37 @@ ul {
 
 .encabezado {
     text-align: center;
- }
+}
 
-.descripcion{
+.descripcion {
     text-align: justify;
-    padding: 10px
-   }
+    padding: 10px;
+    max-width: 800px;
+    border: 1px solid black
+}
 
 .imagenproducto img {
-   max-width: 300px;
+    max-width: 300px;
 }
 
 .botoncarrito {
-   text-align: center;
-   margin-top: 15px
+    text-align: center;
+    margin-top: 15px;
+}
+
+.botoncarrito button {
+    background-color: rgb(195, 236, 195);
+    padding: 15px
 }
 
 .talles {
-   text-align: center;
+    text-align: center;
 }
 
 .top-box {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-section2 h3 {
@@ -452,34 +463,37 @@ h3 {
     text-align: center;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
-   .main-container {
-       max-width: 1200px;
-       padding: 10px;
-       border-radius: 20px;
-       border: 1px solid rgb(138, 138, 138)
-   }
+    .main-container {
+        max-width: 1200px;
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
 
-   .main-section {
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: space-around;
-   }
+    .main-section {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-   .main-section2 {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
+    .main-section2 {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
 
-   .top-box2 {
-      width: 50%;
-      align-self: center;
-   }
+    .top-box2 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-self: center;
+        justify-content: space-between;
+    }
 }
 
 @media (min-width:768px) {
@@ -510,18 +524,18 @@ h3 {
         font-size: 20px;
     }
 
-    .suscription-input{
+    .suscription-input {
         align-items: center;
     }
-    
+
     .suscription-input input {
-        width:50%;
+        width: 50%;
     }
-    
+
     .suscription-box button {
-        left:600px;
+        left: 600px;
     }
-    
+
 }
 
 @media (min-width:1200px) {
@@ -545,31 +559,23 @@ h3 {
         flex-wrap: wrap;
         justify-content: space-evenly;
         max-width: 1200px;
-        border: solid 5px red
-    }
-    
-    .productos2 {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1000px;
-        border: solid 5px red
+        padding-top: 15px
     }
 
     .suscription-box h2 {
         font-size: 24px;
     }
 
-    .suscription-input{
+    .suscription-input {
         align-items: center;
     }
-    
+
     .suscription-input input {
-        width:40%;
+        width: 40%;
     }
-    
+
     .suscription-box button {
-        left:900px;
+        left: 900px;
     }
 
 }
