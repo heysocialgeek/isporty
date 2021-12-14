@@ -120,6 +120,10 @@ input {
     border-radius: 5px;
 }
 
+.button-style:hover{
+    background-color: rgb(46, 83, 131);
+}
+
 .remind-me {
     display: flex;
     display: block;
