@@ -16,6 +16,8 @@ box-sizing: border-box;
 	padding-bottom: 10px;
 }
 
+
+
 .Header{
 	margin: auto;
 	width: 90%;
@@ -49,6 +51,7 @@ box-sizing: border-box;
 	justify-content: space-between;
 	align-items: center;
 }
+
 .image-box{
 	width: 15%;
 	text-align: center;
@@ -186,7 +189,7 @@ box-sizing: border-box;
 	font-size: 22px;
 	font-family: 'Roboto';
 	font-weight: 700;
-	color: #;
+	
 }
 .items{
 	font-size: 16px;
