@@ -2,7 +2,15 @@
 
 * {
     box-sizing: border-box;
+    
 }
+
+a {color:black;}
+
+a:hover {color:#FF00FF;}  
+
+a:active {color:#0000FF;}
+
 
 body {
     font-family: "Roboto";
