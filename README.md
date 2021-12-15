@@ -44,3 +44,7 @@ en iSporty podés comprar en línea  la mejor ropa deportiva del mercado para qu
 - https://www.solodeportes.com.ar/
 - https://www.nike.com/ar/
 - https://www.digitalsport.com.ar/
+
+**Tablero de seguimiento de sprint:**
+
+<iframe src="https://trello.com/c/NIRpzVDM.html"></iframe>
