@@ -49,5 +49,7 @@ en iSporty podés comprar en línea  la mejor ropa deportiva del mercado para qu
 
 https://trello.com/b/KOGWHtgN.html
 
+<iframe src="https://trello.com/b/KOGWHtgN.html" frameBorder="0" width="100%" height="600"></iframe>
+
 
 
