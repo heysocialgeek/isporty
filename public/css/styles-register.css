@@ -15,9 +15,14 @@ body {
 }
 
 .title-header {
+    margin: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-size: 13px;
     text-align: center;
     display: none;
+    color: rgb(255, 255, 255);
+    background-color: #4678f4;
 }
 
 .header-container {
@@ -79,8 +84,12 @@ ul {
 
 /* main del register*/
 
+.banner {
+    width: 100vw;
+    margin-left: 0px;
+}
 .main-form {
-    padding: 0px 5px 50px 5px;
+    background-color: white;
 }
 
 .main-navbar {
@@ -125,7 +134,7 @@ ul {
     text-align: center;
     color: #808790;
     font-size: 25px;
-    margin: 10px
+    margin: 10px 
 }
 
 .create-form h2 {
@@ -285,6 +294,7 @@ ul {
 
     @media (min-width: 768px){
 
+        
         .main-form section {
             display: flex;
             flex-wrap: wrap;
@@ -294,7 +304,8 @@ ul {
             margin: auto;
             border: solid 1px #808790;
             border-radius: 20px;
-            padding: 15px
+            padding: 15px;
+            background-color: white;
     
         }
     
@@ -307,6 +318,10 @@ ul {
         .boton {
             align-self: flex-end;
             padding: 50px
+        }
+
+        .main-form {
+            padding-bottom: 50px
         }
     
     }
