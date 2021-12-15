@@ -420,7 +420,6 @@ main {
         flex-wrap: wrap;
         justify-content: space-evenly;
         max-width: 1200px;
-        border: solid 5px red
     }
     
     .productos2 {
@@ -428,7 +427,6 @@ main {
         flex-wrap: wrap;
         justify-content: space-evenly;
         max-width: 1000px;
-        border: solid 5px red
     }
 
     .suscription-box h2 {
