@@ -146,8 +146,11 @@ article {
 .amount {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items:center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto
 }
 
 /* footer */
