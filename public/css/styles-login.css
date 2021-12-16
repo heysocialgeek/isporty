@@ -84,15 +84,6 @@ ul {
 
 /* main */
 
-.all-login {
-    min-height: 65vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .box-main {
     background-color: #53a6f3;
     padding: 10px;
@@ -254,6 +245,17 @@ input {
 
     .logo {
         order: -1;
+    }
+
+    /* main */
+
+    .all-login {
+        min-height: 68vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
     
     /* footer */
