@@ -252,7 +252,7 @@ article {
     .logo {
         order: -1;
     }
-    
+
     /* footer */
     
     .email {
@@ -288,6 +288,11 @@ article {
 
     .features-search i {
         margin-left: 5px;
+    }
+
+    /* main */
+    .all-main {
+        min-height: 68vh;
     }
 
     /* footer */
