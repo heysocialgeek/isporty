@@ -84,6 +84,15 @@ ul {
 
 /* main */
 
+.all-login {
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .box-main {
     background-color: #53a6f3;
     padding: 10px;
