@@ -85,7 +85,7 @@ ul {
 /* main */
 
 .all-login {
-    min-height: 500px;
+    min-height: 65vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
