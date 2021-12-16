@@ -46,6 +46,3 @@ Empezar a hacer: Tener backups de código para evitar avanzar y luego no poder i
 Dejar de hacer: Tener miedo a programar de nuevo TODO porque se pierde tiempo a veces tratando de resolver un error.
 
 Hacer menos: Comparar el avance con el de otros de forma competitiva cuando son elementos y construcciones distintas.
-
-
-
