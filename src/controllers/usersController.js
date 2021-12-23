@@ -2,12 +2,12 @@ const path = require ("path");
 
 const controller = {
     login: (req, res) => {
-        const loginPath = path.resolve (__dirname, '../views/login.html');
-        return res.sendFile (loginPath)
+        const loginPath = path.resolve (__dirname, '../views/login.ejs');
+        return res.render (loginPath)
     },
     register: (req, res) => {
-        const registerPath = path.resolve (__dirname, '../views/register.html');
-        return res.sendFile (registerPath)
+        const registerPath = path.resolve (__dirname, '../views/register.ejs');
+        return res.render (registerPath)
     }
 }
 
