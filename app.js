@@ -6,25 +6,13 @@ app.listen (3003, () => console.log ("Servidor corriendo en puerto 3003"));
 app.use (express.static (path.resolve (__dirname, "./public")))
 
 //rutas main//
-const mainControllers = require ("./src/routes/main")
-app.use ("/", mainControllers)
-
-//no se a que rutas agregar el carrito//
-app.get('/cart', (req,res)=>{
-        res.sendFile(path.resolve (__dirname,'src/views/cart.html'))})
+const mainRoutes = require ("./src/routes/main")
+app.use ("/", mainRoutes)
 
 //rutas users//
-
-app.get('/login', (req,res)=>{
-    res.sendFile(path.resolve (__dirname,'src/views/login.html'))
-})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.resolve (__dirname, 'src/views/register.html'))
-})
+const userRoutes = require ("./src/routes/users")
+app.use ("/user", userRoutes)
 
 //rutas products//
-
-app.get('/producto', (req, res) => {
-    res.sendFile(path.resolve (__dirname, 'src/views/producto.html'))
-})
+const productsRoutes = require ("./src/routes/products")
+app.use ("/", productsRoutes)
