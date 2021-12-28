@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: "Roboto";
+}
+
+/*main*/
+
+main {
+    background-color: #53a6f3;
+    padding: 20px 0px;
+    margin: auto;
+    padding: 20px;
+}
+
+.filter-container {
+    display: none;
+}
+
+.talle-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.marca-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.genero-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precio-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descuentos-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ubicacion-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-description h2 {
+    font-size: 20px;
+}
+
+.section-style img {
+    width: 60%;
+}
+
+.section-style article {
+    background-color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgb(31 31 31);
+    border-radius: 15px;
+}
+
+.product-description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*resolución 768*/
+
+@media (min-width: 768px) {
+
+    /*main*/
+
+    .product-results {
+        justify-content: space-around;
+    }
+
+    .article-style {
+        width: 40%
+    }
+
+    .section-style {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-results {
+        display: none;
+    }
+    
+    .article-style {
+        width: 30%;
+    }
+
+    .main-container {
+        display: flex;
+    }
+
+    .filter-container {
+        display: block;
+        margin-right: 30px;
+        padding: 10px 30px 0px;
+    }
+
+    .price-form input{
+        width: 70%;
+    }
+
+    .filter-container span {
+        margin-bottom: 10px;
+    }
+}
