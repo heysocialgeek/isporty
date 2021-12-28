@@ -19,6 +19,7 @@ main {
 
 .filter-container {
     display: none;
+    border-right: solid 0.5px black;
 }
 
 .filter-container h3 {
