@@ -21,6 +21,11 @@ main {
     display: none;
 }
 
+.filter-container h3 {
+    border-bottom: solid 1px black;
+    text-align: center;
+}
+
 .talle-container {
     display: flex;
     flex-wrap: wrap;
