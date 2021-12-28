@@ -75,7 +75,8 @@ main {
 }
 
 .section-style img {
-    width: 60%;
+    width: 100%;
+    border-bottom: solid 1px gray;
 }
 
 .section-style article {
@@ -83,8 +84,34 @@ main {
     text-align: center;
     margin-bottom: 20px;
     padding: 10px;
-    box-shadow: 10px 10px 10px rgb(31 31 31);
     border-radius: 15px;
+}
+
+.article-style {
+    position: relative
+}
+
+.article-style i {
+    position: absolute;
+    left: 90%;
+    bottom:90%;
+    display: none;
+}
+
+.article-style:hover i {
+    display: block;
+}
+
+.article-style:hover {
+    box-shadow: 10px 10px 10px rgb(31 31 31);
+}
+
+.article-style p {
+    display: none;
+}
+
+.article-style:hover p {
+    display: block;
 }
 
 .product-description {
@@ -136,7 +163,7 @@ main {
     }
 
     .price-form input{
-        width: 70%;
+        width: 100%;
     }
 
     .filter-container span {
