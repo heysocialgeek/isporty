@@ -18,3 +18,8 @@ app.use ("/user", userRoutes)
 //rutas products//
 const productsRoutes = require ("./src/routes/products")
 app.use ("/", productsRoutes)
+
+//rutas formularioDeCreacion//
+
+const formularioDeCreacionRoutes = require ("./src/routes/formularioDeCreacion")
+app.use ("/", formularioDeCreacionRoutes)

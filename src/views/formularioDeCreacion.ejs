@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Creacion</title>
+    <link rel="stylesheet" href="/css/styles-index.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Carga de Productos</h1></legend>
+
+        <label for="idProducto">Indica que producto vas a publicar:</label><br/>
+        <input type="text" id="idProducto" name="idProducto">
+
+        <select>¿A que catgoria pertenece?</select>
+        <option>Ropa Femenina</option>
+        <option>Ropa Masculina</option>
+        <option>Calzado</option>
+        <option>Accesorios</option>
+
+        <label for="idMarca">Indique Marca del Producto a publicar:</label><br/>
+        <input type="text" id="idMarca" name="idMarca">
+
+        <label for="idModelo">Indique Modelo del Producto a publicar</label><br/>
+        <input type="text" id="idModelo" name="idModelo">
+
+        <label for="idTitulo">Indique Titulo del Producto</label><br/>
+        <input type="text" id="idTitulo" name="idTitulo">
+
+        <label for="idColor"> Indique los colores que tiene este producto:</label>
+                <input type="checkbox" value="rojo">Rojo<br>
+                <input type="checkbox" value="negro">negro<br>
+                <input type="checkbox" value="blanco">blanco<br>
+                <input type="checkbox" value="azul">azul<br>
+                <input type="checkbox" value="estampado">estampado<br><br>
+
+        <label for="idTalle"> Indique los talles que tiene este producto:</label>
+        <input type="checkbox" value="XS">XS<br>
+        <input type="checkbox" value="S">S<br>
+        <input type="checkbox" value="M">M<br>
+        <input type="checkbox" value="L">L<br>
+        <input type="checkbox" value="XL">XL<br><br>
+        <input type="checkbox" value="XXL">XXL<br><br>
+        
+    <h4>Selecciono las imagenes del producto</h4>    
+    <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+        <input type="file" name="imagen1" />
+        <input type="submit" name="subir-imagen" value="Enviar imagen" />
+    </form>    
+
+    <label for="idcantidad">Selecciono la cantidad de elementos disponibles para la venta</label><br/>
+        <input type="text" id="idcantidad" name="idcantidad">
+
+    <textarea>Descripcion del Producto</textarea>
+
+    <button type="submit"><a href="/">Enviar</a></button>
+    <button type="reset">Borrar</button>
+
+
+    </fieldset>
+</body>
+</html>
