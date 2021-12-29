@@ -16,6 +16,10 @@ const controller = {
     productList: (req, res) => {
         const productListPath = path.resolve (__dirname, "../views/productList.ejs");
         return res.render (productListPath)
+    },
+    productCreationForm: (req, res) => {
+        const productCreationForm = path.resolve (__dirname, "../views/formularioDeCreacion.ejs");
+        return res.render (productCreationForm)
     }
 }
 
