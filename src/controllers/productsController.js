@@ -20,7 +20,12 @@ const controller = {
     productCreationForm: (req, res) => {
         const productCreationForm = path.resolve (__dirname, "../views/formularioDeCreacion.ejs");
         return res.render (productCreationForm)
-    }
+    },
+    formularioedit: (req, res) => {
+        const formularioEditPath = path.resolve (__dirname, '../views/formularioedit');
+        return res.render (formularioEditPath)
+}
+
 }
 
 module.exports = controller
