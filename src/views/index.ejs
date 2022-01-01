@@ -11,47 +11,7 @@
 rel="stylesheet" />
 </head>
 <body>
-  <header class="main-header">
-    <h2 class="title-header">Envío gratis a todo el país en compras mayores a $6500</h2>
-    <div class="header-container">
-      <div class="burger-and-search">
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-
-        <div>
-          <form class="features-search" action="">
-            <input class="search-bar" type="text" name="search" placeholder="Buscar productos, marcas"> <i class="fas fa-search"></i>
-          </form>
-        </div>
-      </div>
-
-      <nav class="nav-bar">
-        <ul class="ul-bar">
-          <a href="/"><li>Inicio</li></a>
-          <li>Hombre</li>
-          <li>Mujer</li>
-          <li>Ofertas</li>
-          <li><i class="fas fa-chevron-down"></i> Marcas</li>
-        </ul>
-      </nav>
-      
-      <img class="iso" src="/img/isotipo-isporty.png" alt="logo de isporty">
-      <img class="logo" src="/img/logotipo-isporty.png" alt="logo de isporty">
-
-        <div class="carrito-login">
-            <div class="shopping-cart">
-            <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-            <div class="user-circle">
-              <a href="/user/login"><i class="far fa-user-circle"></i></a>
-            </div>
-            <a class="link-login" href="/user/login">Iniciar sesión</a>
-        </div>
-        
-    </div>
-    </header>
-
+  <%- include("./partials/header.ejs") %>
     <main>
       <img class="banner" width="100%" src="/img/banner.png" alt="banner">
       <h2 class="title-news-first">Nuevos lanzamientos</h2>

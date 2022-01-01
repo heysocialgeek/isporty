@@ -7,17 +7,19 @@
     <title>Formulario de Creacion</title>
     <link rel="stylesheet" href="/css/styles-formularioDeCreacion.css">
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles-index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
 </head>
 <body>
+    <%- include("./partials/header.ejs") %>
     <fieldset class="marco">
         <legend><h1>Carga de Productos</h1></legend>
 
         <label for="idProducto">Indica que producto vas a publicar:</label><br/>
         <input type="text" id="idProducto" name="idProducto"><br/><br/>
 
-        <label for="categoria">¿A que catgoria pertenece?</label><br/>
+        <label for="categoria">¿A que categoría pertenece?</label><br/>
         <select>
         <option>Ropa Femenina</option>
         <option>Ropa Masculina</option>
