@@ -38,14 +38,14 @@ Hacer menos: xxxxx
 
 **Retrospectiva Sprint-2/ Juan Carlos Muñoz:**
 
-Seguir haciendo: xxxx
+Seguir haciendo: Utilizar la tarjeta de "comentarios" para mantenernos comunicados.
 
-Hacer más: xxxx
+Hacer más: Buscar recursos e inspiración externa para aprender comparando lo que hacemos y obtener buenas prácticas de otros programadores con experiencia.
 
-Empezar a hacer: xxxx
+Empezar a hacer: Pensar partes reutilizables para implementar partials y optimizar código.
 
-Dejar de hacer: xxxx
+Dejar de hacer: Pensar en la estética primero antes que la funcionalidad.
 
-Hacer menos: xxxxx
+Hacer menos: Dejar que la ansiedad por el resultado final visual me bloquee.
 
 
