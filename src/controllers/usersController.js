@@ -8,11 +8,6 @@ const controller = {
     register: (req, res) => {
         const registerPath = path.resolve (__dirname, '../views/register');
         return res.render (registerPath)
-    },
-    
-    formularioDeCreacion: (req, res) => {
-        const formularioDeCreacionPath = path.resolve (__dirname, '../views/formularioDeCreacion');
-        return res.render (formularioDeCreacionPath)
     }
 }
 
