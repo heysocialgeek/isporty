@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+
+.marco {
+    padding-top: 30px;
+}
+
 body {
     font-family: "Roboto";
 }
@@ -54,4 +59,16 @@ body {
     border: none;
     cursor: pointer;
     
+}
+
+/*resolución 768*/
+
+@media (min-width: 768px) {
+
+    /*main*/
+
+.marco {
+    padding-top: 100px;
+}
+
 }
