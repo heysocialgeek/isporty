@@ -8,29 +8,40 @@
 </head>
 <body>
     <%- include("./partials/header.ejs") %>
+
     <fieldset class="marco">
-        <legend><h1>Carga de Productos</h1></legend>
+        <h1>Carga de Productos</h1>
 
-        <label for="idProducto">Indica que producto vas a publicar:</label><br/>
-        <input type="text" id="idProducto" name="idProducto"><br/><br/>
+        <div class="container">
+        <label  for="idProducto">Indica que producto vas a publicar:</label><br/>
+        <input type="text" id="idProducto" name="idProducto" class="caja"><br/><br/>
+        </div>
 
+        <div class="container">
         <label for="categoria">¿A que categoría pertenece?</label><br/>
-        <select>
-        <option>Ropa Femenina</option>
-        <option>Ropa Masculina</option>
-        <option>Calzado</option>
-        <option>Accesorios</option>
-        </select><br/><br/>
+            <select>
+                <option>Ropa Masculina</option>
+                <option>Calzado</option>
+                <option>Accesorios</option>
+            </select><br/><br/>
+        </div>
 
+        <div class="container">
         <label for="idMarca">Indique Marca del Producto a publicar:</label><br/>
-        <input type="text" id="idMarca" name="idMarca"><br/><br/>
+        <input type="text" id="idMarca" name="idMarca" class="caja" ><br/><br/>
+        </div>
 
+        <div class="container">
         <label for="idModelo">Indique Modelo del Producto a publicar</label><br/>
-        <input type="text" id="idModelo" name="idModelo"><br/><br/>
+        <input type="text" id="idModelo" name="idModelo" class="caja"> <br/><br/>
+        </div>
 
-        <label for="idTitulo">Indique Titulo del Producto</label><br/>
-        <input type="text" id="idTitulo" name="idTitulo"><br/><br/>
+        <div class="container">
+        <label  for="idTitulo">Indique Titulo del Producto</label><br/>
+        <input type="text" id="idTitulo" name="idTitulo" class="caja"><br/><br/>
+        </div>
 
+        <div class="container">
         <label for="idColor"> Indique los colores que tiene este producto:</label><br/>
                 <input type="checkbox" value="rojo">Rojo<br>
                 <input type="checkbox" value="negro">Negro<br>
@@ -38,7 +49,9 @@
                 <input type="checkbox" value="azul">Azul<br>
                 <input type="checkbox" value="rosa">Rosa<br>
                 <input type="checkbox" value="estampado">Estampado<br><br>
+        </div>
 
+        <div class="container">
         <label for="idTalle"> Indique los talles que tiene este producto:</label>
         <input type="checkbox" value="XS">XS<br>
         <input type="checkbox" value="S">S<br>
@@ -46,24 +59,31 @@
         <input type="checkbox" value="L">L<br>
         <input type="checkbox" value="XL">XL<br>
         <input type="checkbox" value="XXL">XXL<br><br>
-        
-    <h4>Seleccione las imagenes del producto:</h4>    
-    <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
-        <input type="file" name="imagen1" />
-        <input type="submit" name="subir-imagen" value="Enviar imagen" /><br><br>
-    </form>    
+        </div>
 
-    <label for="idcantidad">Selecciono la cantidad de elementos disponibles para la venta:</label><br/>
-        <input type="text" id="idcantidad" name="idcantidad"><br><br>
+        <div class="container">
+            <h4>Seleccione las imagenes del producto:</h4>    
+            <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
+            <input type="file" name="imagen1" class="botonimg" ><br><br>
+            </form>      
+        </div>
 
-    <label for="comentario">Descripcion del Producto:</label><br>
-        <textarea id="comentario" name="comentario" rows="4" cols="60"></textarea><br><br>
+        <div class="container">
+        <label  for="idcantidad">Selecciono la cantidad de elementos disponibles para la venta:</label><br/>
+        <input type="text" id="idcantidad" name="idcantidad" class="caja"><br><br>
+        </div>
 
-    <button type="submit"><a href="/">Enviar</a></button>
-    <button type="reset">Borrar</button>
+        <div class="container">
+        <label for="comentario">Descripcion del Producto:</label><br>
+        <textarea id="comentario" name="comentario" rows="5" cols="73"></textarea><br><br>
+        </div>
 
-
+        <div>
+        <button class="botonform" type="submit"><a style="text-decoration:none" href="/">Enviar</a></button>
+        <button class="botonform" type="reset">Borrar</button>
+        </div>
     </fieldset>
+
     <%- include("./partials/footer.ejs") %>
 </body>
 </html>
