@@ -26,15 +26,15 @@ Hacer menos: no frustrarme si algunas pequeñas cosas no salen exactamente como 
 
 **Retrospectiva Sprint-2/Fernandez, Maria Sol:**
 
-Seguir haciendo: xxxx
+Seguir haciendo: Practicar e incorporar los temas aprendidos en la página isporty, logrando perfeccionarla a medida que se afianzan los nuevos conocimientos. 
 
-Hacer más: xxxx
+Hacer más:Seguir practicando hasta lograr el objetivo y confiar más en uno mismo.
 
-Empezar a hacer: xxxx
+Empezar a hacer: Limpiar y mejorar el código con los nuevos conocimientos. 
 
-Dejar de hacer: xxxx
+Dejar de hacer: De frustrarme cuando las cosas no salen como imagino
 
-Hacer menos: xxxxx
+Hacer menos: Autosabotearse a uno mismo, hay que seguir aprendiendo y obtener confianza.-
 
 **Retrospectiva Sprint-2/ Juan Carlos Muñoz:**
 
