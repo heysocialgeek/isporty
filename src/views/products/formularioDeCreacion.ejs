@@ -9,8 +9,10 @@
 <body>
     <%- include("./partials/header.ejs") %>
 
-    <fieldset class="marco">
-        <h1>Carga de Productos</h1>
+    <form action="" method="GET" class="marco"> 
+        
+
+        <h1 class="tituloform">Carga de Productos</h1><br/><br/>
 
         <div class="container">
         <label  for="idProducto">Indica que producto vas a publicar:</label><br/>
@@ -78,11 +80,11 @@
         <textarea id="comentario" name="comentario" rows="5" cols="73"></textarea><br><br>
         </div>
 
-        <div>
+        <div class="container">
         <button class="botonform" type="submit"><a style="text-decoration:none" href="/">Enviar</a></button>
         <button class="botonform" type="reset">Borrar</button>
         </div>
-    </fieldset>
+    </form>
 
     <%- include("./partials/footer.ejs") %>
 </body>
