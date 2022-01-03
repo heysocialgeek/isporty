@@ -10,6 +10,10 @@ body {
 
 /*main*/
 
+.main-container {
+    padding-top: 30px;
+}
+
 main {
     background-color: #53a6f3;
     padding: 20px 0px;
@@ -99,9 +103,17 @@ main {
 
 .article-style i {
     position: absolute;
-    left: 90%;
+    left: 86%;
     bottom:90%;
+    font-size: 1.5em;
     display: none;
+}
+
+.shoppingcart i {
+    position: absolute;
+    left: 86%;
+    top: 90%;
+    color: #53a6f3;
 }
 
 .article-style:hover i {
@@ -127,11 +139,16 @@ main {
     align-items: flex-start;
 }
 
+    
 /*resolución 768*/
 
 @media (min-width: 768px) {
 
     /*main*/
+
+    .main-container {
+        padding-top: 100px;
+    }
 
     .product-results {
         justify-content: space-around;
@@ -153,7 +170,10 @@ main {
     .product-results {
         display: none;
     }
-    
+
+    .main-container {
+        padding-top: 170px;
+    }
     .article-style {
         width: 30%;
     }

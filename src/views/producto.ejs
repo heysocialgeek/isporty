@@ -2,60 +2,13 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include("./partials/head.ejs") %>
   <title>iSporty - Inicio de sesión</title>
   <link rel="stylesheet" href="/css/styles-producto.css">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-  <header class="main-header">
-    <h2 class="title-header">Envío gratis a todo el país en compras mayores a $6500</h2>
-    <div class="header-container">
-      <div class="burger-and-search">
-        <div class="burger-menu">
-          <i class="fas fa-bars"></i>
-        </div>
-
-        <div>
-          <form class="features-search" action="">
-            <input class="search-bar" type="text" name="search" placeholder="Buscar productos, marcas"> <i
-              class="fas fa-search"></i>
-          </form>
-        </div>
-      </div>
-
-      <nav class="nav-bar">
-        <ul class="ul-bar">
-          <a href="/">
-            <li>Inicio</li>
-          </a>
-          <li>Hombre</li>
-          <li>Mujer</li>
-          <li>Ofertas</li>
-          <li><i class="fas fa-chevron-down"></i> Marcas</li>
-        </ul>
-      </nav>
-
-      <img class="iso" src="/img/isotipo-isporty.png" alt="logo de isporty">
-      <img class="logo" src="/img/logotipo-isporty.png" alt="logo de isporty">
-
-      <div class="carrito-login">
-        <div class="shopping-cart">
-          <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
-        </div>
-        <div class="user-circle">
-          <a href="/user/login"><i class="far fa-user-circle"></i></a>
-        </div>
-        <a class="link-login" href="/user/login">Iniciar sesión</a>
-      </div>
-
-    </div>
-  </header>
-
+  <%- include("./partials/header.ejs") %>
   <main class="main-container">
 
     <section class="main-section">
@@ -177,51 +130,7 @@
         class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
 
   </main>
-
-  <footer class="box-footer">
-
-    <form action="/login" method="POST">
-      <div class="email-and-buttom">
-        <label class="title-suscription">Recibí las ofertas en tu mail</label>
-        <input class="email" type="email" name="email" placeholder="Correo electrónico">
-        <input class="buttom-footer" value="Suscribirse" type="submit">
-      </div>
-    </form>
-
-    <div class="footer-container">
-      <img src="img/logotipo-isporty.png" class="logotipo">
-      <img class="logo-footer" src="/img/isotipo-isporty.png" alt="logo de isporty">
-      <div class="h3-footer">
-        <h3><a href="">Privacidad</a></h3>
-        <h3><a href="">Comunidad</a></h3>
-        <h3><a href="">Contacto</a></h3>
-        <h3><a href="">Blog</a></h3>
-        <h3><a href="">Términos y condiciones</a></h3>
-      </div>
-
-      <div class="h3-footer-desktop">
-        <h3><a href="">Inicio</a></h3>
-        <h3><a href="">Hombres</a></h3>
-        <h3><a href="">Mujeres</a></h3>
-        <h3><a href="">Marcas</a></h3>
-        <h3><a href="">Ofertas</a></h3>
-      </div>
-    </div>
-
-    <div class="social-medias">
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-youtube"></i>
-      <i class="fab fa-whatsapp"></i>
-    </div>
-
-
-  </footer>
-</body>
-
-</html>
-
+  <%- include("./partials/footer.ejs") %>
 </body>
 
 </html>

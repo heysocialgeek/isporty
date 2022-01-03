@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product-list</title>
+        <%- include("./partials/head.ejs") %>
+        <title>Lista de productos</title>
         <link rel="stylesheet" href="/css/styles-productList.css">
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/css/styles-index.css">
     </head>
     <body>
-        <header>
-            ACA VA EL HEADER
-        </header>
-
+        <%- include("./partials/header.ejs") %>
         <main>
             <div class="main-container">
                 <div class="filter-container">
@@ -89,88 +83,112 @@
                         <img src="/img/Nike-air-force.jpg" alt="Zapatillas-Nike-Air-Force">
                         <div class="product-description">
                             <h2>Zapatillas Nike Air Force</h2>
-                            <p>$$$Precio</p>
+                            <p>$7.800</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/Nike-court-borough.jpg" alt="Zapatillas-Nike-Court-Borough">
                         <div class="product-description">
                             <h2>Zapatillas Nike Court Borough</h2>
-                            <p>$$$Precio</p>
+                            <p>$9.000</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/Nike-court-legacy.jpg" alt="Zapatillas-Nike-Court-Legacy">
                         <div class="product-description">
                             <h2>Zapatillas Nike Court Legacy</h2>
-                            <p>$$$Precio</p>
+                            <p>$12.350</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/nike-reposto.jpg" alt="Zapatillas-Nike-Reposto">
                         <div class="product-description">
                             <h2>Zapatillas Nike Reposto</h2>
-                            <p>$$$Precio</p>
+                            <p>$11.100</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/nike-revolution-5.jpg" alt="Zapatillas-Nike-Revolution-5">
                         <div class="product-description">
                             <h2>Zapatillas Nike Revolution 5</h2>
-                            <p>$$$Precio</p>
+                            <p>$14.200</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/nike-court-vision.jpg" alt="Zapatillas-Nike-Court-Vision">
                         <div class="product-description">
                             <h2>Zapatillas Nike Court Vision</h2>
-                            <p>$$$Precio</p>
+                            <p>$11.100</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/zapatillas air.jpeg" alt="Zapatillas-Air">
                         <div class="product-description">
-                            <h2>Zapatillas Air</h2>
-                            <p>$$$Precio</p>
+                            <h2>Zapatillas Nike Air</h2>
+                            <p>$13.200</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/zapatillasairmaxmujer.jpeg" alt="Zapatillas-Air-Max-Mujer">
                         <div class="product-description">
-                            <h2>Zapatillas-Air-Max</h2>
-                            <p>$$$Precio</p>
+                            <h2>Zapatillas Nike Air Max</h2>
+                            <p>$11.900</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
 
                     <article class="article-style">
                         <img src="/img/zapatillsclassic.jpeg" alt="Zapatillas-Classic">
                         <div class="product-description">
-                            <h2>Zapatillas Classic</h2>
-                            <p>$$$Precio</p>
+                            <h2>Zapatillas Nike Classic</h2>
+                            <p>$15.000</p>
                         </div>
                         <i class="far fa-heart"></i>
+                        <div class="shoppingcart">
+                            <i class="fas fa-cart-arrow-down"></i>
+                        </div>
                     </article>
                 </section>
             </div>
         </main>
-
-        <footer>
-            ACA VA EL FOOTER
-        </footer>
+        <%- include("./partials/footer.ejs") %>
     </body>
 </html>
