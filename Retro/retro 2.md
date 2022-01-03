@@ -2,15 +2,15 @@
 
 **Retrospectiva Sprint-2/Joaquín Caggiano:**
 
-Seguir haciendo: xxxx
+Seguir haciendo: la comunicación de equipo, creo que estamos bien organizados en los Sprint. Cada uno realiza una tarea.
 
-Hacer más: xxxx
+Hacer más: Sobre el diseño podemos seguir agregando un mejor css.
 
-Empezar a hacer: xxxx
+Empezar a hacer: Agregar más dinamismo al contenido.
 
-Dejar de hacer: xxxx
+Dejar de hacer: El HTML de hasta ahora me parece que ya está
 
-Hacer menos: xxxxx
+Hacer menos: la cantidad de horas que le dedico al Sprint, a veces paso muchisimas horas sin hacer otra actividad para dedicarle todo mi tiempo al Sprint.
 
 **Retrospectiva sprint 2 / Facundo Mayuri:**
 
