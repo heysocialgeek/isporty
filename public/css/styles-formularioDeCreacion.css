@@ -7,6 +7,7 @@
 
 .marco {
     padding-top: 30px;
+    margin: auto;
 }
 
 body {
@@ -15,26 +16,36 @@ body {
 
 .marco {
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 100%;
  
+}
+
+.label{
+    margin-bottom: 5px;
+    font-style: italic;
 }
 
 .container{
     margin-bottom: 15px;
     font-style: italic;
-    width: 100%;
+    width: 60%;
     padding: 8px;
     margin: 0 auto;
-    
+
+}
+.tituloform{
+    text-align: center;
+    color: #808790;
+    font-size: 25px;
+    margin: 10px;
 }
 
 .caja {
-    width: 50%;
+    width: 100%;
     padding: 8px;
     border: 1px solid rgb(196, 196, 196);
+
 
 }
 
@@ -42,12 +53,12 @@ body {
     background-color: #4678f4;
     border: none;
     font-size: 25px;
-    color: white;
+    color: black;
     padding: 10px 10px;
     border-radius: 5px;
-    width: 250px;
     cursor: pointer;
-  
+    width: 40%;
+    
 }
 
 .botonimg {
