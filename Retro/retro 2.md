@@ -14,15 +14,15 @@ Hacer menos: xxxxx
 
 **Retrospectiva sprint 2 / Facundo Mayuri:**
 
-Seguir haciendo: xxxx
+Seguir haciendo: seguir en constante comunicación con el equipo
 
-Hacer más: xxxx
+Hacer más: animarse a investigar e implementar ideas más complejas e innovadoras
 
-Empezar a hacer: xxxx
+Empezar a hacer: revisar los sprints anteriores y ver qué mejoras se pueden encontrar
 
-Dejar de hacer: xxxx
+Dejar de hacer: dejar pequeños detalles para el último momento
 
-Hacer menos: xxxxx
+Hacer menos: no frustrarme si algunas pequeñas cosas no salen exactamente como las planifiqué, disfrutar más el trabajo y lo que voy logrando.
 
 **Retrospectiva Sprint-2/Fernandez, Maria Sol:**
 
