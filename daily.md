@@ -6,3 +6,5 @@ A través de estas tarjetas, comunicamos cualquier cambio y automáticamente, en
 **Sprint 2:** https://trello.com/c/HYGNYB6P
 
 **Sprint 3:** https://trello.com/c/frr18laA
+
+**Sprint 4:** https://trello.com/c/daX8jdRv
