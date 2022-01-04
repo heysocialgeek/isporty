@@ -5,8 +5,8 @@ const controller = require ("../controllers/productsController");
 
 router.get ("/producto", controller.product);
 router.get ("/cart", controller.cart)
-router.get ("/productList", controller.productList)
-router.get ("/product-creation-form", controller.productCreationForm)
-router.get ("/formularioedit", controller.formularioedit)
+router.get ("/productoList", controller.productList)
+router.get ("/productoCreate", controller.productCreationForm)
+router.get ("/productoEdit", controller.formularioedit)
 
 module.exports = router;
