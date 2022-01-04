@@ -48,10 +48,3 @@ en iSporty podés comprar en línea  la mejor ropa deportiva del mercado para qu
 **Tablero de seguimiento de sprint:**
 
 https://trello.com/b/KOGWHtgN.html
-
-**Daily con conexión automática a canal de Slack:**
-
-Sprint 2: https://trello.com/c/HYGNYB6P
-
-Sprint 3: https://trello.com/c/frr18laA
-
