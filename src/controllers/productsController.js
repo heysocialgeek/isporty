@@ -30,7 +30,7 @@ const controller = {
 		fs.writeFileSync(productsJSONPath, JSON.stringify(productsDB, null, " "));
 
 		// Redirección
-		return res.redirect("/products");
+		return res.redirect("/producto");
     },
     cart: (req, res) => {
         const cartPath = path.resolve (__dirname, "../views/products/cart.ejs");
