@@ -21,4 +21,4 @@ app.use ("/user", userRoutes)
 
 
 const productsRoutes = require ("./src/routes/products")
-app.use ("/", productsRoutes)
+app.use ("/product", productsRoutes)
