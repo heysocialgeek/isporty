@@ -1,9 +1,36 @@
+const fs = require ("fs")
 const path = require ("path");
+
+//path al JSON products y user//
+const productJSONpath = path.resolve(__dirname, "../../data/products.json");
+const userJSONpath = path.resolve (__dirname, "../../data/user.json");
+
+// contenido de la Data Base//
+const productsDB = JSON.parse (fs.readFileSync(productJSONpath,"utf-8"));
+const userDB = JSON.parse (fs.readFileSync(userJSONpath,"utf-8"));
 
 const controller = {
     product: (req, res) => {
         const productPath = path.resolve (__dirname, '../views/products/producto.ejs');
         return res.render (productPath)
+    },
+
+    store: (req, res) => {
+        const generateID = () => {
+            const lastProduct = productsDB[productsDB.length - 1];
+			const lastID = lastProduct.id;
+			return lastID + 1;
+        }
+        productsDB.push({
+			id: generateID(),
+			...req.body
+		});
+
+		// Reescribo el archivo JSON
+		fs.writeFileSync(productsJSONPath, JSON.stringify(productsDB, null, " "));
+
+		// Redirección
+		return res.redirect("/products");
     },
     cart: (req, res) => {
         const cartPath = path.resolve (__dirname, "../views/products/cart.ejs");
