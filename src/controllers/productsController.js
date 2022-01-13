@@ -10,8 +10,8 @@ const productsDB = JSON.parse (fs.readFileSync(productJSONpath,"utf-8"));
 const userDB = JSON.parse (fs.readFileSync(userJSONpath,"utf-8"));
 
 const controller = {
-    product: (req, res) => {
-        const productPath = path.resolve (__dirname, '../views/products/producto.ejs');
+    detail: (req, res) => {
+        const productPath = path.resolve (__dirname, '../views/products/detail.ejs');
         return res.render (productPath)
     },
 
