@@ -3,7 +3,7 @@ const path = require ("path");
 
 //path al JSON products y user//
 const productJSONpath = path.resolve(__dirname, "../../data/products.json");
-const userJSONpath = path.resolve (__dirname, "../../data/user.json");
+const userJSONpath = path.resolve (__dirname, "../../data/users.json");
 
 // contenido de la Data Base//
 const productsDB = JSON.parse (fs.readFileSync(productJSONpath,"utf-8"));
