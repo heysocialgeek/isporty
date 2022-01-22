@@ -1,5 +1,5 @@
-const fs = require ("fs")
-const path = require ("path");
+const fs = require("fs")
+const path = require("path");
 
 //path al JSON products//
 const productJSONpath = path.resolve(__dirname, "../../data/products.json");
@@ -44,7 +44,11 @@ const controller = {
             modelo: req.body.idModelo,
             titulo: req.body.idTitulo,
             cantidad: req.body.idcantidad,
-            comentario: req.body.comentario
+            comentario: req.body.comentario,
+            talle: req.body.talle,
+            category: req.body.category,
+            image: req.file ? req.file.filename : 'sin imagen'
+            
         });
 
         fs.writeFileSync(productJSONpath, JSON.stringify(productsDB, null, ' '))
