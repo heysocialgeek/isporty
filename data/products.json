@@ -1,20 +1,84 @@
-[{"id":1,"name":"Rooibos Caramelo","description":"montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id","price":1774.31,"discount":11,"category":"café","image":"PRODUCTS-xanela-paraiso.jpg","type":"nuevo"},
-{"id":2,"name":"Filtro Tacita","description":"dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras","price":3717.77,"discount":5,"category":"insumos","image":"PRODUCTS-product_f_i_filtro_detalle_tacita.jpg","type":"banner"},
-{"id":3,"name":"Canela Paraiso","description":"amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis","price":1316.6,"discount":3,"category":"insumos","image":"PRODUCTS-golden-monkey.jpg","type":"nuevo"},
-{"id":4,"name":"Rooibos Caramelo","description":"cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis","price":1330.35,"discount":39,"category":"café","image":"PRODUCTS-cafe-origen-tolima-juan-valdez.png","type":"nuevo"},
-{"id":5,"name":"Gold en Monkey","description":"eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi","price":2067.88,"discount":36,"category":"te","image":"PRODUCTS-cafe-organico-balanceado-juan-valdez.png","type":"nuevo"},
-{"id":6,"name":"Canela Paraiso","description":"rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo","price":4401.46,"discount":7,"category":"te","image":"PRODUCTS-cafe-organico-balanceado-juan-valdez.png","type":"mas-vendido"},
-{"id":7,"name":"Canela Paraiso","description":"ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat","price":3842.41,"discount":29,"category":"insumos","image":"PRODUCTS-xanela-paraiso.jpg","type":"banner"},
-{"id":8,"name":"Albaricoque Maracuyá","description":"interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu","price":3779.12,"discount":33,"category":"insumos","image":"PRODUCTS-te-blanco-albaricoque-maracuya.jpg","type":"banner"},
-{"id":9,"name":"Rooibos Caramelo","description":"quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam","price":1631.5,"discount":18,"category":"café","image":"PRODUCTS-te-blanco-albaricoque-maracuya.jpg","type":"banner"},
-{"id":10,"name":"Gold en Monkey","description":"duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris","price":4154.34,"discount":14,"category":"te","image":"PRODUCTS-product_f_i_filtro_detalle_tacita.jpg","type":"mas-vendido"},
-{"id":11,"name":"Café Orgánico Balanceado","description":"vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo","price":3271.34,"discount":35,"category":"te","image":"PRODUCTS-cafe-organico-balanceado-juan-valdez.png","type":"banner"},
-{"id":12,"name":"Albaricoque Maracuyá","description":"orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui","price":1091.84,"discount":10,"category":"te","image":"PRODUCTS-cafe-origen-tolima-juan-valdez.png","type":"nuevo"},
-{"id":13,"name":"Rooibos Caramelo","description":"etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue","price":3205.51,"discount":24,"category":"te","image":"PRODUCTS-xanela-paraiso.jpg","type":"nuevo"},
-{"id":14,"name":"Filtro Tacita","description":"et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare","price":2160.68,"discount":2,"category":"insumos","image":"PRODUCTS-ROOIBOS-CARAMELO.jpg","type":"nuevo"},
-{"id":15,"name":"Rooibos Caramelo","description":"est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum","price":907.26,"discount":22,"category":"te","image":"PRODUCTS-product_f_i_filtro_detalle_tacita.jpg","type":"banner"},
-{"id":16,"name":"Café Orgánico Balanceado","description":"urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo","price":1212.72,"discount":14,"category":"café","image":"PRODUCTS-cafe-origen-tolima-juan-valdez.png","type":"mas-vendido"},
-{"id":17,"name":"Rooibos Caramelo","description":"id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce","price":3211.17,"discount":3,"category":"café","image":"PRODUCTS-cafe-organico-balanceado-juan-valdez.png","type":"banner"},
-{"id":18,"name":"Albaricoque Maracuyá","description":"in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus","price":2383.85,"discount":18,"category":"café","image":"PRODUCTS-product_f_i_filtro_detalle_tacita.jpg","type":"nuevo"},
-{"id":19,"name":"Albaricoque Maracuyá","description":"dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel","price":4429.04,"discount":16,"category":"insumos","image":"PRODUCTS-product_f_i_filtro_detalle_tacita.jpg","type":"nuevo"},
-{"id":20,"name":"Canela Paraiso","description":"ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam","price":3613.99,"discount":20,"category":"te","image":"PRODUCTS-product_f_i_filtro_detalle_tacita.jpg","type":"mas-vendido"}]
+[
+    {
+        "id": 1,
+        "name": "Zapatillas Nike Air Force",
+        "description": "Perfectas en comodidad",
+        "price": 7800,
+        "discount": 11,
+        "category": "Zapatillas",
+        "image": "/img/Nike-air-force.jpg",
+        "type": "nuevo"
+    }, {
+        "id": 2,
+        "name": "Zapatillas Nike Court Borough",
+        "description": "Perfectas en comodidad",
+        "price": 9000,
+        "discount": 5,
+        "category": "Zapatillas",
+        "image": "/img/Nike-court-borough.jpg",
+        "type": "nuevo"
+    }, {
+        "id": 3,
+        "name": "Zapatillas Nike Court Legacy",
+        "description": "Perfectas en comodidad",
+        "price": 12350,
+        "discount": 3,
+        "category": "Zapatillas",
+        "image": "/img/Nike-court-legacy.jpg",
+        "type": "nuevo"
+    }, {
+        "id": 4,
+        "name": "Zapatillas Nike Reposto",
+        "description": "Perfectas en comodidad",
+        "price": 11100,
+        "discount": 39,
+        "category": "Zapatillas",
+        "image": "/img/nike-reposto.jpg",
+        "type": "nuevo"
+    }, {
+        "id": 5,
+        "name": "Zapatillas Nike Revolution 5",
+        "description": "Perfectas en comodidad",
+        "price": 14200,
+        "discount": 36,
+        "category": "Zapatillas",
+        "image": "/img/nike-revolution-5.jpg",
+        "type": "nuevo"
+    }, {
+        "id": 6,
+        "name": "Zapatillas Nike Court Vision",
+        "description": "Perfectas en comodidad",
+        "price": 11100,
+        "discount": 7,
+        "category": "Zapatillas",
+        "image": "/img/nike-court-vision.jpg",
+        "type": "mas-vendido"
+    }, {
+        "id": 7,
+        "name": "Zapatillas Nike Air",
+        "description": "Perfectas en comodidad",
+        "price": 13200,
+        "discount": 29,
+        "category": "Zapatillas",
+        "image": "/img/zapatillas air.jpeg",
+        "type": "nuevo"
+    }, {
+        "id": 8,
+        "name": "Zapatillas Nike Air Max",
+        "description": "Perfectas en comodidad",
+        "price": 11900,
+        "discount": 33,
+        "category": "Zapatillas",
+        "image": "/img/zapatillasairmaxmujer.jpeg",
+        "type": "nuevo"
+    }, {
+        "id": 9,
+        "name": "Zapatillas Nike Classic",
+        "description": "Perfectas en comodidad",
+        "price": 15000,
+        "discount": 18,
+        "category": "Zapatillas",
+        "image": "/img/zapatillsclassic.jpeg",
+        "type": "nuevo"
+    }
+]

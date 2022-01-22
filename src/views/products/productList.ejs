@@ -79,113 +79,19 @@
                         Filtrar</p>
                 </div>
                 <section class="section-style">
+                    <% for (let i=0; i <productsDB.length; i++) { %>
                     <article class="article-style">
-                        <img src="/img/Nike-air-force.jpg" alt="Zapatillas-Nike-Air-Force">
+                        <img src="<%= productsDB[i].image %>" alt="<%= productsDB[i].name %>">
                         <div class="product-description">
-                            <h2>Zapatillas Nike Air Force</h2>
-                            <p>$7.800</p>
+                            <h2><%= productsDB[i].name %></h2>
+                            <p>$<%= productsDB[i].price %></p>
                         </div>
                         <i class="far fa-heart"></i>
                         <div class="shoppingcart">
                             <i class="fas fa-cart-arrow-down"></i>
                         </div>
                     </article>
-
-                    <article class="article-style">
-                        <img src="/img/Nike-court-borough.jpg" alt="Zapatillas-Nike-Court-Borough">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Court Borough</h2>
-                            <p>$9.000</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
-
-                    <article class="article-style">
-                        <img src="/img/Nike-court-legacy.jpg" alt="Zapatillas-Nike-Court-Legacy">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Court Legacy</h2>
-                            <p>$12.350</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
-
-                    <article class="article-style">
-                        <img src="/img/nike-reposto.jpg" alt="Zapatillas-Nike-Reposto">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Reposto</h2>
-                            <p>$11.100</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
-
-                    <article class="article-style">
-                        <img src="/img/nike-revolution-5.jpg" alt="Zapatillas-Nike-Revolution-5">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Revolution 5</h2>
-                            <p>$14.200</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
-
-                    <article class="article-style">
-                        <img src="/img/nike-court-vision.jpg" alt="Zapatillas-Nike-Court-Vision">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Court Vision</h2>
-                            <p>$11.100</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
-
-                    <article class="article-style">
-                        <img src="/img/zapatillas air.jpeg" alt="Zapatillas-Air">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Air</h2>
-                            <p>$13.200</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
-
-                    <article class="article-style">
-                        <img src="/img/zapatillasairmaxmujer.jpeg" alt="Zapatillas-Air-Max-Mujer">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Air Max</h2>
-                            <p>$11.900</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
-
-                    <article class="article-style">
-                        <img src="/img/zapatillsclassic.jpeg" alt="Zapatillas-Classic">
-                        <div class="product-description">
-                            <h2>Zapatillas Nike Classic</h2>
-                            <p>$15.000</p>
-                        </div>
-                        <i class="far fa-heart"></i>
-                        <div class="shoppingcart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </div>
-                    </article>
+                    <% } %>
                 </section>
             </div>
         </main>

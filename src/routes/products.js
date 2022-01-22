@@ -10,16 +10,16 @@ router.get ("/detail", controller.detail);
 router.get ("/cart", controller.cart)
 
 //listado de productos//
-router.get ("/productoList", controller.productList)
+router.get ("/productList", controller.productList)
 
 //formulario de creacion de productos//
-router.get ("/productoCreate", controller.productCreationForm)
+router.get ("/productCreate", controller.productCreationForm)
 
 //acción de creación de un producto//
-router.post ("/", controller.store)
+router.post ("/productCreate", controller.store)
 
 //formulario de edición de un producto//
-router.get ("/productoEdit", controller.formularioedit)
+router.get ("/productEdit", controller.formularioedit)
 
 //acción de edición de un producto//
 
