@@ -28,23 +28,30 @@ const controller = {
         const productCreationForm = path.resolve (__dirname, "../views/products/formularioDeCreacion.ejs");
         return res.render (productCreationForm)
     },
-    store: (req, res) => {
+    
+    create: (req, res) => {
+
         const generateID = () => {
             const lastProduct = productsDB[productsDB.length - 1];
 			const lastID = lastProduct.id;
 			return lastID + 1;
         }
+
         productsDB.push({
-			id: generateID(),
-			...req.body
-		});
+            id: generateID(),
+            producto: req.body.idProducto,
+            marca: req.body.idMarca,
+            modelo: req.body.idModelo,
+            titulo: req.body.idTitulo,
+            cantidad: req.body.idcantidad,
+            comentario: req.body.comentario
+        });
 
-		// Reescribo el archivo JSON
-		fs.writeFileSync(productJSONpath, JSON.stringify(productsDB, null, " "));
+        fs.writeFileSync(productJSONpath, JSON.stringify(productsDB, null, ' '))
 
-		// Redirección
-		return res.redirect("/producto");
+        res.redirect('/')
     },
+
     formularioedit: (req, res) => {
         const formularioEditPath = path.resolve (__dirname, '../views/products/formularioedit');
         return res.render (formularioEditPath)

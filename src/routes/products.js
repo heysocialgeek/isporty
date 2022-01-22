@@ -13,10 +13,10 @@ router.get ("/cart", controller.cart)
 router.get ("/productList", controller.productList)
 
 //formulario de creacion de productos//
-router.get ("/productCreate", controller.productCreationForm)
+router.get ("/create", controller.productCreationForm)
 
 //acción de creación de un producto//
-router.post ("/productCreate", controller.store)
+router.post ("/", controller.create)
 
 //formulario de edición de un producto//
 router.get ("/productEdit", controller.formularioedit)

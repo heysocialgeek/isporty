@@ -9,7 +9,7 @@
 <body>
     <%- include("../partials/header.ejs") %>
 
-    <form action="" method="post" class="marco"> 
+    <form action="/product" method="post" class="marco"> 
         
 
         <h1 class="tituloform">Carga de Productos</h1><br/><br/>
@@ -64,10 +64,7 @@
         </div>
 
         <div class="container">
-            <h4>Seleccione las imagenes del producto:</h4>    
-            <form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
-            <input type="file" name="imagen1" class="botonimg" ><br><br>
-            </form>      
+            <h4>Seleccione las imagenes del producto:</h4>         
         </div>
 
         <div class="container">
@@ -81,7 +78,7 @@
         </div>
 
         <div class="container">
-        <button class="botonform" type="submit"><a style="text-decoration:none" href="/">Enviar</a></button>
+        <button class="botonform" type="submit"><a style="text-decoration:none">Enviar</a></button>
         <button class="botonform" type="reset">Borrar</button>
         </div>
     </form>
