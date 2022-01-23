@@ -39,21 +39,21 @@ const controller = {
 
         productsDB.push({
             id: generateID(),
-            producto: req.body.idProducto,
+            name: req.body.idProducto,
             marca: req.body.idMarca,
             modelo: req.body.idModelo,
-            titulo: req.body.idTitulo,
+            price: req.body.precio,
             cantidad: req.body.idcantidad,
             comentario: req.body.comentario,
             talle: req.body.talle,
             category: req.body.category,
-            image: req.file ? req.file.filename : 'sin imagen'
+            image: req.file ? req.file.filename : ''
             
         });
 
         fs.writeFileSync(productJSONpath, JSON.stringify(productsDB, null, ' '))
 
-        res.redirect('/')
+        res.redirect('/product/productlist')
     },
 
     formularioedit: (req, res) => {
