@@ -13,13 +13,13 @@
 
     <section class="main-section">
       <article class="top-box">
-        <img src="/img/calzas.jpeg" width="90%" alt="Calzas">
+        <img src="/img/<%= product.image%>" width="100%" alt="Calzas">
       </article>
 
       <article class="top-box2">
         <div class="encabezado">
-          <h3>CALZAS DE ENTRENAMIENTO COLOR NEGRO</h3>
-          <p>$8000</p>
+          <h3><%= product.name %></h3>
+          <p><%= product.price %> </p>
         </div>
 
         <div class="imagenproducto">
@@ -41,11 +41,7 @@
     <section class="main-section2">
       <div>
         <h3>Descripción del producto</h3>
-        <p class="descripcion">Mejorá el tiempo en tus entrenamientos con estas Calzas las que poseen
-          propiedades antihumedad inteligentes que te mantendrán fresca y cómoda mientras lo das todo.
-           Su cintura de corte alta y las inserciones efecto cuero en la parte delantera y posterior
-            y su detalle de doble costura te da la libertad de movimiento y un mejor rendimiento en 
-            tus rutinas de ejercicios, además  te da un estilo único y característico de la marca.</p>
+        <p class="descripcion">Marca: <%= product.marca %><br> Modelo: <%= product.modelo %> <br> Talles disponibles: <%= product.talle %> <br> Categoría: <%= product.category %> <br> Descripción: <%= product.description %> </p>
       </div>
     </section>
 

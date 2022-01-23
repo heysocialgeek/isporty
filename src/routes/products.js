@@ -18,14 +18,14 @@ const multerDiskStorage = multer.diskStorage({
 
 const upload = multer({ storage: multerDiskStorage });
 
+//listado de productos//
+router.get ("/productList", controller.productList)
+
 //detalle de un producto en particular//
-router.get ("/detail", controller.detail);
+router.get ("/detail/:id", controller.detail);
 
 
 router.get ("/cart", controller.cart)
-
-//listado de productos//
-router.get ("/productList", controller.productList)
 
 //formulario de creacion de productos//
 router.get ("/create", controller.productCreationForm)

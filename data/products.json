@@ -1,84 +1,107 @@
 [
-    {
-        "id": 1,
-        "name": "Zapatillas Nike Air Force",
-        "description": "Perfectas en comodidad",
-        "price": 7800,
-        "discount": 11,
-        "category": "Zapatillas",
-        "image": "Nike-air-force.jpg",
-        "type": "nuevo"
-    }, {
-        "id": 2,
-        "name": "Zapatillas Nike Court Borough",
-        "description": "Perfectas en comodidad",
-        "price": 9000,
-        "discount": 5,
-        "category": "Zapatillas",
-        "image": "Nike-court-borough.jpg",
-        "type": "nuevo"
-    }, {
-        "id": 3,
-        "name": "Zapatillas Nike Court Legacy",
-        "description": "Perfectas en comodidad",
-        "price": 12350,
-        "discount": 3,
-        "category": "Zapatillas",
-        "image": "Nike-court-legacy.jpg",
-        "type": "nuevo"
-    }, {
-        "id": 4,
-        "name": "Zapatillas Nike Reposto",
-        "description": "Perfectas en comodidad",
-        "price": 11100,
-        "discount": 39,
-        "category": "Zapatillas",
-        "image": "nike-reposto.jpg",
-        "type": "nuevo"
-    }, {
-        "id": 5,
-        "name": "Zapatillas Nike Revolution 5",
-        "description": "Perfectas en comodidad",
-        "price": 14200,
-        "discount": 36,
-        "category": "Zapatillas",
-        "image": "nike-revolution-5.jpg",
-        "type": "nuevo"
-    }, {
-        "id": 6,
-        "name": "Zapatillas Nike Court Vision",
-        "description": "Perfectas en comodidad",
-        "price": 11100,
-        "discount": 7,
-        "category": "Zapatillas",
-        "image": "nike-court-vision.jpg",
-        "type": "mas-vendido"
-    }, {
-        "id": 7,
-        "name": "Zapatillas Nike Air",
-        "description": "Perfectas en comodidad",
-        "price": 13200,
-        "discount": 29,
-        "category": "Zapatillas",
-        "image": "zapatillas air.jpeg",
-        "type": "nuevo"
-    }, {
-        "id": 8,
-        "name": "Zapatillas Nike Air Max",
-        "description": "Perfectas en comodidad",
-        "price": 11900,
-        "discount": 33,
-        "category": "Zapatillas",
-        "image": "zapatillasairmaxmujer.jpeg",
-        "type": "nuevo"
-    }, {
-        "id": 9,
-        "name": "Zapatillas Nike Classic",
-        "description": "Perfectas en comodidad",
-        "price": 15000,
-        "discount": 18,
-        "category": "Zapatillas",
-        "image": "zapatillsclassic.jpeg",
-        "type": "nuevo"
-    }
+ {
+  "id": 1,
+  "name": "Zapatillas Nike Air Force",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 7800,
+  "discount": 11,
+  "category": "Zapatillas",
+  "image": "Nike-air-force.jpg",
+  "type": "nuevo"
+ },
+ {
+  "id": 2,
+  "name": "Zapatillas Nike Court Borough",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 9000,
+  "discount": 5,
+  "category": "Zapatillas",
+  "image": "Nike-court-borough.jpg",
+  "type": "nuevo"
+ },
+ {
+  "id": 3,
+  "name": "Zapatillas Nike Court Legacy",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 12350,
+  "discount": 3,
+  "category": "Zapatillas",
+  "image": "Nike-court-legacy.jpg",
+  "type": "nuevo"
+ },
+ {
+  "id": 4,
+  "name": "Zapatillas Nike Reposto",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 11100,
+  "discount": 39,
+  "category": "Zapatillas",
+  "image": "nike-reposto.jpg",
+  "type": "nuevo"
+ },
+ {
+  "id": 5,
+  "name": "Zapatillas Nike Revolution 5",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 14200,
+  "discount": 36,
+  "category": "Zapatillas",
+  "image": "nike-revolution-5.jpg",
+  "type": "nuevo"
+ },
+ {
+  "id": 6,
+  "name": "Zapatillas Nike Court Vision",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 11100,
+  "discount": 7,
+  "category": "Zapatillas",
+  "image": "nike-court-vision.jpg",
+  "type": "mas-vendido"
+ },
+ {
+  "id": 7,
+  "name": "Zapatillas Nike Air",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 13200,
+  "discount": 29,
+  "category": "Zapatillas",
+  "image": "zapatillas air.jpeg",
+  "type": "nuevo"
+ },
+ {
+  "id": 8,
+  "name": "Zapatillas Nike Air Max",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 11900,
+  "discount": 33,
+  "category": "Zapatillas",
+  "image": "zapatillasairmaxmujer.jpeg",
+  "type": "nuevo"
+ },
+ {
+  "id": 9,
+  "name": "Zapatillas Nike Classic",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "price": 15000,
+  "discount": 18,
+  "category": "Zapatillas",
+  "image": "zapatillsclassic.jpeg",
+  "type": "nuevo"
+ },
+ {
+  "id": 10,
+  "name": "Zapatiilas",
+  "marca": "Nike",
+  "modelo": "DURAM",
+  "price": "6500",
+  "cantidad": "10",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "talle": [
+   "S",
+   "M"
+  ],
+  "category": "Ropa masculina",
+  "image": "1642974609686_img.jpg"
+ }
 ]

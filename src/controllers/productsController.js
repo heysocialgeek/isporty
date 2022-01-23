@@ -9,8 +9,10 @@ const productsDB = JSON.parse (fs.readFileSync(productJSONpath,"utf-8"));
 
 const controller = {
     detail: (req, res) => {
-        const productPath = path.resolve (__dirname, '../views/products/detail.ejs');
-        return res.render (productPath)
+        const detailPath = path.resolve (__dirname, "../views/products/detail.ejs");
+        const id = Number(req.params.id);
+        const product = productsDB.find(oneProduct => oneProduct.id === id);
+        return res.render (detailPath, {product})
     },
     cart: (req, res) => {
         const cartPath = path.resolve (__dirname, "../views/products/cart.ejs");
@@ -44,7 +46,7 @@ const controller = {
             modelo: req.body.idModelo,
             price: req.body.precio,
             cantidad: req.body.idcantidad,
-            comentario: req.body.comentario,
+            description: req.body.comentario,
             talle: req.body.talle,
             category: req.body.category,
             image: req.file ? req.file.filename : ''
