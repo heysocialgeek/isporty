@@ -41,7 +41,7 @@
     <section class="main-section2">
       <div>
         <h3>Descripción del producto</h3>
-        <p class="descripcion">Marca: <%= product.marca %><br> Modelo: <%= product.modelo %> <br> Talles disponibles: <%= product.talle %> <br> Categoría: <%= product.category %> <br> Descripción: <%= product.description %> </p>
+        <p class="descripcion">Marca: <%= product.marca %><br> Modelo: <%= product.modelo %> <br> Talles disponibles: <%= product.talle %> <br> Colores disponibles: <%= product.color %> <br> Categoría: <%= product.category %> <br> Descripción: <%= product.description %> </p>
       </div>
     </section>
 
@@ -121,6 +121,8 @@
         </article>
 
       </section>
+
+      <a href="/product/productEdit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
 
       <a href="https://wa.me/5491127682598?text=Me%20gustar%C3%ADa%20contactar%20con%20un%20asesor%20comercial"
         class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>

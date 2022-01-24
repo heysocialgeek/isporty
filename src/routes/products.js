@@ -34,9 +34,9 @@ router.get ("/create", controller.productCreationForm)
 router.post ("/", upload.single('imagen'), controller.create)
 
 //formulario de edición de un producto//
-router.get ("/productEdit", controller.formularioedit)
-
+router.get("/productEdit/:id", controller.formularioedit)
 //acción de edición de un producto//
+router.put('/:id', controller.editproduct)
 
 
 //acción de borrar un producto//

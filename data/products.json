@@ -23,11 +23,14 @@
   "id": 3,
   "name": "Zapatillas Nike Court Legacy",
   "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
-  "price": 12350,
+  "price": "12350",
   "discount": 3,
-  "category": "Zapatillas",
+  "category": "Ropa femenina",
   "image": "Nike-court-legacy.jpg",
-  "type": "nuevo"
+  "type": "nuevo",
+  "marca": "",
+  "modelo": "",
+  "cantidad": "0"
  },
  {
   "id": 4,
@@ -73,11 +76,14 @@
   "id": 8,
   "name": "Zapatillas Nike Air Max",
   "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
-  "price": 11900,
+  "price": "11900",
   "discount": 33,
-  "category": "Zapatillas",
+  "category": "Ropa femenina",
   "image": "zapatillasairmaxmujer.jpeg",
-  "type": "nuevo"
+  "type": "nuevo",
+  "marca": "Nike",
+  "modelo": "",
+  "cantidad": "0"
  },
  {
   "id": 9,
@@ -91,17 +97,39 @@
  },
  {
   "id": 10,
-  "name": "Zapatiilas",
+  "name": "Zapatiilas blancas",
   "marca": "Nike",
   "modelo": "DURAM",
   "price": "6500",
-  "cantidad": "10",
+  "cantidad": "0",
   "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "category": "Ropa femenina",
+  "image": "1642974609686_img.jpg",
+  "color": [
+   "Blanco",
+   "Azul"
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Zapatillas",
+  "marca": "Nike",
+  "modelo": "Quest 4",
+  "price": "16000",
+  "cantidad": "0",
+  "description": "\"Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad\"",
   "talle": [
-   "S",
-   "M"
+   "M",
+   "L",
+   "XL",
+   "XXL"
   ],
-  "category": "Ropa masculina",
-  "image": "1642974609686_img.jpg"
+  "category": "Ropa femenina",
+  "color": [
+   "Rojo",
+   "Negro",
+   "Azul"
+  ],
+  "image": "1643062319287_img.jpg"
  }
 ]

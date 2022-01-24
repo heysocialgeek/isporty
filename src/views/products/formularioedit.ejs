@@ -14,95 +14,91 @@
     <h1>Editar producto</h1>
     <section>
 
-      <form action="" method="GET" class="create-form">
+      <form action="/product/<%= product.id %>?_method=put" method="post" class="create-form">
 
         <div class="controlador">
           <label>* Editar producto publicado</label>
-          <input type="text" name="producto" class="control">
+          <input type="text" name="idProducto" class="control" value="<%= product.name %>">
+        </div>
+
+        <div class="controlador">
+          <label>* Editar categoría</label>
+          <select name="category" value="<% product.category %> ">
+            <option value="Ropa femenina">Ropa femenina</option>
+            <option value="Ropa masculina">Ropa masculina</option>
+            <option value="Calzado">Calzado</option>
+            <option value="Accesorios">Accesorios</option>
+          </select>
         </div>
 
         <div class="controlador">
           <label>* Editar marca</label>
-          <input type="text" name="marca" class="control">
+          <input type="text" name="idMarca" class="control" value="<%= product.marca %>">
         </div>
 
         <div class="controlador">
           <label>* Editar modelo</label>
-          <input type="text" name="modelo" class="control">
+          <input type="text" name="idModelo" class="control" value="<%= product.modelo %>">
         </div>
 
         <div class="controlador">
-          <label>* Editar título del producto</label>
-          <input type="password" name="titulo" class="control">
+          <label>* Editar precio del producto</label>
+          <input type="number" name="precio" class="control" value="<%= product.price %>">
         </div>
 
         <div class="controlador">
-          <label>* Editar precio</label>
-          <input type="number" name="precio" class="control">
-        </div>
-
-        <div class="controlador">
-          <label>* Editar imagen</label>
-          <input type="file" name="imagen" accept=".jpg" class="control" multiple>
-        </div>
-
-        <div class="controlador">
-          <label>* Editar color</label>
-            <select name="color">
-              <option value="">Rojo</option>
-              <option value="">Negro</option>
-              <option value="">Blanco</option>
-              <option value="">Azul</option>
-              <option value="">Rosa</option>
-              <option value="">Estampado</option>
-            </select>
+          <label>* Editar colores disponibles</label>
+          <label>
+            <input type="checkbox" name="color" value="Rojo" multiple>Rojo</label>
+          <label>
+            <input type="checkbox" name="color" value="Negro" multiple>Negro</label>
+          <label>
+            <input type="checkbox" name="color" value="Blanco" multiple>Blanco</label>
+          <label>
+            <input type="checkbox" name="color" value="Azul" multiple>Azul</label>
+          <label>
+            <input type="checkbox" name="color" value="Rosa" multiple>Rosa</label>
+          <label>
+            <input type="checkbox" name="color" value="Estampado" multiple>Estampado</label>
         </div>
 
         <div class="controlador">
           <label>* Editar talles disponibles</label>
           <label>
-          <input type="checkbox" name="talle" value="XS" multiple>XS</label>
+            <input type="checkbox" name="talle" value="XS" multiple>XS</label>
           <label>
-          <input type="checkbox" name="talle" value="S" multiple>S</label>
+            <input type="checkbox" name="talle" value="S" multiple>S</label>
           <label>
-          <input type="checkbox" name="talle" value="M" multiple>M</label>
+            <input type="checkbox" name="talle" value="M" multiple>M</label>
           <label>
-          <input type="checkbox" name="talle" value="L" multiple>L</label>
+            <input type="checkbox" name="talle" value="L" multiple>L</label>
           <label>
-          <input type="checkbox" name="talle" value="XL" multiple>XL</label>
+            <input type="checkbox" name="talle" value="XL" multiple>XL</label>
           <label>
-          <input type="checkbox" name="talle" value="XXL" multiple>XXL</label>
+            <input type="checkbox" name="talle" value="XXL" multiple>XXL</label>
         </div>
 
         <div class="controlador">
           <label>* Editar cantidad a la venta</label>
-            <select name="cantidad">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>              
-            </select>
+          <select name="idcantidad" value="">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
         </div>
 
-        <div class="controlador">
-          <label>* Editar categoría</label>
-            <select name="categoria">
-              <option value="Ropa femenina">Ropa femenina</option>
-              <option value="Ropa masculina">Ropa masculina</option>
-              <option value="Calzado">Calzado</option>
-              <option value="Accesorios">Accesorios</option>
-            </select>
-        </div>
+
 
         <div class="controlador">
           <label>* Editar descripción</label>
-          <textarea name="comentario" class="controlador-comentario"></textarea>
+          <input name="comentario" class="controlador-comentario" value="<%= product.description %>"></textarea>
         </div>
 
         <button type="submit" class="boton-formulario">Guardar cambios</button>
