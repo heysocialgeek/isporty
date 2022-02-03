@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <%- include("../partials/head.ejs") %>
-  <title>iSporty - Inicio de sesión</title>
-  <link rel="stylesheet" href="/css/styles-formulario-edit.css">
-  <link rel="stylesheet" href="/css/normalize.css">
-</head>
+  <%- include("../partials/head.ejs", {
+    pageTitle: "Formulario de edición",
+    cssTag: "<link rel='stylesheet' href='/css/styles-formulario-edit.css'> <link rel='stylesheet' href='/css/normalize.css'>"}) %>
 
 <body>
   <%- include("../partials/header.ejs") %>

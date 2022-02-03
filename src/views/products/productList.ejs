@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <%- include("../partials/head.ejs") %>
-        <title>Lista de productos</title>
-        <link rel="stylesheet" href="/css/styles-productList.css">
-        <link rel="stylesheet" href="/css/styles-index.css">
-    </head>
+    
+        <%- include("../partials/head.ejs", {
+            pageTitle: "Lista de productos",
+            cssTag: "<link rel='stylesheet' href='/css/styles-productList.css'> <link rel='stylesheet' href='/css/styles-index.css'>"}) %>
+    
     <body>
         <%- include("../partials/header.ejs") %>
         <main>

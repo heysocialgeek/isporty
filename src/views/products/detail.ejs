@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <%- include("../partials/head.ejs") %>
-  <title>iSporty - Inicio de sesión</title>
-  <link rel="stylesheet" href="/css/styles-detail.css">
-</head>
+  <%- include("../partials/head.ejs", {
+    pageTitle: "Detalle del producto",
+    cssTag: "<link rel='stylesheet' href='/css/styles-detail.css'>"}) %>
 
 <body>
   <%- include("../partials/header.ejs") %>

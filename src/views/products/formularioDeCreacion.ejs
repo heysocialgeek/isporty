@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <%- include("../partials/head.ejs") %>
-    <title>Formulario de Creacion</title>
-    <link rel="stylesheet" href="/css/styles-formularioDeCreacion.css">
-    <link rel="stylesheet" href="/css/styles-index.css">
-</head>
+    <%- include("../partials/head.ejs", {
+        pageTitle: "Formulario de creación",
+        cssTag: "<link rel='stylesheet' href='/css/styles-formularioDeCreacion.css'> <link rel='stylesheet' href='/css/styles-index.css'>"}) %>
 
 <body>
     <%- include("../partials/header.ejs") %>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <%- include("../partials/head.ejs") %>
-    <title>iSporty - Carrito de compra</title>
-    <link rel="stylesheet" type="text/css" href="/css/styles-cart.css">
-</head>
+
+  <%- include("../partials/head.ejs", {
+    pageTitle: "Carrito de compra", 
+    cssTag: "<link rel='stylesheet' type='text/css' href='/css/styles-cart.css'>"}) %>
+    
 <body>
   <%- include("../partials/header.ejs") %>
     <main>
