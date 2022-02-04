@@ -40,5 +40,6 @@ router.put('/:id', controller.editproduct)
 
 
 //acción de borrar un producto//
+router.delete('/detail/:id', controller.delete); 
 
 module.exports = router;

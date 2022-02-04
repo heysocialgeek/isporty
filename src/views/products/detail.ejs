@@ -44,8 +44,11 @@
     </section>
 
     <br>
-
-    <h4>Personas interesadas en este producto también vieron:</h3>
+    <form action="/product/detail/<%= product.id %>?_method=DELETE" method="POST">
+      <button type="submit" class="action-button delete">Borrar Producto</button>
+    <br>
+    
+      <h4>Personas interesadas en este producto también vieron:</h3>
 
       <section class="productos">
         <article>

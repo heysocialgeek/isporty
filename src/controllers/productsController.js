@@ -94,8 +94,14 @@ const controller = {
         fs.writeFileSync(productJSONpath, JSON.stringify(productsEdited, null, ' '));
 
         return res.redirect ('/product/productList')
-}
+},
 
+        delete : (req, res) => {
+        const finalProductList = productsDB.filter (product => product.id !== Number(req.params.id));
+        fs.writeFileSync( productJSONpath, JSON.stringify(finalProductList, null, ""));
+    
+         return res.redirect("/product/productlist")
+}
 }
 
 module.exports = controller
