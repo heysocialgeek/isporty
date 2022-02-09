@@ -78,7 +78,7 @@ ul {
     margin-right: 10px;
 }
 
-.link-login {
+.link-login-register {
     display: none;
 }
 
@@ -371,6 +371,15 @@ ul {
 
     .features-search i {
         margin-left: 5px;
+    }
+
+    .link-login-register {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .user-circle {
+        display: none;
     }
 
     /* footer */

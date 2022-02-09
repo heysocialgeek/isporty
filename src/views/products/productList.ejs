@@ -80,7 +80,7 @@
                 <section class="section-style">
                     <% for (let i=0; i <productsDB.length; i++) { %>
                     <article class="article-style">
-                        <a href="/product/detail/<%= productsDB[i].id %> "><img src="/img/<%= productsDB[i].image %>" alt="<%= productsDB[i].name %>"></a>
+                        <a href="/product/detail/<%= productsDB[i].id %> "><img src="/img/products/<%= productsDB[i].image %>" alt="<%= productsDB[i].name %>"></a>
                         <div class="product-description">
                             <h2><%= productsDB[i].name %></h2>
                             <p>$<%= productsDB[i].price %></p>

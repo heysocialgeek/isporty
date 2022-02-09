@@ -78,7 +78,7 @@ ul {
     margin-right: 10px;
 }
 
-.link-login {
+.link-login-register {
     display: none;
 }
 
@@ -538,6 +538,16 @@ h3 {
 }
 
 @media (min-width:1200px) {
+
+    /*header*/
+    .link-login-register {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .user-circle {
+        display: none;
+    }
 
     /* main */
 

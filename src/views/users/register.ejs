@@ -4,7 +4,7 @@
 
   <%- include("../partials/head.ejs", {
     pageTitle: "Register",
-    cssTag: "<link rel='stylesheet' href='/css/styles-register.css'>"}) %>
+    cssTag: "<link rel='stylesheet' href='/css/styles-register.css'> "}) %>
 
 
 <body>
@@ -13,42 +13,75 @@
     <h1>Registrate</h1>
     <section>
 
-      <form action="" method="GET" class="create-form" form="register-form">
+      <form action="/user/register" method="POST" class="create-form" form="register-form" enctype="multipart/form-data">
+        
+        <div>
         <h2>Datos sobre tu cuenta</h2>
 
         <div class="controlador">
           <label>* Nombre</label>
-          <input type="text" name="nombre" class="control">
+          <input type="text" name="first_name" class="control" value="<%= locals.oldData ? oldData.first_name : null %>">
+          <% if (locals.errors && errors.first_name) { %>
+            <div class="text-danger">
+              <%= errors.first_name.msg %> 
+            </div>
+          <% } %>
         </div>
         <div class="controlador">
           <label>* Apellido</label>
-          <input type="text" name="apellido" class="control">
+          <input type="text" name="last_name" class="control" value="<%= locals.oldData ? oldData.last_name : null %>">
+          <% if (locals.errors && errors.last_name) { %>
+            <div class="text-danger">
+              <%= errors.last_name.msg %> 
+            </div>
+          <% } %>
         </div>
 
         <div class="controlador">
           <label>* Email</label>
-          <input type="text" name="email" class="control">
+          <input type="text" name="email" class="control" value="<%= locals.oldData ? oldData.email : null %>">
+          <% if (locals.errors && errors.email) { %>
+            <div class="text-danger">
+              <%= errors.email.msg %> 
+            </div>
+          <% } %>
         </div>
 
         <div class="controlador">
           <label>* Contraseña</label>
-          <input type="password" name="password" class="control">
+          <input type="password" name="password" class="control" value="<%= locals.oldData ? oldData.password : null %>">
+          <% if (locals.errors && errors.password) { %>
+            <div class="text-danger">
+              <%= errors.password.msg %> 
+            </div>
+          <% } %>
         </div>
 
 
         <div class="controlador">
           <label>* Documento</label>
-          <input type="text" name="documento" class="control">
+          <input type="text" name="documento" class="control" value="<%= locals.oldData ? oldData.documento : null %>">
+          <% if (locals.errors && errors.documento) { %>
+            <div class="text-danger">
+              <%= errors.documento.msg %> 
+            </div>
+          <% } %>
         </div>
         <div class="controlador">
           <label>* Fecha de nacimiento</label>
-          <input type="date" name="fecha-nacimiento" class="control">
+          <input type="date" name="birthday_date" class="control">
         </div>
-      </form>
-
-
-
-      <form action="" method="GET" class="create-form" id="register-form">
+        <div class="controlador">
+          <label>Imagen de perfil</label>
+          <input type="file" name="avatar">
+          <% if (locals.errors && errors.avatar) { %>
+            <div class="text-danger">
+              <%= errors.avatar.msg %> 
+            </div>
+          <% } %>
+        </div>
+      </div>
+      <div>
         <h2>Datos de envío</h2>
         <div class="controlador">
           <label>* Calle</label>
@@ -56,7 +89,7 @@
         </div>
         <div class="controlador">
           <label>* Número</label>
-          <input type="text" name="numero-calle" class="control">
+          <input type="text" name="numeroCalle" class="control">
         </div>
         <div class="controlador">
           <label>* Piso/departamento</label>
@@ -64,11 +97,11 @@
         </div>
         <div class="controlador">
           <label>* Código postal</label>
-          <input type="text" name="codigo-postal" class="control">
+          <input type="text" name="codigoPostal" class="control">
         </div>
         <div class="controlador">
           <label>Información adicional</label>
-          <input type="text" name="info-adicional" class="control">
+          <input type="text" name="infoAdicional" class="control">
         </div>
         <div>
           <input type="checkbox" name="terminos">
@@ -77,6 +110,7 @@
         <p>* campos obligatorios</p>
         <button type="submit" class="boton-formulario">Registrarse</button>
       </form>
+    </div>
 
     </section>
     <a href="https://wa.me/5491127682598?text=Me%20gustar%C3%ADa%20contactar%20con%20un%20asesor%20comercial"

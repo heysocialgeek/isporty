@@ -78,7 +78,7 @@ ul {
     margin-right: 10px;
 }
 
-.link-login {
+.link-login-register {
     display: none;
 }
 
@@ -112,6 +112,11 @@ ul {
 
 .create-form {
     padding: 20px 15px;
+}
+
+.text-danger {
+    color: red;
+    margin-top: 5px;
 }
 
 .controlador {
@@ -295,10 +300,7 @@ ul {
     @media (min-width: 768px){
 
         
-        .main-form section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        .main-form section form {
             width: 95%;
             max-width: 900px;
             margin: auto;
@@ -306,13 +308,15 @@ ul {
             border-radius: 20px;
             padding: 15px;
             background-color: white;
-    
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
     
         .create-form {
             max-width: 700px;
             flex-direction: row;
-            width: 50%
+            width: 50%;
         }
     
         .boton {
@@ -359,6 +363,15 @@ ul {
 
     .features-search i {
         margin-left: 5px;
+    }
+
+    .link-login-register {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .user-circle {
+        display: none;
     }
 
     /* footer */

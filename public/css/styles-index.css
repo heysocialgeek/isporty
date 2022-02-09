@@ -87,7 +87,7 @@ ul {
     margin-right: 10px;
 }
 
-.link-login {
+.link-login-register {
     display: none;
 }
 
@@ -260,23 +260,17 @@ main {
 /*Mobile*/
 
 @media (max-width:479px) {
-
     .logo {
         display: none;
-    }
-    
+       }
     }
     
     /*Ipad*/
     
 @media (min-width:480px) {
-    
     .iso {
     display: none;
         }
-
-
-        
     }
 
 @media (min-width:768px) {
@@ -300,10 +294,6 @@ main {
 
     .ul-bar li {
         margin: 0px 10px;
-    }
-
-    .link-login {
-        display: block;
     }
 
     .user-circle {
@@ -399,6 +389,15 @@ main {
 
     .features-search i {
         margin-left: 5px;
+    }
+
+    .link-login-register {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .user-circle {
+        display: none;
     }
 
     /* main */
