@@ -178,5 +178,35 @@
   "password": "GGNMol5jS",
   "category": "user",
   "avatar": "user_20.jpg"
+ },
+ {
+  "id": 21,
+  "first_name": "Joaquín",
+  "last_name": "Serra caggiano",
+  "email": "joaquincaggiano@gmail.com",
+  "password": "$2a$10$pGmo2u57awui8NBDsxZqcuf4aNm79CNwAiM4q.MvLq71c8shhOfky",
+  "documento": "40826268",
+  "birthday_date": "",
+  "calle": "Pje. Valdes",
+  "numeroCalle": "1163",
+  "piso": "",
+  "codigoPostal": "2000",
+  "infoAdicional": "",
+  "image": "1644525586666_img.jpg"
+ },
+ {
+  "id": 22,
+  "first_name": "Joaquín",
+  "last_name": "Serra caggiano",
+  "email": "joaquincaggiano@hotmail.com",
+  "password": "$2a$10$jAlYO3U9ulWtkMmM66M7g.h7m7RL.bbjTkazPhz0BwvGsogrn/d2O",
+  "documento": "40826268",
+  "birthday_date": "",
+  "calle": "Pje. Valdes",
+  "numeroCalle": "1163",
+  "piso": "",
+  "codigoPostal": "2000",
+  "infoAdicional": "",
+  "image": "1644528914005_img.jpg"
  }
 ]

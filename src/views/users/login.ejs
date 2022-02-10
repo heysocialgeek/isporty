@@ -13,11 +13,14 @@
         <h2>Bienvenid@ <i class="fas fa-sign-in-alt"></i></h2>
         </div>
 
-        <form action="/login" method="POST">
+        <form action="/user/login" method="post">
           <div class="form-container">
 
               <div class="input-user">
-            <input type="text" name="usuario" placeholder="Usuario">
+            <input type="text" name="email" placeholder="Email">
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger"> <%= errors.email.msg %>  </div>
+            <% } %>
               </div>
 
               <div class="input-password">

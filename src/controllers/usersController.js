@@ -10,10 +10,47 @@ const userJSONpath = path.resolve(__dirname, "../../data/users.json");
 // contenido de la Data Base//
 const userDB = JSON.parse(fs.readFileSync(userJSONpath, "utf-8"));
 
+//busco por campo del formulario
+let findByField = (field, text) => {
+    let userFound = userDB.find(oneUser => oneUser[field] === text);
+    return userFound
+}
+
 const controller = {
     login: (req, res) => {
         const loginPath = path.resolve(__dirname, '../views/users/login');
         return res.render(loginPath)
+    },
+    processLogin: (req, res) => {
+        let userToLogin = findByField("email", req.body.email);
+
+        if(userToLogin) {
+            let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if (passwordCorrect){
+                delete userToLogin.password //por seguridad de que nadie vea el password
+                req.session.userLogged = userToLogin;
+                return res.redirect("/user/profile")
+            }
+            return res.render(path.resolve(__dirname, '../views/users/login'), {
+                errors: {
+                    email: {
+                        msg: "Las credenciales son inválidas"
+                    }
+                }
+            })
+        } 
+        return res.render(path.resolve(__dirname, '../views/users/login'), {
+            errors: {
+                email: {
+                    msg: "El correo electrónico ingresado no ha sido encontrado"
+                }
+            }
+        })
+    },
+    profile: (req, res) => {
+        res.render(path.resolve(__dirname, '../views/users/profile'), {
+            user: req.session.userLogged
+        })
     },
     register: (req, res) => {
         const registerPath = path.resolve(__dirname, '../views/users/register');
@@ -25,6 +62,19 @@ const controller = {
         if (resultValidation.errors.length > 0) {
             return res.render(path.resolve(__dirname, '../views/users/register'), {
                 errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+        let userInDB = findByField("email", req.body.email);
+
+        if (userInDB) {
+            return res.render(path.resolve(__dirname, '../views/users/register'), {
+                errors: {
+                    email: {
+                        msg: "Este correo electrónico ya se encuentra registrado"
+                    }
+                },
                 oldData: req.body
             });
         }
@@ -47,6 +97,10 @@ const controller = {
 
         fs.writeFileSync(userJSONpath, JSON.stringify(userDB, null, ' '))
         res.redirect('/user/login')
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect("/")
     }
 }
 

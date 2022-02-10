@@ -3,6 +3,9 @@ const router = express.Router();
 const path = require("path")
 const multer = require("multer")
 const { body } = require("express-validator")
+const guestMiddleware = require("../../middlewares/guestMiddleware")//requiero el middleware que no me permite volver al logij y register
+const authMiddleware = require("../../middlewares/authMiddleware")
+
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -41,11 +44,17 @@ const validations = [
     })
 ]
 
-router.get ("/login", controller.login)
+router.get ("/login", guestMiddleware, controller.login)
+router.post ("/login", controller.processLogin)
 
-router.get ("/register", controller.register)
+router.get("/profile", authMiddleware, controller.profile)
+
+router.get ("/register", guestMiddleware, controller.register)
 
 //Procesa el registro//
 router.post("/register",uploadFile.single("avatar"), validations, controller.processRegister)
+
+//logOut para eliminar todo lo de session
+router.get("/logout", controller.logout)
 
 module.exports = router;

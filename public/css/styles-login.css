@@ -135,6 +135,11 @@ input {
     font-size: 18px;
 }
 
+.text-danger {
+    color: red;
+    margin-top: 5px;
+}
+
 .questions-of-users {
     font-size: 13px;
 }
