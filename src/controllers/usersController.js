@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require('fs')
+const bcryptjs = require ("bcryptjs")
 const {validationResult} = require("express-validator")
 
 
@@ -27,30 +28,25 @@ const controller = {
                 oldData: req.body
             });
         }
+
         const generateID = () => {
             const lastUser = userDB[userDB.length - 1];
             const lastID = lastUser.id;
-            return lastID + 1;
+            //hago este if por si el json estuviera vacío
+            if(lastID){
+                return lastID + 1;
+            }
+            return 1
         } 
         userDB.push({
             id: generateID(),
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            password: req.body.password,
-            documento: req.body.documento,
-            FechaDeNacimiento: req.body.birthday_date,
-            calle: req.body.calle,
-            numeroCalle: req.body.numeroCalle,
-            pisoDepartamento: req.body.piso,
-            codigoPostal: req.body.codigoPostal,
-            infoAdicional: req.body.infoAdicional,
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
             image: req.file ? req.file.filename : '',
-
         });
 
         fs.writeFileSync(userJSONpath, JSON.stringify(userDB, null, ' '))
-        res.redirect('/')
+        res.redirect('/user/login')
     }
 }
 
