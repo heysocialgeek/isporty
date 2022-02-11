@@ -30,6 +30,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border-bottom:solid #4678f4 2px;
 }
 
 .burger-and-search {
