@@ -208,5 +208,20 @@
   "codigoPostal": "2000",
   "infoAdicional": "",
   "image": "1644528914005_img.jpg"
+ },
+ {
+  "id": 23,
+  "first_name": "Juan",
+  "last_name": "Muñoz",
+  "email": "juanmunoz9393@gmail.com",
+  "password": "$2a$10$MfNeXAa/G9r6xCohwkncWeCwevV1/FcGa8jHE.8GpE6POG6bqXSEe",
+  "documento": "1234",
+  "birthday_date": "2022-02-03",
+  "calle": "sadfas",
+  "numeroCalle": "afsasf",
+  "piso": "asfasf",
+  "codigoPostal": "asfdas",
+  "infoAdicional": "ds",
+  "image": "1644602733638_img.jpeg"
  }
 ]

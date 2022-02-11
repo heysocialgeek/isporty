@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include("../partials/head.ejs", {
+        pageTitle: "Login",
+        cssTag: "<link rel='stylesheet' href='/css/styles-login.css'>"}) %>
     <title>Document</title>
 </head>
 <body>
-    Soy el perfil del usuario
+<%- include("../partials/header.ejs") %>
 
-    <h2><%= user.first_name %> </h2>
+    <h2>Hola, <%= user.first_name %> </h2>
+    <h2><%= user.image %> </h2>
+    
+<%- include("../partials/footer.ejs") %>
 </body>
 </html>
