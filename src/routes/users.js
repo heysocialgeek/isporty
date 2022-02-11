@@ -31,7 +31,7 @@ const validations = [
     body("documento").notEmpty().withMessage("Tienes que escribir un documento de identidad"),
     body("avatar").custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = [".jpg", ".png", ".gif"];
+        let acceptedExtensions = [".jpg", ".png", ".jpeg", ".gif"];
         if(!file) {
             throw new Error("Tienes que subir una imagen")
         } else {
