@@ -253,5 +253,21 @@
   "genre": "men",
   "terminos": "on",
   "image": "1644608680989_img.jpeg"
+ },
+ {
+  "id": 26,
+  "first_name": "etert",
+  "last_name": "erte",
+  "email": "Juanki@gmail.comrter",
+  "password": "$2a$10$69.QaRUqfRRazXosrbaEXelTsCB0Gh17z1s3Qquy.y4xALZL9iT/K",
+  "documento": "524555",
+  "birthday_date": "2022-02-17",
+  "calle": "ertert",
+  "numeroCalle": "rter",
+  "piso": "terte",
+  "codigoPostal": "terter",
+  "genre": "Hombre",
+  "terminos": "on",
+  "image": "1644609390918_img.jpeg"
  }
 ]
