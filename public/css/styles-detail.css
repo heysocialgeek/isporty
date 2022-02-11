@@ -39,6 +39,22 @@ body {
     margin: 0px 15px;
 }
 
+.action-button-delete {
+display: flex;
+display:inline-block;
+padding:0.3em 1.2em;
+margin:0 0.1em 0.1em 0;
+border:0.16em solid #4678f4;
+border-radius:2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#4678f4;
+text-align:center;
+transition: all 0.2s;
+}
+
 .burger-menu {
     margin: 0px 10px;
 }
@@ -351,13 +367,23 @@ ul {
 }
 
 .botoncarrito {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.botoncarrito button {
-    background-color: rgb(195, 236, 195);
-    padding: 15px
+    display: flex;
+display:inline-block;
+padding:0.3em 1.2em;
+margin:0 0.1em 0.1em 0;
+border:0.16em solid #4678f4;
+border-radius:2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color:#4678f4;
+text-align:center;
+transition: all 0.2s;
+display: block;
+margin-top: 10px;
+margin-left: auto;
+margin-right: auto
 }
 
 
