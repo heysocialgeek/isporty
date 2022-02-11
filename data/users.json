@@ -214,7 +214,6 @@
   "first_name": "Juan",
   "last_name": "Muñoz",
   "email": "juanmunoz9393@gmail.com",
-  "password": "$2a$10$MfNeXAa/G9r6xCohwkncWeCwevV1/FcGa8jHE.8GpE6POG6bqXSEe",
   "documento": "1234",
   "birthday_date": "2022-02-03",
   "calle": "sadfas",
@@ -223,5 +222,36 @@
   "codigoPostal": "asfdas",
   "infoAdicional": "ds",
   "image": "1644602733638_img.jpeg"
+ },
+ {
+  "id": 24,
+  "first_name": "Juan",
+  "last_name": "Muñoz",
+  "email": "juanmunoz939333@gmail.com",
+  "documento": "95837278",
+  "birthday_date": "2022-02-02",
+  "calle": "Av cramer",
+  "numeroCalle": "355",
+  "piso": "54551",
+  "codigoPostal": "1426",
+  "infoAdicional": "men",
+  "terminos": "on",
+  "image": "1644608592030_img.jpeg"
+ },
+ {
+  "id": 25,
+  "first_name": "Juan",
+  "last_name": "Muñoz",
+  "email": "Juanki@gmail.com",
+  "password": "$2a$10$70iFZzhz2cXJPE84omKqN.FfBw0RmQX/AaV8ux45kdSo6SY87flyG",
+  "documento": "95837278",
+  "birthday_date": "2022-02-16",
+  "calle": "Av Cramer",
+  "numeroCalle": "355",
+  "piso": "4",
+  "codigoPostal": "1426",
+  "genre": "men",
+  "terminos": "on",
+  "image": "1644608680989_img.jpeg"
  }
 ]
