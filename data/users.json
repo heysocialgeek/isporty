@@ -269,5 +269,21 @@
   "genre": "Hombre",
   "terminos": "on",
   "image": "1644609390918_img.jpeg"
+ },
+ {
+  "id": 27,
+  "first_name": "facundo",
+  "last_name": "mayuri",
+  "email": "m.facundo@hotmail.com",
+  "password": "$2a$10$lQHlSl7UlQkfmT9UrzoI7uOcNQNYRmRFluoUe14JGCjAU2ps4D862",
+  "documento": "35996021",
+  "birthday_date": "2022-01-31",
+  "calle": "123",
+  "numeroCalle": "123",
+  "piso": "123",
+  "codigoPostal": "123",
+  "genre": "Hombre",
+  "terminos": "on",
+  "image": "1644859180472_img.jpg"
  }
 ]

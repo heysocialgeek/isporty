@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require('fs')
-const bcryptjs = require ("bcryptjs")
+const bcryptjs = require('bcryptjs')
 const {validationResult} = require("express-validator")
 
 
@@ -27,10 +27,17 @@ const controller = {
         if(userToLogin) {
             let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if (passwordCorrect){
-                delete userToLogin.password //por seguridad de que nadie vea el password
+                //delete userToLogin.password //por seguridad de que nadie vea el password
                 req.session.userLogged = userToLogin;
+
+                if (req.body.recordar_usuario){
+                    res.cookie("userEmail", userToLogin.email, { maxAge: (1000 * 60) * 10 });
+                }
+
                 return res.redirect("/user/profile")
             }
+
+
             return res.render(path.resolve(__dirname, '../views/users/login'), {
                 errors: {
                     email: {
@@ -99,6 +106,7 @@ const controller = {
         res.redirect('/user/login')
     },
     logout: (req, res) => {
+        res.clearCookie("userEmail")
         req.session.destroy();
         return res.redirect("/")
     }

@@ -10,16 +10,6 @@
   "type": "nuevo"
  },
  {
-  "id": 2,
-  "name": "Zapatillas Nike Court Borough",
-  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
-  "price": 9000,
-  "discount": 5,
-  "category": "Zapatillas",
-  "image": "Nike-court-borough.jpg",
-  "type": "nuevo"
- },
- {
   "id": 3,
   "name": "Zapatillas Nike Court Legacy",
   "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
@@ -131,5 +121,24 @@
    "Azul"
   ],
   "image": "1643062319287_img.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Zapatillas Nike Court Borough",
+  "marca": "Nike",
+  "modelo": "Court Borough",
+  "price": "9000",
+  "cantidad": "10",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "talle": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "category": "Calzado",
+  "color": "negro",
+  "image": "1644850011535_img.jpg"
  }
 ]
