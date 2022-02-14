@@ -42,11 +42,13 @@
         <p class="descripcion">Marca: <%= product.marca %><br> Modelo: <%= product.modelo %> <br> Talles disponibles: <%= product.talle %> <br> Colores disponibles: <%= product.color %> <br> Categoría: <%= product.category %> <br> Descripción: <%= product.description %> </p>
       </div>
     </section>
-
+    <div class="alinear">
     <br>
     <form action="/product/detail/<%= product.id %>?_method=DELETE" method="POST">
-      <button type="submit" class="action-button-delete">Borrar Producto</button>
-    <br>
+      <a href="/product/productEdit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
+      <button type="submit" class="action-button-delete">BORRAR PRODUCTO</button>
+      <br>
+      </div>
     
       <h4>Personas interesadas en este producto también vieron:</h3>
 
@@ -122,9 +124,6 @@
         </article>
 
       </section>
-
-      <a href="/product/productEdit/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a>
-
       <a href="https://wa.me/5491127682598?text=Me%20gustar%C3%ADa%20contactar%20con%20un%20asesor%20comercial"
         class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
 
