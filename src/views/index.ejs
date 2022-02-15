@@ -19,16 +19,19 @@
         <div class="product-container">
           <div class="product-article">
             <i class="fas fa-chevron-circle-left"></i>
-            <a href="/product/detail/1"><img class="img-products" src="/img/products/remeraair.jpeg"
-                alt="remera air hombre"></a>
+            
+            <a href="/product/detail/<%= productsDB[0].id %>"><img class="img-products"
+                src="/img/products/<%= productsDB[0].image %>" alt="zapatillas adidas mujer nuevas"></a>
+
             <i class="fas fa-chevron-circle-right"></i>
           </div>
 
           <ul>
-            <a href="/product/detail/1">
-              <li>Remera Nike Air</li>
+            <a href="/product/detail/<%= productsDB[0].id %>">
+              <li><%= productsDB[0].name %> </li>
             </a>
-            <li>$4.200</li>
+            <li><%= productsDB[0].price %> </li>
+
           </ul>
 
         </div>
@@ -40,16 +43,19 @@
         <div class="product-container">
           <div class="product-article">
             <i class="fas fa-chevron-circle-left"></i>
-            <a href="/product/detail/1"><img class="img-products" src="/img/products/remeratraininggirl.jpeg"
-                alt="remera training mujer"></a>
+            
+            <a href="/product/detail/<%= productsDB[1].id %>"><img class="img-products"
+                src="/img/products/<%= productsDB[1].image %>" alt="zapatillas adidas mujer nuevas"></a>
+
             <i class="fas fa-chevron-circle-right"></i>
           </div>
 
           <ul>
-            <a href="/product/detail/1">
-              <li>Remera Training Mujer</li>
+            <a href="/product/detail/<%= productsDB[1].id %>">
+              <li><%= productsDB[1].name %> </li>
             </a>
-            <li>$5.500</li>
+            <li><%= productsDB[1].price %> </li>
+
           </ul>
 
         </div>
@@ -61,7 +67,7 @@
         <div class="product-container">
           <div class="product-article">
             <i class="fas fa-chevron-circle-left"></i>
-            
+
             <a href="/product/detail/<%= productsDB[i].id %>"><img class="img-products"
                 src="/img/products/<%= productsDB[i].image %>" alt="zapatillas adidas mujer nuevas"></a>
 
@@ -94,16 +100,19 @@
         <div class="product-container">
           <div class="product-article">
             <i class="fas fa-chevron-circle-left"></i>
-            <a href="/product/detail/1"><img class="img-products" src="/img/products/zapatillas air.jpeg"
-                alt="zapatillas nike colours"></a>
+            
+            <a href="/product/detail/<%= productsDB[2].id %>"><img class="img-products"
+                src="/img/products/<%= productsDB[2].image %>" alt="zapatillas adidas mujer nuevas"></a>
+
             <i class="fas fa-chevron-circle-right"></i>
           </div>
 
           <ul>
-            <a href="/product/detail/1">
-              <li>Zapatillas Nike Colours</li>
+            <a href="/product/detail/<%= productsDB[2].id %>">
+              <li><%= productsDB[2].name %> </li>
             </a>
-            <li>$17.770</li>
+            <li><%= productsDB[2].price %> </li>
+
           </ul>
 
         </div>
@@ -115,16 +124,19 @@
         <div class="product-container">
           <div class="product-article">
             <i class="fas fa-chevron-circle-left"></i>
-            <a href="/product/detail/1"><img class="img-products" src="/img/products/zapatillas air 95.jpeg"
-                alt="zapatillas air 95"></a>
+            
+            <a href="/product/detail/<%= productsDB[3].id %>"><img class="img-products"
+                src="/img/products/<%= productsDB[3].image %>" alt="zapatillas adidas mujer nuevas"></a>
+
             <i class="fas fa-chevron-circle-right"></i>
           </div>
 
           <ul>
-            <a href="/product/detail/1">
-              <li>Zapatillas Air 95</li>
+            <a href="/product/detail/<%= productsDB[3].id %>">
+              <li><%= productsDB[3].name %> </li>
             </a>
-            <li>$9.900</li>
+            <li><%= productsDB[3].price %> </li>
+
           </ul>
 
         </div>
@@ -132,31 +144,31 @@
       </article>
 
       <% for (let i=4; i < 9; i++) { %>
-        <article class="article-desktop">
-  
-          <div class="product-container">
-            <div class="product-article">
-              <i class="fas fa-chevron-circle-left"></i>
-              
-              <a href="/product/detail/<%= productsDB[i].id %>"><img class="img-products"
-                  src="/img/products/<%= productsDB[i].image %>" alt="zapatillas adidas mujer nuevas"></a>
-  
-              <i class="fas fa-chevron-circle-right"></i>
-            </div>
-  
-            <ul>
-              <a href="/product/detail/<%= productsDB[i].id %>">
-                <li><%= productsDB[i].name %> </li>
-              </a>
-              <li><%= productsDB[i].price %> </li>
-  
-            </ul>
-  
-          </div>
-        </article>
-        <% } %>
+      <article class="article-desktop">
 
-      
+        <div class="product-container">
+          <div class="product-article">
+            <i class="fas fa-chevron-circle-left"></i>
+
+            <a href="/product/detail/<%= productsDB[i].id %>"><img class="img-products"
+                src="/img/products/<%= productsDB[i].image %>" alt="zapatillas adidas mujer nuevas"></a>
+
+            <i class="fas fa-chevron-circle-right"></i>
+          </div>
+
+          <ul>
+            <a href="/product/detail/<%= productsDB[i].id %>">
+              <li><%= productsDB[i].name %> </li>
+            </a>
+            <li><%= productsDB[i].price %> </li>
+
+          </ul>
+
+        </div>
+      </article>
+      <% } %>
+
+
 
     </section>
 
@@ -197,18 +209,21 @@
           <div class="product-container">
             <div class="product-article">
               <i class="fas fa-chevron-circle-left"></i>
-              <a href="/product/detail/1"><img class="img-products" src="/img/products/zapatillas air.jpeg"
-                  alt="zapatillas nike colours"></a>
+              
+              <a href="/product/detail/<%= productsDB[4].id %>"><img class="img-products"
+                  src="/img/products/<%= productsDB[4].image %>" alt="zapatillas adidas mujer nuevas"></a>
+  
               <i class="fas fa-chevron-circle-right"></i>
             </div>
-
+  
             <ul>
-              <a href="/product/detail/1">
-                <li>Zapatillas Nike Colours</li>
+              <a href="/product/detail/<%= productsDB[4].id %>">
+                <li><%= productsDB[4].name %> </li>
               </a>
-              <li>$17.770</li>
+              <li><%= productsDB[4].price %> </li>
+  
             </ul>
-
+  
           </div>
 
         </article>
@@ -218,47 +233,51 @@
           <div class="product-container">
             <div class="product-article">
               <i class="fas fa-chevron-circle-left"></i>
-              <a href="/product/detail/1"><img class="img-products" src="/img/products/Campera-nike.jpeg"
-                  alt="campera Nike"></a>
+              
+              <a href="/product/detail/<%= productsDB[5].id %>"><img class="img-products"
+                  src="/img/products/<%= productsDB[5].image %>" alt="zapatillas adidas mujer nuevas"></a>
+  
               <i class="fas fa-chevron-circle-right"></i>
             </div>
-
+  
             <ul>
-              <a href="/product/detail/1">
-                <li>Campera Nike</li>
+              <a href="/product/detail/<%= productsDB[5].id %>">
+                <li><%= productsDB[5].name %> </li>
               </a>
-              <li>$7.700</li>
+              <li><%= productsDB[5].price %> </li>
+  
             </ul>
+  
           </div>
 
         </article>
 
         <% for (let i=9; i < 12; i++) { %>
-          <article class="article-desktop">
-    
-            <div class="product-container">
-              <div class="product-article">
-                <i class="fas fa-chevron-circle-left"></i>
-                
-                <a href="/product/detail/<%= productsDB[i].id %>"><img class="img-products"
-                    src="/img/products/<%= productsDB[i].image %>" alt="zapatillas adidas mujer nuevas"></a>
-    
-                <i class="fas fa-chevron-circle-right"></i>
-              </div>
-    
-              <ul>
-                <a href="/product/detail/<%= productsDB[i].id %>">
-                  <li><%= productsDB[i].name %> </li>
-                </a>
-                <li><%= productsDB[i].price %> </li>
-    
-              </ul>
-    
-            </div>
-          </article>
-          <% } %>
+        <article class="article-desktop">
 
-        
+          <div class="product-container">
+            <div class="product-article">
+              <i class="fas fa-chevron-circle-left"></i>
+
+              <a href="/product/detail/<%= productsDB[i].id %>"><img class="img-products"
+                  src="/img/products/<%= productsDB[i].image %>" alt="zapatillas adidas mujer nuevas"></a>
+
+              <i class="fas fa-chevron-circle-right"></i>
+            </div>
+
+            <ul>
+              <a href="/product/detail/<%= productsDB[i].id %>">
+                <li><%= productsDB[i].name %> </li>
+              </a>
+              <li><%= productsDB[i].price %> </li>
+
+            </ul>
+
+          </div>
+        </article>
+        <% } %>
+
+
 
       </section>
 
