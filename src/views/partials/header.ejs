@@ -31,15 +31,23 @@
           <div class="shopping-cart">
           <a href="/product/cart"><i class="fas fa-shopping-cart"></i></a>
           </div>
+
+          <% if (locals.isLogged) { %>
+
+            
+            <img class="profileimg" src="/img/users/<%= locals.userLogged.image %>"><a href="/user/profile"><h3>Hola, <%= locals.userLogged.first_name %></h3></a>
+            <a class= "link-login-register" href="/user/logout">Cerrar sesión</a>
+
+          <% } else { %>
+
           <div class="user-circle">
             <a href="/user/login"><i class="far fa-user-circle"></i></a>
             <a href="/user/register"><i class="far fa-registered"></i></a>
           </div>
-          
             <a class="link-login-register" href="/user/login">Iniciar sesión</a>
             <a class= "link-login-register" href="/user/register">Registrarse</a>
-            <a href="/user/profile"><h3 href="/user/register">Hola, <%= user.first_name %></h3></a> <img class="profileimg" src="/img/users/<%= user.image %>">
-            <a class= "link-login-register" href="/user/logout">Cerrar sesión</a>
+
+          <% } %> 
           
       </div>
 

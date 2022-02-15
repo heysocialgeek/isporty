@@ -55,9 +55,7 @@ const controller = {
         })
     },
     profile: (req, res) => {
-        res.render(path.resolve(__dirname, '../views/users/profile'), {
-            user: req.session.userLogged
-        })
+        res.render(path.resolve(__dirname, '../views/users/profile'), {user: req.session.userLogged})
     },
     register: (req, res) => {
         const registerPath = path.resolve(__dirname, '../views/users/register');
