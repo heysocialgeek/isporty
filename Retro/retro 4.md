@@ -38,14 +38,14 @@ Hacer menos:
 
 **Retrospectiva Sprint-4/ Juan Carlos Muñoz:**
 
-Seguir haciendo: 
+Seguir haciendo: Buscar tutoriales y opiniones en sitios como stackoverflow donde otros han hecho consultas similares.
 
-Hacer más: 
+Hacer más: Apoyarnos en el fuerte del otro para avanzar.
 
-Empezar a hacer: 
+Empezar a hacer: Explotar el potencial de lo que más te gusta para ponerlo a la orden del equipo.
 
-Dejar de hacer: 
+Dejar de hacer: Bloquearse cuando algo no sale en vez de poner el foco en otra cosa y darle chance de que llegue el "ajá moment".
 
-Hacer menos: 
+Hacer menos: Preocuparse en vez de ocuparse.
 
 
