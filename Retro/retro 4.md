@@ -14,15 +14,15 @@ Hacer menos: tratar de hacer todo solo
 
 **Retrospectiva sprint 4 / Facundo Mayuri:**
 
-Seguir haciendo: 
+Seguir haciendo: ayudar a otros miembros del equipo
 
-Hacer más: 
+Hacer más: mejorar la "estética" del código, que sea breve, simple, resumido, lo más limpio posible. Es mejor para todo el equipo
 
-Empezar a hacer: 
+Empezar a hacer: cuidar la estructura y respetar el trabajo realizado en sprints anteriores (por ejemplo mantener la estética/vista de la página cuando agregamos funcionalidades) 
 
-Dejar de hacer: 
+Dejar de hacer: dejar arreglos o detalles "simples" para el último momento
 
-Hacer menos: 
+Hacer menos: lamentar que paso mucho tiempo codeando algo que parecía sencillo. Practicar nunca es perder tiempo.
 
 **Retrospectiva Sprint-4/Fernandez, Maria Sol:**
 

@@ -14,15 +14,15 @@ Hacer menos: tratar de hacer todo solo
 
 **Retrospectiva sprint 3 / Facundo Mayuri:**
 
-Seguir haciendo: 
+Seguir haciendo: colaborar con el equipo
 
-Hacer más: 
+Hacer más: organizar mejor las tareas del sprint
 
-Empezar a hacer: 
+Empezar a hacer: animarse a investigar más allá de lo aprendido en el curso e implementar ideas innovadoras "alcanzables"
 
-Dejar de hacer: 
+Dejar de hacer: descuidar quizás algunos detalles adicionales importantes porque nos enfocamos simplemente en cumplir con la consigna del sprint
 
-Hacer menos: 
+Hacer menos: relajarse y creer que podemos cumplir con todo a tiempo
 
 **Retrospectiva Sprint-3/Fernandez, Maria Sol:**
 
