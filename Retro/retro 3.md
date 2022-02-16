@@ -26,15 +26,15 @@ Hacer menos:
 
 **Retrospectiva Sprint-3/Fernandez, Maria Sol:**
 
-Seguir haciendo: 
+Seguir haciendo: Manter conversacion con el grupo.
 
-Hacer más:
+Hacer más:  Tomar la iniciativa y perder el miedo a romper el codigo.
 
-Empezar a hacer:  
+Empezar a hacer:  Trabajar en una rama para evitar arruinar todo el codigo.
 
-Dejar de hacer: 
+Dejar de hacer: Tener pensamientos negativos y evitar el yo no puedo.
 
-Hacer menos: 
+Hacer menos: Creo que cada vez de intensifica mas y es imposible hacer menos.
 
 **Retrospectiva Sprint-3/ Juan Carlos Muñoz:**
 
