@@ -35,7 +35,7 @@
           <% if (locals.isLogged) { %>
 
             
-            <img class="profileimg" src="/img/users/<%= locals.userLogged.image %>"><a href="/user/profile"><h3>Hola, <%= locals.userLogged.first_name %></h3></a>
+            <a href="/user/profile"><h3 class="nada">Hola, <%= locals.userLogged.first_name %></h3></a><img class="profileimg" src="/img/users/<%= locals.userLogged.image %>">
             <a class= "link-login-register" href="/user/logout">Cerrar sesión</a>
 
           <% } else { %>

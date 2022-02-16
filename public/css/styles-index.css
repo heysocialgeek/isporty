@@ -511,6 +511,7 @@ margin-top: 10px;
     .buttom-footer {
         max-width: 30%;
     }
+
     .footer-container {
         order: -1;
         flex-wrap: wrap;

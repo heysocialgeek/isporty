@@ -83,6 +83,19 @@ a:hover {color:#FF00FF;}
 
 a:active {color:#0000FF;}
 
+.profileimg {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 /**
  * 1. Remove the bottom border in Chrome 57-
