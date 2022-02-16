@@ -2,15 +2,15 @@
 
 **Retrospectiva Sprint-3/Joaquín Caggiano:**
 
-Seguir haciendo: 
+Seguir haciendo: Mejorar las vistas
 
-Hacer más: 
+Hacer más: seguir probando cosas en el código
 
-Empezar a hacer: 
+Empezar a hacer: mejor control de las rutas
 
-Dejar de hacer: 
+Dejar de hacer: los campos de los formularios
 
-Hacer menos: 
+Hacer menos: tratar de hacer todo solo
 
 **Retrospectiva sprint 3 / Facundo Mayuri:**
 

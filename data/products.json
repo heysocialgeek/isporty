@@ -142,22 +142,22 @@
   "image": "1644850011535_img.jpg"
  },
  {
-    "id": 13,
-    "name": "Zapatillas Court Borough",
-    "marca": "Nike",
-    "modelo": "Court Borough",
-    "price": "9000",
-    "cantidad": "10",
-    "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
-    "talle": [
-     "S",
-     "M",
-     "L",
-     "XL",
-     "XXL"
-    ],
-    "category": "Calzado",
-    "color": "negro",
-    "image": "1644850011535_img.jpg"
-   }
+  "id": 13,
+  "name": "Zapatillas Court Borough",
+  "marca": "Nike",
+  "modelo": "Court Borough",
+  "price": "9000",
+  "cantidad": "10",
+  "description": "Perfectas en comodidad, mantienen tus pies cómodos sin importar si estás corriendo en una pista o por las calles de la ciudad",
+  "talle": [
+   "S",
+   "M",
+   "L",
+   "XL",
+   "XXL"
+  ],
+  "category": "Calzado",
+  "color": "negro",
+  "image": "1644850011535_img.jpg"
+ }
 ]

@@ -2,15 +2,15 @@
 
 **Retrospectiva Sprint-4/Joaquín Caggiano:**
 
-Seguir haciendo: 
+Seguir haciendo: limpiar aún mejor el código
 
-Hacer más: 
+Hacer más: pedir ayuda cuando no me sale algo y no frustarme
 
-Empezar a hacer: 
+Empezar a hacer: intentar cosas que no sean mi fuerte
 
-Dejar de hacer: 
+Dejar de hacer: el proceso de login y register
 
-Hacer menos: 
+Hacer menos: tratar de hacer todo solo
 
 **Retrospectiva sprint 4 / Facundo Mayuri:**
 
