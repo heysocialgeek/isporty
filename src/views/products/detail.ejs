@@ -45,8 +45,12 @@
     <div class="alinear">
     <br>
     <form action="/product/detail/<%= product.id %>?_method=DELETE" method="POST">
-      <a href="/product/productEdit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
+      
+      <% if (locals.isLogged) { %>
+       <a href="/product/productEdit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
       <button type="submit" class="action-button-delete">BORRAR PRODUCTO</button>
+      <% } %>
+      
       <br>
       </div>
     
