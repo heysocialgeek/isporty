@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-    let alias = "Size";
+    let alias = "Brand";
 
     let cols = {
         id: {
@@ -13,22 +13,20 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     let config = {
-        tableName = "sizes",
+        tableName = "brands",
         timestamps = true,
         createdAt: 'created_at',
         updatedAt: 'updated_at'
     }
 
-    let Size = sequelize.define(alias, cols, config);
+    let Brand = sequelize.define(alias, cols, config);
 
-    Size.associate = function (models) {
-        Size.belogsToMany(models.Product, {
+    Brand.associate = function (models) {
+        Brand.hasMany(models.Product, {
             as: "products",
-            through: "productSize",
-            foreignKey: "sizeId",
-            otherKey: "productId"
+            foreignKey: "brandId"
         })
     }
 
-    return Size
+    return Brand
 }

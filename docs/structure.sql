@@ -8,8 +8,10 @@ CREATE TABLE `users` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL UNIQUE,
   `password` varchar(255) NOT NULL,
+  `image` varchar(255) NULL DEFAULT 'no-image.png',
   `createdAt` timestamp NULL DEFAULT NULL,
-  `updatedAt` timestamp NULL DEFAULT NULL
+  `updatedAt` timestamp NULL DEFAULT NULL,
+  `deletedAt` timestamp NULL DEFAULT NULL
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `brands` (
@@ -19,6 +21,14 @@ CREATE TABLE `brands` (
   `updatedAt` timestamp NULL DEFAULT NULL
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+CREATE TABLE `gender` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(255) NOT NULL,
+  `createdAt` timestamp NULL DEFAULT NULL,
+  `updatedAt` timestamp NULL DEFAULT NULL
+) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- AGREGUE TABLA DE CATEGORIAS
 CREATE TABLE `categories` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255) NOT NULL,
@@ -48,8 +58,10 @@ CREATE TABLE `products` (
   `image` varchar(255) NULL DEFAULT 'no-image.png',
   `description` text NULL DEFAULT NULL,
   `brandId` int(10) unsigned DEFAULT NULL,
+  `genderId` int(10) unsigned DEFAULT NULL, -- agregue genderId
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
+  `deletedAt` timestamp NULL DEFAULT NULL,
   FOREIGN KEY (`brandId`) REFERENCES `brands` (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -62,7 +74,7 @@ CREATE TABLE `carts` (
   FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `cartProduct` (
+CREATE TABLE `productCart` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `productId` int(10) unsigned DEFAULT NULL,
   `cartId` int(10) unsigned DEFAULT NULL,
@@ -74,15 +86,17 @@ CREATE TABLE `cartProduct` (
   FOREIGN KEY (`cartId`) REFERENCES `carts` (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `productGender` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `productId` int(10) unsigned DEFAULT NULL,
-  `genderId` int(10) unsigned DEFAULT NULL,
-  `createdAt` timestamp NULL DEFAULT NULL,
-  `updatedAt` timestamp NULL DEFAULT NULL,
-  FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
-  FOREIGN KEY (`genderId`) REFERENCES `gender` (`id`)
-) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ME PARECE QUE ESTA RELACION NO ES ASÍ
+-- CREATE TABLE `productGender` (
+--   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--   `productId` int(10) unsigned DEFAULT NULL,
+--   `genderId` int(10) unsigned DEFAULT NULL,
+--   `createdAt` timestamp NULL DEFAULT NULL,
+--   `updatedAt` timestamp NULL DEFAULT NULL,
+--   FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
+--   FOREIGN KEY (`genderId`) REFERENCES `gender` (`id`)
+-- ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `productColor` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -102,6 +116,18 @@ CREATE TABLE `productSize` (
   `updatedAt` timestamp NULL DEFAULT NULL,
   FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
   FOREIGN KEY (`sizeId`) REFERENCES `sizes` (`id`)
+) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+-- RELACION DE PRODUCTOS CON CATEGORIAS-LA HICE DE MUCHOS A MUCHOS NO SE SI ES ASÍ
+CREATE TABLE `productCategory` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `productId` int(10) unsigned DEFAULT NULL,
+  `categoryId` int(10) unsigned DEFAULT NULL,
+  `createdAt` timestamp NULL DEFAULT NULL,
+  `updatedAt` timestamp NULL DEFAULT NULL,
+  FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
+  FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*
