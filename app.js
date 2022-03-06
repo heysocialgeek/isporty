@@ -32,13 +32,17 @@ app.use(cookie())
 const autoLog = require("./middlewares/autoLogMiddleware")
 app.use(autoLog);
 
+/************* RUTAS CON JSON *************/
 const mainRoutes = require ("./src/routes/main")
 app.use ("/", mainRoutes)
-
 
 const userRoutes = require ("./src/routes/users")
 app.use ("/user", userRoutes)
 
-
 const productsRoutes = require ("./src/routes/products")
 app.use ("/product", productsRoutes)
+
+
+/************* RUTAS CON BASE DE DATOS *************/
+// const productRoutedb = require("./src/routes/routesdb/productRoutedb")
+// app.use("/products", productRoutedb)

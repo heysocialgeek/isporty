@@ -13,8 +13,8 @@ module.exports = function (sequelize, dataTypes) {
     }
 
     let config = {
-        tableName = "brands",
-        timestamps = true,
+        tableName: "brands",
+        timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at'
     }

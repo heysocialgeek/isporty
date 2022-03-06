@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs", {
+        pageTitle:"product-create",
+        cssTag: "<link rel='stylesheet' href='/css/styles-create.css'> <link rel='stylesheet' href='/css/styles-index.css'>"}) %>
+<body>
+    <%- include("../partials/header.ejs") %>
+    
+    <main>
+        
+        <h1 id="h1-create">Crear producto</h1>
+
+        <form action="/product" method="POST" enctype="multipart/form-data">
+            <div class="form-container-create">
+                <label class="label-title" for="productName">Nombre del producto:</label>
+                <input type="text" id="productName" name="productName" placeholder="Ej: zapatilla nike air force">
+
+                <label for="price">Precio:</label>
+                <input type="number" id="price" name="productPrice" placeholder="Escriba el precio">
+
+                <label for="gender">Género del producto:</label>
+                <select name="gender" id="gender" name="productGender">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+
+                <label for="brand">Marca del producto:</label>
+                <input type="text" id="brand" name="productBrand" placeholder="Ej: Nike">
+
+                <label>Talle del producto:</label>
+                <label class="productCheckbox">
+                    <div>
+                        35 <input type="checkbox" name="productSize" value="35">
+                    </div>
+                    <div>
+                        36 <input type="checkbox" name="productSize" value="36">
+                    </div>
+                    <div>
+                        37 <input type="checkbox" name="productSize" value="37">
+                    </div>
+                    <div>
+                        38 <input type="checkbox" name="productSize" value="38">
+                    </div>
+                    <div>
+                        39 <input type="checkbox" name="productSize" value="39">
+                    </div>
+                    <div>
+                        40 <input type="checkbox" name="productSize" value="40">
+                    </div>
+                    <div>
+                        41 <input type="checkbox" name="productSize" value="41">
+                    </div>
+                    <div>
+                        42 <input type="checkbox" name="productSize" value="42">
+                    </div>
+                    <div>
+                        43 <input type="checkbox" name="productSize" value="43">
+                    </div>
+                    <div>
+                        44 <input type="checkbox" name="productSize" value="44">
+                    </div>
+                    <div>
+                        45 <input type="checkbox" name="productSize" value="45">
+                    </div>
+                </label>
+
+                <label>Color del producto:</label>
+                <label class="productCheckbox">
+                    <div>
+                        Rojo <input type="checkbox" name="productColor" value="Rojo">
+                    </div>
+                    <div>
+                        Verde <input type="checkbox" name="productColor" value="Verde">
+                    </div>
+                    <div>
+                        Amarillo <input type="checkbox" name="productColor" value="Amarillo">
+                    </div>
+                    <div>
+                        Azul <input type="checkbox" name="productColor" value="Azul">
+                    </div>
+                    <div>
+                        Negro <input type="checkbox" name="productColor" value="Negro">
+                    </div>
+                    <div>
+                        Blanco <input type="checkbox" name="productColor" value="Blanco">
+                    </div>
+                    <div>
+                        Rosa <input type="checkbox" name="productColor" value="Rosa">
+                    </div>
+                    <div>
+                        Violeta <input type="checkbox" name="productColor" value="Violeta">
+                    </div>
+                </label>
+
+                <label>Categoría del producto:</label>
+                <label class="productCheckbox">
+                    <div>
+                        Running <input type="checkbox" name="productCategory" value="Running">
+                    </div>
+                    <div>
+                        Fútbol <input type="checkbox" name="productCategory" value="Fútbol">
+                    </div>
+                    <div>
+                        Street <input type="checkbox" name="productCategory" value="Street">
+                    </div>
+                    <div>
+                        Ojotas <input type="checkbox" name="productCategory" value="Ojotas">
+                    </div>
+                    <div>
+                        Crocs <input type="checkbox" name="productCategory" value="Crocs">
+                    </div>
+                </label>
+
+                <label for="image">Imagen del producto:</label>
+                <input class="input-image" type="file" id="image" name="image" multiple>
+
+                <label for="description">Descripción del producto:</label>
+                <textarea name="productDescription" id="description" cols="40" rows="10">Detalle aún más el producto a publicar...</textarea>
+
+                <button class="button-style" type="submit">Cargar producto</button>
+            </div>
+        </form>
+    </main>
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

@@ -21,13 +21,16 @@ module.exports = function (sequelize, dataTypes) {
         },
         brandId: {
             type: dataTypes.INTEGER
+        },
+        genderId: {
+            type: dataTypes.INTEGER
         }
     }
 
     let config = {
         paranoid: true,
-        tableName = "products",
-        timestamps = true,
+        tableName: "products",
+        timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
         deletedAt: 'deleted_at'
@@ -55,6 +58,10 @@ module.exports = function (sequelize, dataTypes) {
         Product.hasMany(models.Category, {
             as: "categories",
             foreignKey: "categoryId"
+        }),
+        Product.hasMany(models.Color, {
+            as: "colors",
+            foreignKey: "colorId"
         })
     }
 

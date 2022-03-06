@@ -27,7 +27,7 @@ const controller = {
         return res.render(productListPath, { productsDB })
     },
     productCreationForm: (req, res) => {
-        const productCreationForm = path.resolve(__dirname, "../views/products/formularioDeCreacion.ejs");
+        const productCreationForm = path.resolve(__dirname, "../views/products/create.ejs");
         return res.render(productCreationForm)
     },
 
@@ -41,15 +41,14 @@ const controller = {
 
         productsDB.push({
             id: generateID(),
-            name: req.body.idProducto,
-            marca: req.body.idMarca,
-            modelo: req.body.idModelo,
-            price: req.body.precio,
-            cantidad: req.body.idcantidad,
-            description: req.body.comentario,
-            talle: req.body.talle,
-            category: req.body.category,
-            color: req.body.color,
+            name: req.body.productName,
+            price: req.body.productPrice,
+            gender: req.body.productGender,
+            brand: req.body.productBrand,
+            size: req.body.productSize,
+            color: req.body.productColor,
+            Category: req.body.productCategory,
+            description: req.body.productDescription,
             image: req.file ? req.file.filename : ''
 
         });

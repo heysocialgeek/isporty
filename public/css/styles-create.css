@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+}
+
+#h1-create {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.form-container-create {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.button-style {
+    width: 200px;
+    margin-top: 10px;
+    padding: 5px;
+    align-self: center;
+    background-color: rgb(46, 83, 131);
+    color: white;
+    border: 3px solid rgb(46, 83, 131);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #acd1f3;
+    color: black;
+}
+
+.productCheckbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.productCheckbox div {
+    margin: 0px 5px;
+}
+
+/* .pAndCheck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.productCheckbox p {
+    margin-right: 5px;
+} */
+
+.form-container-create label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.form-container-create input {
+    max-width: 200px;
+    border: 2px solid #393939;
+    border-radius: 5px;
+    padding: 5px;
+    align-self: center;
+}
+
+.form-container-create select {
+    width: 200px;
+    border: 2px solid #393939;
+    border-radius: 5px;
+    padding: 5px;
+    align-self: center;
+}
+
+.form-container-create textarea {
+    align-self: center;
+}
+
+.input-image {
+    background-color: white;
+}
