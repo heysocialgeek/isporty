@@ -15,14 +15,14 @@ module.exports = function (sequelize, dataTypes) {
     let config = {
         tableName: "colors",
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at'
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt'
     }
 
     let Color = sequelize.define(alias, cols, config);
 
     Color.associate = function (models) {
-        Color.belogsToMany(models.Product, {
+        Color.belongsToMany(models.Product, {
             as: "products",
             through: "productColor",
             foreignKey: "colorId",

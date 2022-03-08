@@ -15,8 +15,8 @@ module.exports = function (sequelize, dataTypes) {
     let config = {
         tableName: "gender",
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at'
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt'
     }
 
     let Gender = sequelize.define(alias, cols, config);

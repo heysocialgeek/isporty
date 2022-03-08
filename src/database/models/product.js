@@ -31,9 +31,9 @@ module.exports = function (sequelize, dataTypes) {
         paranoid: true,
         tableName: "products",
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at',
-        deletedAt: 'deleted_at'
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
+        deletedAt: 'deletedAt'
     }
 
     let Product = sequelize.define(alias, cols, config);

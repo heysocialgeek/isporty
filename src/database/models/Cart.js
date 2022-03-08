@@ -18,14 +18,14 @@ module.exports = function (sequelize, dataTypes) {
     let config = {
         tableName: "carts",
         timestamps: true,
-        createdAt: 'created_at',
-        updatedAt: 'updated_at'
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt'
     }
 
     let Cart = sequelize.define(alias, cols, config);
 
     Cart.associate = function (models) {
-        Cart.belogsToMany(models.Product, {
+        Cart.belongsToMany(models.Product, {
             as: "products",
             through: "productCart",
             foreignKey: "cartId",

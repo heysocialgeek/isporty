@@ -20,95 +20,47 @@
 
                 <label for="gender">Género del producto:</label>
                 <select name="gender" id="gender" name="productGender">
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
+                    <% for( let i = 0; i < genders.length; i++ ) { %>
+                        <option value="<%= genders[i].id %>">
+                            <%= genders[i].name %>  
+                        </option>
+                    <% } %>    
                 </select>
 
                 <label for="brand">Marca del producto:</label>
-                <input type="text" id="brand" name="productBrand" placeholder="Ej: Nike">
+                <select name="productBrand" id="brand">
+                    <% for( let i = 0; i < brands.length; i++ ) { %>
+                        <option value="<%= brands[i].id %>">
+                            <%= brands[i].name %> 
+                        </option>
+                    <% } %>
+                </select>
 
                 <label>Talle del producto:</label>
                 <label class="productCheckbox">
+                    <% for( let i = 0; i < sizes.length; i++ ) { %>
                     <div>
-                        35 <input type="checkbox" name="productSize" value="35">
+                        <%= sizes[i].name %> <input type="checkbox" name="productSize" value="<%= sizes[i].id %>">
                     </div>
-                    <div>
-                        36 <input type="checkbox" name="productSize" value="36">
-                    </div>
-                    <div>
-                        37 <input type="checkbox" name="productSize" value="37">
-                    </div>
-                    <div>
-                        38 <input type="checkbox" name="productSize" value="38">
-                    </div>
-                    <div>
-                        39 <input type="checkbox" name="productSize" value="39">
-                    </div>
-                    <div>
-                        40 <input type="checkbox" name="productSize" value="40">
-                    </div>
-                    <div>
-                        41 <input type="checkbox" name="productSize" value="41">
-                    </div>
-                    <div>
-                        42 <input type="checkbox" name="productSize" value="42">
-                    </div>
-                    <div>
-                        43 <input type="checkbox" name="productSize" value="43">
-                    </div>
-                    <div>
-                        44 <input type="checkbox" name="productSize" value="44">
-                    </div>
-                    <div>
-                        45 <input type="checkbox" name="productSize" value="45">
-                    </div>
+                    <% } %>
                 </label>
 
                 <label>Color del producto:</label>
                 <label class="productCheckbox">
-                    <div>
-                        Rojo <input type="checkbox" name="productColor" value="Rojo">
-                    </div>
-                    <div>
-                        Verde <input type="checkbox" name="productColor" value="Verde">
-                    </div>
-                    <div>
-                        Amarillo <input type="checkbox" name="productColor" value="Amarillo">
-                    </div>
-                    <div>
-                        Azul <input type="checkbox" name="productColor" value="Azul">
-                    </div>
-                    <div>
-                        Negro <input type="checkbox" name="productColor" value="Negro">
-                    </div>
-                    <div>
-                        Blanco <input type="checkbox" name="productColor" value="Blanco">
-                    </div>
-                    <div>
-                        Rosa <input type="checkbox" name="productColor" value="Rosa">
-                    </div>
-                    <div>
-                        Violeta <input type="checkbox" name="productColor" value="Violeta">
-                    </div>
+                    <% for( let i = 0; i < colors.length; i++ ) { %>
+                        <div>
+                            <%= colors[i].name %>  <input type="checkbox" name="productColor" value="<%= colors[i].id %>">
+                        </div>
+                    <% } %>
                 </label>
 
                 <label>Categoría del producto:</label>
                 <label class="productCheckbox">
-                    <div>
-                        Running <input type="checkbox" name="productCategory" value="Running">
-                    </div>
-                    <div>
-                        Fútbol <input type="checkbox" name="productCategory" value="Fútbol">
-                    </div>
-                    <div>
-                        Street <input type="checkbox" name="productCategory" value="Street">
-                    </div>
-                    <div>
-                        Ojotas <input type="checkbox" name="productCategory" value="Ojotas">
-                    </div>
-                    <div>
-                        Crocs <input type="checkbox" name="productCategory" value="Crocs">
-                    </div>
+                    <% for( let i = 0; i < categories.length; i++ ) { %>
+                        <div>
+                            <%= categories[i].name %>  <input type="checkbox" name="productCategory" value="<%= categories[i].id %>">
+                        </div>
+                    <% } %>
                 </label>
 
                 <label for="image">Imagen del producto:</label>
