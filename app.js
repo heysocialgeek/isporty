@@ -9,7 +9,6 @@ const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
 app.listen (3003, () => console.log ("Servidor corriendo en puerto 3003"));
 app.use (express.static (path.resolve (__dirname, "./public")))
 
-app.set("view engine", "ejs")
 
 //utilizo session
 app.use(session({
@@ -32,6 +31,7 @@ app.use(cookie())
 const autoLog = require("./middlewares/autoLogMiddleware")
 app.use(autoLog);
 
+app.set("view engine", "ejs");
 /************* RUTAS CON JSON *************/
 // const mainRoutes = require ("./src/routes/main")
 // app.use ("/", mainRoutes)
@@ -46,3 +46,6 @@ app.use(autoLog);
 /************* RUTAS CON BASE DE DATOS *************/
 const productRoutedb = require("./src/routes/routesdb/productRoutedb")
 app.use("/products", productRoutedb)
+
+
+

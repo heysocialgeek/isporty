@@ -43,25 +43,33 @@ module.exports = function (sequelize, dataTypes) {
             as: "brands",
             foreignKey: "brandId"
         }),
-        Product.hasMany(models.Size, {
+        Product.belongsToMany(models.Size, {
             as: "sizes",
-            foreignKey: "sizeId"
+            through: "productSize",
+            foreignKey: "productId",
+            otherKey: "sizeId"
         }),
         Product.belongsTo(models.Gender, {
             as: "gender",
             foreignKey: "genderId"
         }),
-        Product.hasMany(models.Cart, {
+        Product.belongsToMany(models.Cart, {
             as: "carts",
-            foreignKey: "cartId"
+            through: "productCart",
+            foreignKey: "productId",
+            otherKey: "cartId"
         }),
-        Product.hasMany(models.Category, {
+        Product.belongsToMany(models.Category, {
             as: "categories",
-            foreignKey: "categoryId"
+            through: "productCategory",
+            foreignKey: "productId",
+            otherKey: "categoryId"
         }),
-        Product.hasMany(models.Color, {
+        Product.belongsToMany(models.Color, {
             as: "colors",
-            foreignKey: "colorId"
+            through: "productColor",
+            foreignKey: "productId",
+            otherKey: "colorId"
         })
     }
 
