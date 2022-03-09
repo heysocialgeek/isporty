@@ -31,7 +31,10 @@ app.use(cookie())
 const autoLog = require("./middlewares/autoLogMiddleware")
 app.use(autoLog);
 
+/******** TEMPLATE EJS ********/
 app.set("view engine", "ejs");
+app.set("views", "./src/views");
+
 /************* RUTAS CON JSON *************/
 // const mainRoutes = require ("./src/routes/main")
 // app.use ("/", mainRoutes)
