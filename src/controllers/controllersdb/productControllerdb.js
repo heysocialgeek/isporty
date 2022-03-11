@@ -2,8 +2,13 @@ const db = require("../../database/models");
 
 const productControllerdb = {
     list: async (req, res) => {
-        const products = await db.Product.findAll({include: ["brand", "categories"]});
-        return res.render ("productList")
+        const genders = await db.Gender.findAll({});
+        const brands = await db.Brand.findAll({});
+        const sizes = await db.Size.findAll({});
+        const categories = await db.Category.findAll({});
+        const colors = await db.Color.findAll({});
+        const products = await db.Product.findAll({/*include: ["brands", "categories", "sizes", "gender", "colors"]*/});
+        return res.render ("products/list", {genders, brands, sizes, categories, colors, products})
     },
     create: async (req, res) => {
         try {
