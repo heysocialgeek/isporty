@@ -1,6 +1,8 @@
 -- / Creación de la DB
-CREATE DATABASE structure;
+CREATE DATABASE IF NOT EXISTS structure;
 USE structure;
+-- CREATE DATABASE structure;
+-- USE structure;
 
 -- / Creación de las tablas que NO tienen FK
 CREATE TABLE `users` (
