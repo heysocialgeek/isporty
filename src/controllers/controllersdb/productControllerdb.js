@@ -23,7 +23,12 @@ const productControllerdb = {
         }
     },
     store: async (req, res) => {
-        const productStore = await Product.create(req.body);
+        const productStore = await db.Product.create(req.body);
+        productStore.addCategories(req.body.productCategory);
+        // productStore.addGender(req.body.productGender);
+        // productStore.addColors(req.body.productColor);
+        // productStore.addSizes(req.body.productSize);
+        // productStore.addBrands(req.body.productBrand);
         return res.redirect("/products/list")
     }
 }
