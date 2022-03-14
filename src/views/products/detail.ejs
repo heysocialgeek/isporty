@@ -39,7 +39,29 @@
     <section class="main-section2">
       <div>
         <h3>Descripción del producto</h3>
-        <p class="descripcion">Marca: <%= product.brands.name %><br> Género: <%= product.gender.name %> <br> Talles disponibles: <%= product.sizes.name %> <br> Colores disponibles: <%= product.colors.name %> <br> Categoría: <%= product.categories.name %> <br> Descripción: <%= product.description %> </p>
+        <div class="descripcion">
+        <p >Marca:</p> <p><%= product.brands.name %></p>
+        <p >Género: <%= product.gender.name %></p> 
+          <% if (product.sizes.length > 0) { %>
+            <p>Talles:</p>
+            <% product.sizes.forEach(size=> { %>
+              <p><%= size.name %></p>
+            <% }) %>
+          <% } %>
+          <% if (product.colors.length > 0) { %>
+            <p>Colores disponibles:</p>
+            <% product.colors.forEach(color=> { %>
+              <p> <%= color.name %></p>
+            <% }) %>
+          <% } %>
+          <% if (product.categories.length > 0) { %>
+            <p>Categorías: </p>
+            <% product.categories.forEach(category=> { %>
+              <p><%= category.name %></p>
+            <% }) %>
+          <% } %>
+          <p >Descripción: <%= product.description %> </p>
+        </div>
       </div>
     </section>
     <div class="alinear">
