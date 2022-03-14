@@ -66,13 +66,14 @@
     </section>
     <div class="alinear">
     <br>
-    <form action="/product/detail/<%= product.id %>?_method=DELETE" method="POST">
-      
-      <!-- <% if (locals.isLogged) { %> -->
-        <!-- <% } %> -->
-        <!-- los botones van en el if que esta justo arriba -->
-        <a href="/products/edit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
+    
+    <!-- <% if (locals.isLogged) { %> -->
+      <!-- <% } %> -->
+      <!-- los botones van en el if que esta justo arriba -->
+      <a href="/products/edit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
+      <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
        <button type="submit" class="action-button-delete">BORRAR PRODUCTO</button>
+      </form>
       
       <br>
       </div>

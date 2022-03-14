@@ -55,7 +55,20 @@ const productControllerdb = {
     },
 
     edit: async (req, res) => {
-
+        const productID = req.params.id;
+        const productUpdate = await db.Product.update({
+            name: req.body.name,
+            price: req.body.price,
+            // image: req.file ? req.file.filename : "",
+            description: req.body.description,
+            brandId: req.body.productBrand,
+            genderId: req.body.productGender
+        },
+        {where: {id: productID}});
+        return res.redirect("/products/detail/" + productID)
+    },
+    delete: async (req, res) => {
+        
     }
 
 }

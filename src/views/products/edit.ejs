@@ -14,20 +14,22 @@
       <form action="/products/edit/<%= product.id %>?_method=put" method="post" class="create-form">
 
         <div class="controlador">
-          <label>* Editar producto publicado</label>
-          <input type="text" name="idProducto" class="control" value="<%= product.name %>">
+          <label>* Modificar el nombre del producto</label>
+          <input type="text" name="name" class="control" value="<%= product.name %>">
+        </div>
+        
+        <div class="controlador">
+          <label>* Editar precio del producto</label>
+          <input type="number" name="price" class="control" value="<%= product.price %>">
         </div>
 
         <div class="controlador">
-          <label>* Editar categoría</label>
-          <select name="categoryId" multiple>
-            <option value="">Selecciona una ó más opciones</option>
-            <% categories.forEach(oneCategory=> { %>
-              <option 
-                value="<%= oneCategory.id %>"
-                <%= oneCategory.id === product.categories.id ? "selected" : ""  %> 
-              >
-                <%= oneCategory.name %>
+          <label>* Género del producto</label>
+          <select name="productGender" id="">
+            <option>Selecciona una opción</option>
+            <% genders.forEach(oneGender=> { %>
+              <option value="<%= oneGender.id %>" <%= oneGender.id === product.genderId ? "selected" : ""  %> >
+                <%= oneGender.name %>
               </option>
             <% }) %>
           </select>
@@ -35,13 +37,10 @@
 
         <div class="controlador">
           <label>* Editar marca</label>
-          <select name="brandId">
+          <select name="productBrand">
             <option>Selecciona una opción</option>
             <% brands.forEach(oneBrand=> { %>
-              <option 
-                value="<%= oneBrand.id %>"
-                <%= oneBrand.id === product.brands.id ? "selected" : ""  %> 
-              >
+              <option value="<%= oneBrand.id %>" <%= oneBrand.id === product.brandId ? "selected" : "" %>>
                 <%= oneBrand.name %>
               </option>
             <% }) %>
@@ -49,68 +48,52 @@
         </div>
 
         <div class="controlador">
-          <label>* Editar modelo</label>
-          <input type="text" name="idModelo" class="control" value="<%= product.modelo %>">
-        </div>
-
-        <div class="controlador">
-          <label>* Editar precio del producto</label>
-          <input type="number" name="precio" class="control" value="<%= product.price %>">
-        </div>
-
-        <div class="controlador">
-          <label>* Editar colores disponibles</label>
-          <label>
-            <input type="checkbox" name="color" value="Rojo" multiple>Rojo</label>
-          <label>
-            <input type="checkbox" name="color" value="Negro" multiple>Negro</label>
-          <label>
-            <input type="checkbox" name="color" value="Blanco" multiple>Blanco</label>
-          <label>
-            <input type="checkbox" name="color" value="Azul" multiple>Azul</label>
-          <label>
-            <input type="checkbox" name="color" value="Rosa" multiple>Rosa</label>
-          <label>
-            <input type="checkbox" name="color" value="Estampado" multiple>Estampado</label>
-        </div>
-
-        <div class="controlador">
-          <label>* Editar talles disponibles</label>
-          <label>
-            <input type="checkbox" name="talle" value="XS" multiple>XS</label>
-          <label>
-            <input type="checkbox" name="talle" value="S" multiple>S</label>
-          <label>
-            <input type="checkbox" name="talle" value="M" multiple>M</label>
-          <label>
-            <input type="checkbox" name="talle" value="L" multiple>L</label>
-          <label>
-            <input type="checkbox" name="talle" value="XL" multiple>XL</label>
-          <label>
-            <input type="checkbox" name="talle" value="XXL" multiple>XXL</label>
-        </div>
-
-        <div class="controlador">
-          <label>* Editar cantidad a la venta</label>
-          <select name="idcantidad" value="">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+          <label>* Modificar los talles del producto</label>
+          <select name="productSize" multiple>
+            <option value="">Selecciona una ó más opciones</option>
+            <% sizes.forEach(oneSize=> { %>
+              <option value="<%= oneSize.id %>" <%= oneSize.id === product.sizeId ? "selected" : ""  %>>
+                <%= oneSize.name %>
+              </option>
+            <% }) %>
           </select>
         </div>
 
+        <div class="controlador">
+          <label>* Modificar los colores del producto</label>
+          <select name="productColor">ç
+            <option value="">Selecciona una ó más opciones</option>
+            <% for( let i = 0; i < colors.length; i++ ) { %>
+              <% if (colors[i].id == product.colorId) { %>
+               <option value="<%= colors[i].id %>" selected>
+                <%= colors[i].name %> 
+              </option>
+              <% } else { %>
+                <option value="<%= colors[i].id %>">
+                  <%= colors[i].name %> 
+                </option>
+                <% } %>  
+            <% } %>
+          </select>
+        </div>
 
+        <div class="controlador">
+          <label>* Editar categoría</label>
+          <select name="productCategory"  multiple>
+            <option value="">Selecciona una ó más opciones</option>
+            <% categories.forEach(oneCategory=> { %>
+              <option value="<%= oneCategory.id %>" <%= oneCategory.id === product.categoryId ? "selected" : ""  %>>
+                <%= oneCategory.name %>
+              </option>
+            <% }) %>
+          </select>
+        </div>
+
+        <!-- AGREGAR IMAGEN -->
 
         <div class="controlador">
           <label>* Editar descripción</label>
-          <input name="comentario" class="controlador-comentario" value="<%= product.description %>"></textarea>
+          <textarea name="description" id="" cols="30" rows="10"><%= product.description %> </textarea>
         </div>
 
         <button type="submit" class="boton-formulario">Guardar cambios</button>

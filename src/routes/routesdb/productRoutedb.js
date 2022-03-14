@@ -18,4 +18,7 @@ router.get("/detail/:id", productControllerdb.detail);
 router.get("/edit/:id", productControllerdb.editForm);
 router.put("/edit/:id", productControllerdb.edit);
 
+//Borrar un producto
+router.delete("/delete/:id", productControllerdb.delete);
+
 module.exports = router;
