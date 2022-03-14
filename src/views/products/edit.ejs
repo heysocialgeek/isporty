@@ -11,7 +11,7 @@
     <h1>Editar producto</h1>
     <section>
 
-      <form action="/product/<%= product.id %>?_method=put" method="post" class="create-form">
+      <form action="/products/edit/<%= product.id %>?_method=put" method="post" class="create-form">
 
         <div class="controlador">
           <label>* Editar producto publicado</label>
@@ -20,17 +20,32 @@
 
         <div class="controlador">
           <label>* Editar categoría</label>
-          <select name="category" value="<% product.category %> ">
-            <option value="Ropa femenina">Ropa femenina</option>
-            <option value="Ropa masculina">Ropa masculina</option>
-            <option value="Calzado">Calzado</option>
-            <option value="Accesorios">Accesorios</option>
+          <select name="categoryId" multiple>
+            <option value="">Selecciona una ó más opciones</option>
+            <% categories.forEach(oneCategory=> { %>
+              <option 
+                value="<%= oneCategory.id %>"
+                <%= oneCategory.id === product.categories.id ? "selected" : ""  %> 
+              >
+                <%= oneCategory.name %>
+              </option>
+            <% }) %>
           </select>
         </div>
 
         <div class="controlador">
           <label>* Editar marca</label>
-          <input type="text" name="idMarca" class="control" value="<%= product.marca %>">
+          <select name="brandId">
+            <option>Selecciona una opción</option>
+            <% brands.forEach(oneBrand=> { %>
+              <option 
+                value="<%= oneBrand.id %>"
+                <%= oneBrand.id === product.brands.id ? "selected" : ""  %> 
+              >
+                <%= oneBrand.name %>
+              </option>
+            <% }) %>
+          </select>
         </div>
 
         <div class="controlador">

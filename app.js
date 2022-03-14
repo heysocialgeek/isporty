@@ -50,5 +50,8 @@ app.set("views", "./src/views");
 const productRoutedb = require("./src/routes/routesdb/productRoutedb")
 app.use("/products", productRoutedb)
 
+const userRoutedb = require("./src/routes/routesdb/userRoutedb")
+app.use("/user", userRoutedb)
+
 
 

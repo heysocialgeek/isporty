@@ -41,8 +41,22 @@ const productControllerdb = {
         const productID = req.params.id;
         const product = await db.Product.findByPk(productID, { include: ['categories', 'gender', 'brands', 'colors', 'sizes'] })
         return res.render('products/detail', { product })
-    }
+    },
 
+    editForm: async (req, res) => {
+        const productID = req.params.id;
+        const product = await db.Product.findByPk(productID, { include: ['categories', 'gender', 'brands', 'colors', 'sizes'] });
+        const genders = await db.Gender.findAll({});
+        const brands = await db.Brand.findAll({});
+        const sizes = await db.Size.findAll({});
+        const categories = await db.Category.findAll({});
+        const colors = await db.Color.findAll({});
+        return res.render("products/edit", { product, genders, brands, sizes, categories, colors })
+    },
+
+    edit: async (req, res) => {
+
+    }
 
 }
 

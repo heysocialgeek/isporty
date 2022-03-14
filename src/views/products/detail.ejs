@@ -68,10 +68,11 @@
     <br>
     <form action="/product/detail/<%= product.id %>?_method=DELETE" method="POST">
       
-      <% if (locals.isLogged) { %>
-       <a href="/product/productEdit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
-      <button type="submit" class="action-button-delete">BORRAR PRODUCTO</button>
-      <% } %>
+      <!-- <% if (locals.isLogged) { %> -->
+        <!-- <% } %> -->
+        <!-- los botones van en el if que esta justo arriba -->
+        <a href="/product/productEdit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
+       <button type="submit" class="action-button-delete">BORRAR PRODUCTO</button>
       
       <br>
       </div>

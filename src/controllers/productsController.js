@@ -63,7 +63,7 @@ const controller = {
 		const id = Number(req.params.id); // Number() nos dá el el valor en formato Number
 		// Buscamos al producto dentro del array que corresponda con ese id
 		const product = productsDB.find(oneProduct => oneProduct.id === id);
-        const formularioEditPath = path.resolve(__dirname, '../views/products/formularioedit')
+        const formularioEditPath = path.resolve(__dirname, '../views/products/edit')
 		return res.render(formularioEditPath, {
 			product		});
 	},
