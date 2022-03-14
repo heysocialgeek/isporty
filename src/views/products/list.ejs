@@ -71,7 +71,7 @@
                 <section class="section-style">
                     <% for (let i = 0; i < products.length; i++) { %>
                     <article class="article-style">
-                        <a href="/product/detail/<%= products[i].id %> "><img src="/img/products/<%= products[i].image %>" alt="<%= products[i].name %>"></a>
+                        <a href="/products/detail/<%= products[i].id %> "><img src="/img/products/<%= products[i].image %>" alt="<%= products[i].name %>"></a>
                         <div class="product-description">
                             <h2><%= products[i].name %></h2>
                             <p>$<%= products[i].price %></p>

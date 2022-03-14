@@ -10,4 +10,7 @@ router.get("/list", productControllerdb.list)
 router.get("/create", productControllerdb.create)
 router.post("/create", upload.single('image'), productControllerdb.store)
 
+//detalle de producto
+router.get("/detail/:id", productControllerdb.detail);
+
 module.exports = router;
