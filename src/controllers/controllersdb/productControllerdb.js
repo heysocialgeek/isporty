@@ -23,14 +23,20 @@ const productControllerdb = {
         }
     },
     store: async (req, res) => {
-        const productStore = await db.Product.create(req.body);
-        productStore.addCategories(req.body.productCategory);
-        // productStore.addGender(req.body.productGender);
-        // productStore.addColors(req.body.productColor);
-        // productStore.addSizes(req.body.productSize);
-        // productStore.addBrands(req.body.productBrand);
-        return res.redirect("/products/list")
-    }
+		const productStored = await db.Product.create({
+			name: req.body.name,
+			price: req.body.price,
+			image: req.file ? req.file.filename : "",
+			description: req.body.description,
+            brandId: req.body.productBrand,
+            genderId: req.body.productGender
+		});
+        productStored.addCategories(req.body.productCategory);
+        productStored.addSize(req.body.productSize);
+        productStored.addColor(req.body.productColor)
+        return res.redirect("/products/list")}
+
+
 }
 
 module.exports = productControllerdb

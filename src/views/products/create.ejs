@@ -13,10 +13,10 @@
         <form action="/products/create" method="POST" enctype="multipart/form-data">
             <div class="form-container-create">
                 <label class="label-title" for="productName">Nombre del producto:</label>
-                <input type="text" id="productName" name="productName" placeholder="Ej: zapatilla nike air force">
+                <input type="text" id="productName" name="name" placeholder="Ej: zapatilla nike air force">
 
                 <label for="price">Precio:</label>
-                <input type="number" id="price" name="productPrice" placeholder="Escriba el precio">
+                <input type="text" id="price" name="price" placeholder="Escriba el precio">
 
                 <label for="gender">Género del producto:</label>
                 <select id="gender" name="productGender">
@@ -63,11 +63,11 @@
                     <% } %>
                 </label>
 
-                <!-- <label for="image">Imagen del producto:</label>
-                <input class="input-image" type="file" id="image" name="image" multiple> -->
+                <label for="image">Imagen del producto:</label>
+                <input class="input-image" type="file" id="image" name="image"> -->
 
                 <label for="description">Descripción del producto:</label>
-                <textarea name="productDescription" id="description" cols="40" rows="10">Detalle aún más el producto a publicar...</textarea>
+                <textarea name="description" id="description" cols="40" rows="10">Detalle aún más el producto a publicar...</textarea>
 
                 <button class="button-style" type="submit">Cargar producto</button>
             </div>
