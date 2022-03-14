@@ -40,25 +40,25 @@
       <div>
         <h3>Descripción del producto</h3>
         <div class="descripcion">
-        <p >Marca:</p> <p><%= product.brands.name %></p>
+        <p >Marca:<%= product.brands.name %></p>
         <p >Género: <%= product.gender.name %></p> 
           <% if (product.sizes.length > 0) { %>
-            <p>Talles:</p>
+            <p>Talles:
             <% product.sizes.forEach(size=> { %>
-              <p><%= size.name %></p>
-            <% }) %>
+              <%= size.name %>
+            <% }) %></p>
           <% } %>
           <% if (product.colors.length > 0) { %>
-            <p>Colores disponibles:</p>
+            <p>Colores disponibles:
             <% product.colors.forEach(color=> { %>
-              <p> <%= color.name %></p>
-            <% }) %>
+              <%= color.name %>
+            <% }) %></p>
           <% } %>
           <% if (product.categories.length > 0) { %>
-            <p>Categorías: </p>
+            <p>Categorías:
             <% product.categories.forEach(category=> { %>
-              <p><%= category.name %></p>
-            <% }) %>
+              <%= category.name %>
+            <% }) %></p>
           <% } %>
           <p >Descripción: <%= product.description %> </p>
         </div>
@@ -71,7 +71,7 @@
       <!-- <% if (locals.isLogged) { %> -->
         <!-- <% } %> -->
         <!-- los botones van en el if que esta justo arriba -->
-        <a href="/product/productEdit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
+        <a href="/products/edit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
        <button type="submit" class="action-button-delete">BORRAR PRODUCTO</button>
       
       <br>
