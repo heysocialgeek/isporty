@@ -38,14 +38,14 @@ Hacer menos:
 
 **Retrospectiva Sprint-5/ Juan Carlos Muñoz:**
 
-Seguir haciendo: 
+Seguir haciendo: Nos cambió mucho reforzar el uso de liveshare, sobre todo al tener cada uno un sistema distinto sobre el que trabajamos.
 
-Hacer más: 
+Hacer más: Investigar y obtener recursos de webs dedicadas a programación.
 
-Empezar a hacer: 
+Empezar a hacer: Tener una rama actualizada semanal por si todo sale mal.
 
-Dejar de hacer: 
+Dejar de hacer: La verdad es que venimos muy bien y siento que hemos aprendido a trabajar en equipo.
 
-Hacer menos: 
+Hacer menos: Dejarnos ganar por el bloqueo.
 
 
