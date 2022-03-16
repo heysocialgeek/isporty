@@ -11,9 +11,11 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL UNIQUE,
   `password` varchar(255) NOT NULL,
   `image` varchar(255) NULL DEFAULT 'no-image.png',
+  `cartId` int(10) unsigned DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL
+  `deletedAt` timestamp NULL DEFAULT NULL,
+  FOREIGN KEY (`cartId`) REFERENCES `carts` (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `brands` (
@@ -64,7 +66,8 @@ CREATE TABLE `products` (
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
-  FOREIGN KEY (`brandId`) REFERENCES `brands` (`id`)
+  FOREIGN KEY (`brandId`) REFERENCES `brands` (`id`),
+  FOREIGN KEY (`genderId`) REFERENCES `gender` (`id`) -- VER DE AGREGARLO EN MySQL
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE `carts` (

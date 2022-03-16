@@ -15,31 +15,22 @@
 
       <form action="/user/register" method="POST" class="create-form" form="register-form" enctype="multipart/form-data">
         
-        <div>
+      <div>
         <h2>Datos sobre tu cuenta</h2>
 
         <div class="controlador">
-          <label>* Nombre</label>
-          <input type="text" name="first_name" class="control" value="<%= locals.oldData ? oldData.first_name : null %>">
-          <% if (locals.errors && errors.first_name) { %>
+          <label>* Nombre completo</label>
+          <input type="text" name="name" class="control" value="<%= locals.oldData ? oldData.name : null %>">
+          <% if (locals.errors && errors.name) { %>
             <div class="text-danger">
-              <%= errors.first_name.msg %> 
-            </div>
-          <% } %>
-        </div>
-        <div class="controlador">
-          <label>* Apellido</label>
-          <input type="text" name="last_name" class="control" value="<%= locals.oldData ? oldData.last_name : null %>">
-          <% if (locals.errors && errors.last_name) { %>
-            <div class="text-danger">
-              <%= errors.last_name.msg %> 
+              <%= errors.name.msg %> 
             </div>
           <% } %>
         </div>
 
         <div class="controlador">
           <label>* Email</label>
-          <input type="text" name="email" class="control" value="<%= locals.oldData ? oldData.email : null %>">
+          <input type="email" name="email" class="control" value="<%= locals.oldData ? oldData.email : null %>">
           <% if (locals.errors && errors.email) { %>
             <div class="text-danger">
               <%= errors.email.msg %> 
@@ -57,55 +48,14 @@
           <% } %>
         </div>
 
-
-        <div class="controlador">
-          <label>* Documento</label>
-          <input type="text" name="documento" class="control" value="<%= locals.oldData ? oldData.documento : null %>">
-          <% if (locals.errors && errors.documento) { %>
-            <div class="text-danger">
-              <%= errors.documento.msg %> 
-            </div>
-          <% } %>
-        </div>
-        <div class="controlador">
-          <label>* Fecha de nacimiento</label>
-          <input type="date" name="birthday_date" class="control">
-        </div>
         <div class="controlador">
           <label>Imagen de perfil</label>
-          <input type="file" name="avatar">
-          <% if (locals.errors && errors.avatar) { %>
+          <input type="file" name="image">
+          <% if (locals.errors && errors.image) { %>
             <div class="text-danger">
-              <%= errors.avatar.msg %> 
+              <%= errors.image.msg %> 
             </div>
           <% } %>
-        </div>
-      </div>
-      <div>
-        <h2>Datos de envío</h2>
-        <div class="controlador">
-          <label>* Calle</label>
-          <input type="text" name="calle" class="control">
-        </div>
-        <div class="controlador">
-          <label>* Número</label>
-          <input type="text" name="numeroCalle" class="control">
-        </div>
-        <div class="controlador">
-          <label>* Piso/departamento</label>
-          <input type="text" name="piso" class="control">
-        </div>
-        <div class="controlador">
-          <label>* Código postal</label>
-          <input type="text" name="codigoPostal" class="control">
-        </div>
-        <div class="controlador">
-          <label>* Género</label>
-<select name="genre"class="control">
-  <option value="Hombre">Hombre</option>
-  <option value="Mujer">Mujer</option>
-  <option value="Prefiero no especificar">Prefiero no especificar</option>
-</select>
         </div>
         <div>
           <input type="checkbox" name="terminos">
@@ -113,8 +63,9 @@
         </div>
         <p>* campos obligatorios</p>
         <button type="submit" class="boton-formulario">Registrarse</button>
+      </div>
+
       </form>
-    </div>
 
     </section>
     <a href="https://wa.me/5491127682598?text=Me%20gustar%C3%ADa%20contactar%20con%20un%20asesor%20comercial"

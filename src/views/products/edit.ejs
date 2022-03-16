@@ -52,7 +52,7 @@
           <select name="productSize" multiple>
             <option value="">Selecciona una ó más opciones</option>
             <% sizes.forEach(oneSize=> { %>
-              <option value="<%= oneSize.id %>" <%= oneSize.id === product.sizeId ? "selected" : ""  %>>
+              <option value="<%= oneSize.id %>" <%= oneSize.id === sizes.id ? "selected" : ""  %>>
                 <%= oneSize.name %>
               </option>
             <% }) %>

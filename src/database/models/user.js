@@ -18,6 +18,9 @@ module.exports = function (sequelize, dataTypes) {
         },
         image: {
             type: dataTypes.STRING
+        },
+        cartId: {
+            type: dataTypes.INTEGER
         }
     }
 

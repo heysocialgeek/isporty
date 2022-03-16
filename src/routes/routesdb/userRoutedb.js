@@ -14,7 +14,7 @@ const validations = require("../../../middlewares/validationsRegister")
 
 //Rutas de registración de un usuario
 router.get("/register", guestMiddleware, userControllerdb.register);
-router.post("/register",uploadFile.single("avatar"), validations, userControllerdb.processRegister);
+router.post("/register",uploadFile.single("image"), validations, userControllerdb.processRegister);
 
 //Rutas del login
 router.get("/login", guestMiddleware, userControllerdb.login);
