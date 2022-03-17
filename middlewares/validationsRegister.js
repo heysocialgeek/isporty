@@ -11,8 +11,9 @@ module.exports = [
         .isEmail().withMessage("Debes escribir un formato de correo válido"),
     body("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
-        // .isStrongPassword({minLength: 6, minLowercase: 1, minUppercase: 1, minNumbers: 1}).withMessage("La contraseña debe contener un mínimo de 6 caracteres, al menos una letra Mayúscula y un Número"),
-    ,body("image").custom((value, { req }) => {
+        .isLength({min: 6}).withMessage("La contraseña debe contener al menos 6 caracteres"),
+        // .isStrongPassword().withMessage("La contraseña debe contener un mínimo de 6 caracteres, al menos una letra Mayúscula y un Número"),
+    body("image").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png", ".jpeg", ".gif"];
         if (!file) {
