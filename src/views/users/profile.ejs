@@ -14,7 +14,7 @@
           <div class="card shadow-sm">
             <div class="card-header bg-transparent text-center">
               <img class="profile_img" src="/img/users/<%= user.image %>">
-              <h3>Hola, <%= user.first_name %></h3>
+              <h3>Hola, <%= user.name %></h3>
             </div>
           </div>
         </div>
@@ -29,33 +29,39 @@
                 <tr>
                     <th width="30%">Nombre completo:</th>
                     <td width="2%">:</td>
-                    <td><%= user.first_name %> <%= user.last_name %></td>
-                  </tr>
-                <tr>
+                    <td><%= user.name %></td>
+                </tr>
+
+                <!-- <tr>
                   <th width="30%">Documento:</th>
                   <td width="2%">:</td>
                   <td><%= user.documento %></td>
-                </tr>
+                </tr> -->
+
                 <tr>
                     <th width="30%">Correo electrónico:</th>
                     <td width="2%">:</td>
                     <td><%= user.email %></td>
-                  </tr>
-                <tr>
+                </tr>
+
+                <!-- <tr>
                   <th width="30%">Género:</th>
                   <td width="2%">:</td>
                   <td><%= user.genre %></td>
-                </tr>
-                <tr>
+                </tr> -->
+
+                <!-- <tr>
                   <th width="30%">Fecha de nacimiento:</th>
                   <td width="2%">:</td>
                   <td><%= user.birthday_date %></td>
-                </tr>
-                <tr>
+                </tr> -->
+
+                <!-- <tr>
                   <th width="30%">Dirección de envío principal</th>
                   <td width="2%">:</td>
                   <td><%= user.calle %> <%= user.numeroCalle %>, <%= user.piso %>, <%= user.codigoPostal %></td>
-                </tr>
+                </tr> -->
+
               </table>
             </div>
           </div>
@@ -65,7 +71,7 @@
               <h3 class="mb-0"><i class="far fa-clone pr-1"></i> Almacenamiento de tus datos</h3>
             </div>
             <div class="card-body pt-0">
-                <p><%= user.first_name %>, usamos la Información de tu perfil generalmente para cumplir con cualquier pedido realizado a través del Sitio (incluido el procesamiento de su información de pago, la organización del envío y el suministro de facturas y / o confirmaciones de pedido). Además, utilizamos esta Información de pedido para comunicarnos con contigo.
+                <p><%= user.name %>, usamos la Información de tu perfil generalmente para cumplir con cualquier pedido realizado a través del Sitio (incluido el procesamiento de su información de pago, la organización del envío y el suministro de facturas y / o confirmaciones de pedido). Además, utilizamos esta Información de pedido para comunicarnos con contigo.
 
                 </p>
             </div>

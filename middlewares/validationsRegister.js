@@ -12,7 +12,7 @@ module.exports = [
     body("password")
         .notEmpty().withMessage("Tienes que escribir una contraseña").bail()
         .isLength({min: 6}).withMessage("La contraseña debe contener al menos 6 caracteres"),
-        // .isStrongPassword().withMessage("La contraseña debe contener un mínimo de 6 caracteres, al menos una letra Mayúscula y un Número"),
+        // .isStrongPassword().withMessage(""),
     body("image").custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png", ".jpeg", ".gif"];

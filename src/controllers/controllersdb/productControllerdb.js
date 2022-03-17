@@ -55,6 +55,7 @@ const productControllerdb = {
     },
 
     edit: async (req, res) => {
+        //findbypk, luego remover relaciones y luego crear las relaciones
         const productID = req.params.id;
         const productUpdate = await db.Product.update({
             name: req.body.name,
