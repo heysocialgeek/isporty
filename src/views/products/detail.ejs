@@ -20,19 +20,18 @@
           <p>Precio: $<%= product.price %> </p>
         </div>
 
-        <div class="imagenproducto">
+        <!-- <div class="imagenproducto"> -->
           <div class="talles">
-            <label></label>
-            <button type="submit">XS</button>
-            <button type="submit">S</button>
-            <button type="submit">M</button>
-            <button type="submit">L</button>
-            <button type="submit">XL</button>
-            <button type="submit">XXL</button>
+            <% if (product.sizes.length > 0) { %>
+              <% product.sizes.forEach(size=> { %>
+                <button type="submit"> <%= size.name %></button>
+              <% }) %>
+            <% } %>
           </div>
           <div>
             <button class="botoncarrito" type="submit">AGREGAR AL CARRITO</button>
           </div>
+          <!-- </div> -->
       </article>
     </section>
 
