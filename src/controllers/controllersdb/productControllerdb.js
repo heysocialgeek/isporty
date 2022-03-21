@@ -1,4 +1,5 @@
 const db = require("../../database/models");
+const { Op } = require("sequelize");
 
 const productControllerdb = {
     list: async (req, res) => {
@@ -83,6 +84,19 @@ const productControllerdb = {
         productToDelete.removeColors(productToDelete.colors);
         productToDelete.destroy();
         return res.redirect("/products/list");
+    },
+    search: (req, res) => {
+        db.Product.findAll({
+            where: {
+                name: {
+                    [Op.like] : '%' + req.body.search + '%'
+                }
+            },
+            include: ['categories', 'sizes', 'colors']
+        })
+            .then(products => {
+                return res.render('products/searchResults', { array: products });
+            })
     }
 
 }

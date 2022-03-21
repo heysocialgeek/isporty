@@ -7,11 +7,14 @@
           <i class="fas fa-bars"></i>
       </div>
 
-      <div>
-        <form class="features-search" action="">
-          <input class="search-bar" type="text" name="search" placeholder="Buscar productos..."> <i class="fas fa-search"></i>
-        </form>
-      </div>
+      <form class="features-search" action="/products/search" method="POST">
+        <div>
+            <button type="submit">
+                <span><i class="fas fa-search"></i></span>
+            </button>
+            <input class="search-bar" type="text" name="search" placeholder="Buscar productos..." />
+        </div>
+    </form>
     </div>
 
     <nav class="nav-bar">
