@@ -76,7 +76,13 @@ const productControllerdb = {
         return res.redirect("/products/list")
     },
     delete: async (req, res) => {
-        
+        const productID = req.params.id;
+        const productToDelete = await db.Product.findByPk(productID, { include: ["categories", "sizes", "colors"]});
+        productToDelete.removeCategories(productToDelete.categories);
+        productToDelete.removeSizes(productToDelete.sizes);
+        productToDelete.removeColors(productToDelete.colors);
+        productToDelete.destroy();
+        return res.redirect("/products/list");
     }
 
 }
