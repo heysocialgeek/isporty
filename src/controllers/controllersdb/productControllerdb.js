@@ -55,18 +55,25 @@ const productControllerdb = {
     },
 
     edit: async (req, res) => {
-        //findbypk, luego remover relaciones y luego crear las relaciones
-        const productID = req.params.id;
-        const productUpdate = await db.Product.update({
-            name: req.body.name,
-            price: req.body.price,
-            // image: req.file ? req.file.filename : "",
-            description: req.body.description,
-            brandId: req.body.productBrand,
-            genderId: req.body.productGender
-        },
-        {where: {id: productID}});
-        return res.redirect("/products/detail/" + productID)
+        const productToEdit = await db.Product.findByPk(req.params.id, { include: ["sizes", "colors", "categories"] })
+
+
+        productToEdit.removeSizes(productToEdit.sizes);
+        productToEdit.addSizes(req.body.productSize)
+        productToEdit.removeColors(productToEdit.colors);
+        productToEdit.addColors(req.body.productColor)
+        productToEdit.removeCategories(productToEdit.categories);
+        productToEdit.addCategories(req.body.productCategory)
+        
+
+        productToEdit.name = req.body.name ? req.body.name : productToEdit.name;
+        productToEdit.price = req.body.price ? req.body.price : productToEdit.price;
+        productToEdit.description = req.body.description;
+        productToEdit.brandId = req.body.productBrand;
+        productToEdit.genderId = req.body.productGender;
+        
+        productToEdit.save()
+        return res.redirect("/products/list")
     },
     delete: async (req, res) => {
         
