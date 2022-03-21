@@ -7,6 +7,9 @@ const upload = require("../../../middlewares/multerProductMiddleware")
 //Mostrar todos los productos
 router.get("/list", productControllerdb.list);
 
+//Buscar un producto
+router.post("/search", productControllerdb.search);
+
 //Creación de productos
 router.get("/create", productControllerdb.create);
 router.post("/create", upload.single('image'), productControllerdb.store);
