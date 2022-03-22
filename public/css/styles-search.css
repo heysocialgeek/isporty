@@ -104,31 +104,12 @@ main {
     position: relative;
 }
 
-.article-style i {
-    position: absolute;
-    left: 86%;
-    bottom:90%;
-    font-size: 1.5em;
-    display: none;
-    
-}
-
 .article-conteiner {
     display: flex;
     flex-direction: row;
 
 }
 
-.shoppingcart i {
-    position: absolute;
-    left: 86%;
-    top: 90%;
-    color: #53a6f3;
-}
-
-.article-style:hover i {
-    display: block;
-}
 
 .article-style:hover {
     box-shadow: 10px 10px 10px rgb(31 31 31);
@@ -166,6 +147,7 @@ main {
 
     .article-style {
         width: 40%;
+        
     }
 
     .section-style {
