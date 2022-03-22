@@ -76,15 +76,24 @@ const productControllerdb = {
         productToEdit.save()
         return res.redirect("/products/list")
     },
-    delete: async (req, res) => {
+    delete: (req, res) => {
+        db.Product.destroy({
+            where: { id: req.params.id }
+        }).then(a =>{
+            res.redirect("/products/list")
+        })
+        
+        /*async (req, res) => {
         const productID = req.params.id;
         const productToDelete = await db.Product.findByPk(productID, { include: ["categories", "sizes", "colors"]});
         productToDelete.removeCategories(productToDelete.categories);
         productToDelete.removeSizes(productToDelete.sizes);
         productToDelete.removeColors(productToDelete.colors);
         productToDelete.destroy();
-        return res.redirect("/products/list");
-    },
+        return res.redirect("/products/list");*/
+        },
+    
+
     search: (req, res) => {
         db.Product.findAll({
             where: {
