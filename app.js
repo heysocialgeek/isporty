@@ -53,6 +53,9 @@ app.use("/products", productRoutedb)
 const userRoutedb = require("./src/routes/routesdb/userRoutedb")
 app.use("/user", userRoutedb)
 
+const mainRoutedb = require ("./src/routes/routesdb/mainRoutedb")
+app.use ("/", mainRoutedb)
+
 
 
 
