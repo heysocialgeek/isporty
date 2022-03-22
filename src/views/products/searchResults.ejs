@@ -8,28 +8,24 @@
 
     <main>
         <section class="section">
-            <article class="article-conteiner">
+            <article class="section-style">
                 <% array.forEach(product => { %>
-                    <div class="article">
-                        <div>
+                    <div class="article-style">
                             <div class="conteinerOfImages">
                                 <a href="/products/detail/<%= product.id %>">
-                                <img class="img" src="/img/products/<%= product.image %>" width="300px" height="300px" alt="" />
+                                <img class="imgProduct" src="/img/products/<%= product.image %>" width="300px" height="300px" alt="" />
                                 </a>
-                            </div>
-                            
-                            <div class=line>
-                                <div class="shipping"><i class="fas fa-truck"></i></div>
-                                <div class="box-text">
-                                    <div class="price">
-                                        AR $<%= product.price %>
+                                <div class=line>
+                                    <div class="shipping"><i class="fas fa-truck"></i></div>
+                                    <div class="box-text">
+                                        <div class="price">
+                                            AR $<%= product.price %>
+                                        </div>
+                                        <div class="productName">
+                                            <%= product.name %>
                                     </div>
-                                </div>
-
-                                <div class="productName">
-                                    <%= product.name %>
-                                </div>
-
+                                    </div>
+                                    </div>
                             </div>
                         </div>
                     </div>

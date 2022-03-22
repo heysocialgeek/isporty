@@ -18,6 +18,7 @@ body {
     width:  400px;
     height: 400px;
     object-fit: scale-down;
+    background-color: white;
 }
 
 main {
@@ -90,11 +91,6 @@ main {
     font-size: 20px;
 }
 
-.section-style img {
-    width: 100%;
-    border-bottom: solid 1px gray;
-}
-
 .section-style article {
     background-color: white;
     text-align: center;
@@ -104,7 +100,8 @@ main {
 }
 
 .article-style {
-    position: relative
+    background-color: white;  
+    position: relative;
 }
 
 .article-style i {
@@ -113,6 +110,13 @@ main {
     bottom:90%;
     font-size: 1.5em;
     display: none;
+    
+}
+
+.article-conteiner {
+    display: flex;
+    flex-direction: row;
+
 }
 
 .shoppingcart i {
@@ -161,7 +165,7 @@ main {
     }
 
     .article-style {
-        width: 40%
+        width: 40%;
     }
 
     .section-style {
