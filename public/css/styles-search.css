@@ -100,15 +100,13 @@ main {
 }
 
 .article-style {
-    background-color: white;  
-    position: relative;
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    padding: auto;
+    background-color: white;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px rgb(31, 31, 31);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    min-height: 300px;
 }
 
 .article-conteiner {
