@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2022 at 12:29 AM
+-- Generation Time: Mar 24, 2022 at 12:45 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.4.28
 
@@ -178,8 +178,6 @@ INSERT INTO `productcategory` (`id`, `productId`, `categoryId`, `createdAt`, `up
 (23, 21, 3, '2022-03-22 14:58:11', '2022-03-22 14:58:11'),
 (24, 22, 1, '2022-03-22 15:00:29', '2022-03-22 15:00:29'),
 (25, 23, 3, '2022-03-22 15:02:05', '2022-03-22 15:02:05'),
-(26, 24, 1, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(27, 24, 3, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
 (28, 25, 3, '2022-03-22 15:04:57', '2022-03-22 15:04:57'),
 (29, 26, 1, '2022-03-22 15:05:52', '2022-03-22 15:05:52');
 
@@ -226,9 +224,6 @@ INSERT INTO `productcolor` (`id`, `productId`, `colorId`, `createdAt`, `updatedA
 (30, 23, 1, '2022-03-22 15:02:05', '2022-03-22 15:02:05'),
 (31, 23, 2, '2022-03-22 15:02:05', '2022-03-22 15:02:05'),
 (32, 23, 4, '2022-03-22 15:02:05', '2022-03-22 15:02:05'),
-(33, 24, 1, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(34, 24, 2, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(35, 24, 4, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
 (36, 25, 1, '2022-03-22 15:04:57', '2022-03-22 15:04:57'),
 (37, 25, 2, '2022-03-22 15:04:57', '2022-03-22 15:04:57'),
 (38, 26, 1, '2022-03-22 15:05:52', '2022-03-22 15:05:52'),
@@ -269,7 +264,7 @@ INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `brandId`
 (21, 'Zapatilla Fila Disruptor Ii Premium', '22400.00', '1647961091195_img.jpg', 'Un versión actualizada de la famosa silueta de los 90s. Estas Fila Disruptor para mujer son un ícono de la moda urbana, son clásicas y combinables. Están confeccionadas en material sintético con una suela de EVA liviana que aporta comodidad en cada paso.', 5, 1, '2022-03-22 14:58:11', '2022-03-22 14:58:11', NULL),
 (22, 'Zapatilla Fila Mujer Mindblower', '9400.00', '1647961229091_img.jpg', 'El upper mantiene su fidelidad a los orígenes en cuanto a estética se refiere, respecto a los materiales utilizado, se ha dado paso a un piel sintética más ligera, cuyo interior esta reforzado con un forro textil muy suave al tacto.', 5, 2, '2022-03-22 15:00:29', '2022-03-22 15:00:29', NULL),
 (23, 'Zapatilla Fila MB L12', '24500.00', '1647961325612_img.jpg', 'Aunque las zapatillas parezcan robustas y voluminosas, nada tiene que ver con la sensación de pisar sobre estas zapatillas, en la cual su espuma de doble densidad proporciona un confort excelente. ', 5, 1, '2022-03-22 15:02:05', '2022-03-22 15:02:05', NULL),
-(24, 'Zapatillas Nike Lunarepic Flyknit Running Lunarlon', '19999.00', '1647961390337_img.jpg', 'Súmate a la lujosa comodidad de las zapatillas de running Nike Flyknit LunarEpic para mujer. Está afinado con precisión con una parte superior construida Flyknit y espuma Lunarlon sensible para ofrecer una conducción suave kilómetro tras kilómetro.\r\n', 1, 3, '2022-03-22 15:03:10', '2022-03-22 15:03:10', NULL),
+(24, 'Zapatillas Nike Lunarepic Flyknit', '19999.00', '1647961390337_img.jpg', 'Súmate a la lujosa comodidad de las zapatillas de running Nike Flyknit LunarEpic para mujer. Está afinado con precisión con una parte superior construida Flyknit y espuma Lunarlon sensible para ofrecer una conducción suave kilómetro tras kilómetro.\r\n ', 1, 3, '2022-03-22 15:03:10', '2022-03-23 23:44:53', NULL),
 (25, 'Zapatillas Entrenamiento Metcon ', '11199.00', '1647961497008_img.jpg', 'Zapatillas Nike Metcon 5 Originales / Rincón del Fútbol', 1, 3, '2022-03-22 15:04:57', '2022-03-22 15:04:57', NULL),
 (26, 'Zapatilla Kappa Authentic Kassidy1', '8999.00', '1647961552632_img.jpg', 'Zapatilla Kappa moda urbana al mejor estilo de New York.', 6, 2, '2022-03-22 15:05:52', '2022-03-22 15:05:52', NULL);
 
@@ -329,17 +324,6 @@ INSERT INTO `productsize` (`id`, `productId`, `sizeId`, `createdAt`, `updatedAt`
 (50, 23, 7, '2022-03-22 15:02:05', '2022-03-22 15:02:05'),
 (51, 23, 8, '2022-03-22 15:02:05', '2022-03-22 15:02:05'),
 (52, 23, 9, '2022-03-22 15:02:05', '2022-03-22 15:02:05'),
-(53, 24, 1, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(54, 24, 2, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(55, 24, 3, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(56, 24, 4, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(57, 24, 5, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(58, 24, 6, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(59, 24, 7, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(60, 24, 8, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(61, 24, 9, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(62, 24, 10, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
-(63, 24, 11, '2022-03-22 15:03:10', '2022-03-22 15:03:10'),
 (64, 25, 7, '2022-03-22 15:04:57', '2022-03-22 15:04:57'),
 (65, 25, 8, '2022-03-22 15:04:57', '2022-03-22 15:04:57'),
 (66, 25, 9, '2022-03-22 15:04:57', '2022-03-22 15:04:57'),
