@@ -102,6 +102,13 @@ main {
 .article-style {
     background-color: white;  
     position: relative;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: auto;
 }
 
 .article-conteiner {
