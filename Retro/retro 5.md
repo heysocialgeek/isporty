@@ -26,15 +26,15 @@ Hacer menos: descuidar las vistas porque simplemente buscamos que lo nuevo funci
 
 **Retrospectiva Sprint-6/Fernandez, Maria Sol:**
 
-Seguir haciendo: 
+Seguir haciendo: La comunicaion con el grupo y aprender a leer los errores.
 
-Hacer más:
+Hacer más:Leer contenido fuera del playground y probar cosas nuevas
 
-Empezar a hacer:  
+Empezar a hacer: Un backup
 
-Dejar de hacer: 
+Dejar de hacer: No modificar lo que funciona
 
-Hacer menos: 
+Hacer menos: Frustrarse menos 
 
 **Retrospectiva Sprint-5/ Juan Carlos Muñoz:**
 
