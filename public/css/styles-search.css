@@ -100,17 +100,13 @@ main {
 }
 
 .article-style {
-    background-color: white;  
-    position: relative;
-}
-
-.article-style i {
-    position: absolute;
-    left: 86%;
-    bottom:90%;
-    font-size: 1.5em;
-    display: none;
-    
+    background-color: white;
+    padding: 8px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px rgb(31, 31, 31);
+    margin-bottom: 20px;
+    border-radius: 15px;
+    min-height: 300px;
 }
 
 .article-conteiner {
@@ -119,16 +115,6 @@ main {
 
 }
 
-.shoppingcart i {
-    position: absolute;
-    left: 86%;
-    top: 90%;
-    color: #53a6f3;
-}
-
-.article-style:hover i {
-    display: block;
-}
 
 .article-style:hover {
     box-shadow: 10px 10px 10px rgb(31 31 31);
@@ -166,13 +152,13 @@ main {
 
     .article-style {
         width: 40%;
+        
     }
 
     .section-style {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: center;
     }
 }
 

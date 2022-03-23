@@ -104,7 +104,10 @@ main {
 }
 
 .article-style {
-    position: relative
+    position: relative;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(31, 31, 31);
+
 }
 
 .article-style i {
