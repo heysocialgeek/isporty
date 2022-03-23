@@ -2,39 +2,39 @@
 
 **Retrospectiva Sprint-5/Joaquín Caggiano:**
 
-Seguir haciendo: 
+Seguir haciendo: mejorar el css de las vistas 
 
-Hacer más: 
+Hacer más: más funcionalidades en el back-end 
 
-Empezar a hacer: 
+Empezar a hacer: Utilizar javascript para el front-end 
 
-Dejar de hacer: 
+Dejar de hacer:  El crud ya está andando perfecto. 
 
-Hacer menos: 
+Hacer menos: No estresarme con el código, pase todo un día con la cabeza “quemada” porque no me salía, y al otro día me salió. 
 
 **Retrospectiva sprint 5 / Facundo Mayuri:**
 
-Seguir haciendo: 
+Seguir haciendo: seguir colaborando y trabajando en equipo.
 
-Hacer más: 
+Hacer más: animarse a investigar y quizás empezar a probar cosas mucho más complejas, comparar proyectos, etc.
 
-Empezar a hacer: 
+Empezar a hacer: utilizar mejor github, probar branches, etc. Lo propusimos anteriormente pero no lo hicimos.
 
-Dejar de hacer: 
+Dejar de hacer: quizás agrupar código, agregar nuevos archivos CSS, etc. Podría estar un poco más prolijo. 
 
-Hacer menos: 
+Hacer menos: descuidar las vistas porque simplemente buscamos que lo nuevo funcione
 
 **Retrospectiva Sprint-6/Fernandez, Maria Sol:**
 
-Seguir haciendo: 
+Seguir haciendo: La comunicaion con el grupo y aprender a leer los errores.
 
-Hacer más:
+Hacer más:Leer contenido fuera del playground y probar cosas nuevas
 
-Empezar a hacer:  
+Empezar a hacer: Un backup
 
-Dejar de hacer: 
+Dejar de hacer: No modificar lo que funciona
 
-Hacer menos: 
+Hacer menos: Frustrarse menos 
 
 **Retrospectiva Sprint-5/ Juan Carlos Muñoz:**
 
