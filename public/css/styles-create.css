@@ -11,13 +11,15 @@ body {
 #h1-create {
     margin-top: 100px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .form-container-create {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .button-style {
