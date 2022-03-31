@@ -13,21 +13,23 @@
         <h2>Bienvenid@ <i class="fas fa-sign-in-alt"></i></h2>
         </div>
 
-        <form action="/user/login" method="post">
+        <form id="loginForm" action="/user/login" method="post">
           <div class="form-container">
 
               <div class="input-user">
-            <input type="text" name="email" placeholder="Email">
+            <input id="emailLogin" type="text" name="email" placeholder="Email">
+            <span></span>
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger"> <%= errors.email.msg %>  </div>
             <% } %>
               </div>
 
               <div class="input-password">
-            <input type="password" name="password" placeholder="Contraseña">
+            <input id="passwordLogin" type="password" name="password" placeholder="Contraseña">
+            <span></span>
               </div>
 
-            <button class="button-style" type="submit">Login</button>
+            <button id="buttonLogin" class="button-style" type="submit">Login</button>
 
             <div class="remind-me">
             <input type="checkbox" name="recordar_usuario" value="recordarme" id="remindMe">
@@ -44,5 +46,6 @@
       </div>
     </main>
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/validationsLoginFront.js"></script>
 </body>
 </html>
