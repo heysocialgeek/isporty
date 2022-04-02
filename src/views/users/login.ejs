@@ -17,24 +17,29 @@
           <div class="form-container">
 
               <div class="input-user">
-            <input id="emailLogin" type="text" name="email" placeholder="Email">
-            <span></span>
-            <% if (locals.errors && errors.email) { %>
-              <div class="text-danger"> <%= errors.email.msg %>  </div>
-            <% } %>
+                <div class="email-span">
+                  <input id="emailLogin" type="text" name="email" placeholder="Email">
+                  <span class="span-msg"></span>
+                </div>
+                <% if (locals.errors && errors.email) { %>
+                <div class="text-danger"> <%= errors.email.msg %> </div>
+                <% } %>
               </div>
 
               <div class="input-password">
-            <input id="passwordLogin" type="password" name="password" placeholder="Contraseña">
-            <span></span>
+                <div class="password-span">
+                  <input id="passwordLogin" type="password" name="password" placeholder="Contraseña">
+                  <span class="span-msg"></span>
+                </div>
               </div>
 
-            <button id="buttonLogin" class="button-style" type="submit">Login</button>
-
-            <div class="remind-me">
-            <input type="checkbox" name="recordar_usuario" value="recordarme" id="remindMe">
-            <label class="remind-text" for="remindMe">Recordarme</label>
-            <div>
+              
+              <div class="remind-me">
+                <input type="checkbox" name="recordar_usuario" value="recordarme" id="remindMe">
+                <label class="remind-text" for="remindMe">Recordarme</label>
+              <div>
+                
+              <button id="buttonLogin" class="button-style" type="submit">Login</button>
 
           </div>
         </form>

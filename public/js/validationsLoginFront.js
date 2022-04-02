@@ -1,52 +1,106 @@
 window.addEventListener("load", () => {
     const emailLogin = document.querySelector("#emailLogin");
     const passwordLogin = document.querySelector("#passwordLogin");
-    const buttonLogin = document.querySelector("#buttonLogin");
-    const loginForm = document.querySelector("#loginForm")
+    const loginForm = document.querySelector("#loginForm");
+
+    // const validationsEmptyFields = (e) => {
+    //     const field = e.target;
+    //     const spanTagError = field.nextElementSibling;
+    //     if (field.value.trim() === '') {
+    //         spanTagError.classList.add('text-danger');
+    //         field.classList.add("invalid")
+    //         spanTagError.innerText = `El campo ${field.name} es obligatorio`;
+    //     } else {
+    //         spanTagError.classList.remove('text-danger');
+    //         spanTagError.classList.add("text-valid")
+    //         field.classList.remove("invalid")
+    //         field.classList.add("valid")
+    //         spanTagError.innerText = 'El password es válido';
+    //     }
+    // } 
 
     emailLogin.addEventListener("blur", (e) => {
-        const field = e.target
+
+        const field = e.target;
+        const spanTagError = field.nextElementSibling;
         const email = field.value
-        const spanTagError = field.nextElementSibling
         const emailFormat = /^([a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-])+@([a-zA-Z0-9-])+(.[a-z])+(?:\.[a-zA-Z0-9-]+)*$/
         
-        // if(email === ""){
-        //     emailLogin.style.borderColor= "red";
-        //     spanTagError.innerText = "Tenes que escribir un mail"
-        // }
-        
         if (field.value.trim() === '') {
-            // spanTagError.classList.add('text-danger');
-            field.style.border ='red 1px solid';
+            if(spanTagError.classList.contains("text-valid") && field.classList.contains("valid")){
+                spanTagError.classList.remove("text-valid");
+                field.classList.remove("valid")
+            }
+            spanTagError.classList.add('text-danger');
+            field.classList.add("invalid")
             spanTagError.innerText = `El campo ${field.name} es obligatorio`;
         } else if (!email.match(emailFormat)) {
-            // spanTagError.classList.add('text-danger');
-            field.style.border ='red 1px solid';
+            if(spanTagError.classList.contains("text-valid") && field.classList.contains("valid")){
+                spanTagError.classList.remove("text-valid");
+                field.classList.remove("valid")
+            }
+            spanTagError.classList.add('text-danger');
+            field.classList.add("invalid")
             spanTagError.innerText = `El campo ${field.name} debe tener un formato de email`;
         } else {
-            field.style.border ='none';
-            // spanTagError.classList.remove('text-danger');
-            spanTagError.innerText = '';
+            spanTagError.classList.remove('text-danger');
+            spanTagError.classList.add("text-valid")
+            field.classList.remove("invalid")
+            field.classList.add("valid")
+            spanTagError.innerText = 'El mail es válido';
         };
 
     })
 
     passwordLogin.addEventListener("blur", (e) => {
+        const passwordFormat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,}$/
         const field = e.target;
         const password = field.value;
         const spanTagError = field.nextElementSibling;
-
-        if(field.value.trim() === ""){
-            field.style.border ='red 1px solid';
+        if (field.value.trim() === '') {
+            if(spanTagError.classList.contains("text-valid") && field.classList.contains("valid")){
+                spanTagError.classList.remove("text-valid");
+                field.classList.remove("valid")
+            }
+            spanTagError.classList.add('text-danger');
+            field.classList.add("invalid")
             spanTagError.innerText = `El campo ${field.name} es obligatorio`;
+        } else if(!password.match(passwordFormat)) {
+            if(spanTagError.classList.contains("text-valid") && field.classList.contains("valid")){
+                spanTagError.classList.remove("text-valid");
+                field.classList.remove("valid")
+            }
+            spanTagError.classList.add('text-danger');
+            field.classList.add("invalid")
+            spanTagError.innerText = `El campo ${field.name} debe contener al menos 8 caracteres, 1 mayúscula, 1 número y 1 un símbolo`;
+        } else {
+            spanTagError.classList.remove('text-danger');
+            spanTagError.classList.add("text-valid")
+            field.classList.remove("invalid")
+            field.classList.add("valid")
+            spanTagError.innerText = 'El password es válido';
         }
     });
 
-    // loginForm.addEventListener("submit", (e) => {
-    //     let thereAreErrors = false;
+    loginForm.addEventListener("submit", (e) => {
+        let thereAreErrors = 0;
 
-    //     const formFields = [...productCreateForm.elements];
-	//     formFields.pop();
+        const formFields = [...loginForm.elements];
+	    formFields.pop()
 
-    // })
+        formFields.forEach(oneField => {
+            const spanTagError = oneField.nextElementSibling;
+            if (oneField.value.trim() === '') {
+                spanTagError.classList.add('text-danger');
+                oneField.style.border ='red 1px solid';
+                spanTagError.innerText = `El campo ${oneField.name} es obligatorio`;
+
+                thereAreErrors++;
+            }
+        })
+
+        if (thereAreErrors > 0) {
+            e.preventDefault()
+        }
+    })
 })
