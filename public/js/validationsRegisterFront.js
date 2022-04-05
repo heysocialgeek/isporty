@@ -2,6 +2,8 @@ window.addEventListener("load", () => {
     const registerName = document.querySelector("[name=name]");
     const registerEmail = document.querySelector("[name=email]");
     const registerPassword = document.querySelector("[name=password]");
+    const registerImage = document.querySelector("[name=image]")
+    console.log(registerImage);
 
     // const validationsEmptyFields = (e) => {
     //     const field = e.target;
