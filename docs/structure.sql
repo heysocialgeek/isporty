@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `structure`
 --
+DROP DATABASE IF EXISTS `structure`;
+CREATE DATABASE `structure`;
+USE `structure`;
 
 -- --------------------------------------------------------
 
