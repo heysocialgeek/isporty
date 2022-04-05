@@ -53,7 +53,6 @@ window.addEventListener("load", () => {
     })
 
     passwordLogin.addEventListener("blur", (e) => {
-        const passwordFormat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,}$/
         const field = e.target;
         const password = field.value;
         const spanTagError = field.nextElementSibling;
@@ -65,15 +64,7 @@ window.addEventListener("load", () => {
             spanTagError.classList.add('text-danger');
             field.classList.add("invalid")
             spanTagError.innerText = `El campo ${field.name} es obligatorio`;
-        } else if(!password.match(passwordFormat)) {
-            if(spanTagError.classList.contains("text-valid") && field.classList.contains("valid")){
-                spanTagError.classList.remove("text-valid");
-                field.classList.remove("valid")
-            }
-            spanTagError.classList.add('text-danger');
-            field.classList.add("invalid")
-            spanTagError.innerText = `El campo ${field.name} debe contener al menos 8 caracteres, 1 mayúscula, 1 número y 1 un símbolo`;
-        } else {
+        }  else {
             spanTagError.classList.remove('text-danger');
             spanTagError.classList.add("text-valid")
             field.classList.remove("invalid")

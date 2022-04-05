@@ -114,8 +114,20 @@ ul {
     padding: 20px 15px;
 }
 
+.invalid {
+    border: 1px solid rgb(229, 16, 16);
+}
+
+.valid {
+    border: 1px solid rgb(10, 195, 10);
+}
+
+.text-valid {
+    color: rgb(10, 195, 10);
+}
+
 .text-danger {
-    color: red;
+    color: rgb(229, 16, 16);
     margin-top: 5px;
 }
 
@@ -132,7 +144,8 @@ ul {
 .control {
     width: 100%;
     padding: 8px;
-    border: 1px solid rgb(196, 196, 196)
+    border-radius: 5px;
+    /* border: 1px solid rgb(196, 196, 196) */
 }
 
 .main-form h1 {
