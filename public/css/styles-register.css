@@ -131,6 +131,15 @@ ul {
     margin-top: 5px;
 }
 
+.span-msg {
+    display: flex;
+    flex-direction: column;
+}
+
+.span-msg span {
+    margin-top: 6px;
+}
+
 .controlador {
     margin-bottom: 15px;
 }

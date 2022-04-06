@@ -3,13 +3,23 @@ window.addEventListener("load", () => {
     const registerEmail = document.querySelector("[name=email]");
     const registerPassword = document.querySelector("[name=password]");
     const registerImage = document.querySelector("[name=image]")
-    console.log(registerImage);
+    const registerForm = document.querySelector("#registerForm")
 
-    // const validationsEmptyFields = (e) => {
+    // // Capturas los campos
+    // const formFields = [...registerForm.elements].filter(element => element.tagName.toLowerCase() !== "button")
+
+    // // Iteras los campos
+    // registerFields.forEach(oneField => {
+    //     // A cada campo le asignas el evento
+    //     oneField.addEventListener("blur", allEvents);
+    // })
+
+    // const allEvents = () => {
     //     const field = e.target;
-    //     const fullName = field.value;
     //     const spanTagError = field.nextElementSibling;
-    //     if(fullName.trim() === ""){
+    //     // Para todos los campos
+    //         if (oneField.value.trim() === "") {
+    //     // Validas el campo vacío
     //         if(field.classList.contains("valid") && spanTagError.classList.contains("text-valid")){
     //             field.classList.remove("valid");
     //             spanTagError.classList.remove("text-valid")
@@ -17,6 +27,11 @@ window.addEventListener("load", () => {
     //         field.classList.add("invalid");
     //         spanTagError.classList.add("text-danger");
     //         spanTagError.innerText = `El campo Nombre Completo es obligatorio`;
+    //         }
+
+    //     // Para el email
+    //     if (oneField.name === "email" && oneField.value !== "") {
+    //         // Validas el formato de email
     //     }
     // }
 
@@ -109,6 +124,47 @@ window.addEventListener("load", () => {
             spanTagError.classList.remove("text-danger")
             spanTagError.classList.add("text-valid");
             spanTagError.innerText = `El campo es correcto`;
+        }
+    })
+
+    registerImage.addEventListener("change", (e) => {
+        const field = e.target;
+        const image = field.value;
+        const spanTagError = field.nextElementSibling;
+
+        let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+            if(!image.match(allowedExtensions)){
+                if(spanTagError.classList.contains("text-valid")){
+                    spanTagError.classList.remove("text-valid")
+                }
+                spanTagError.classList.add("text-danger")
+                spanTagError.innerText = `La imagen debe ser formato .jpg, .jpeg, .png o .gif`
+            }else{
+                spanTagError.classList.remove("text-danger")
+                spanTagError.classList.add("text-valid");
+                spanTagError.innerText = `La imagen es correcta`;
+            }
+    });
+
+    registerForm.addEventListener("submit", (e) => {
+        let thereAreErrors = 0;
+
+        const formFields = [...registerForm.elements];
+	    formFields.pop()
+
+        formFields.forEach(oneField => {
+            const spanTagError = oneField.nextElementSibling;
+            if (oneField.value.trim() === '') {
+                spanTagError.classList.add('text-danger');
+                oneField.classList.add("invalid")
+                spanTagError.innerText = `El campo ${oneField.name} es obligatorio`;
+
+                thereAreErrors++;
+            }
+        })
+
+        if (thereAreErrors > 0) {
+            e.preventDefault()
         }
     })
 })

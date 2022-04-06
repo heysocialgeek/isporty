@@ -83,7 +83,7 @@ window.addEventListener("load", () => {
             const spanTagError = oneField.nextElementSibling;
             if (oneField.value.trim() === '') {
                 spanTagError.classList.add('text-danger');
-                oneField.style.border ='red 1px solid';
+                oneField.classList.add("invalid")
                 spanTagError.innerText = `El campo ${oneField.name} es obligatorio`;
 
                 thereAreErrors++;

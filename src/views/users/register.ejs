@@ -13,7 +13,7 @@
     <h1>Registrate</h1>
     <section>
 
-      <form action="/user/register" method="POST" class="create-form" form="register-form" enctype="multipart/form-data">
+      <form id="registerForm" action="/user/register" method="POST" class="create-form" form="register-form" enctype="multipart/form-data">
         
       <div>
         <h2>Datos sobre tu cuenta</h2>
@@ -53,7 +53,10 @@
 
         <div class="controlador">
           <label>Imagen de perfil</label>
-          <input type="file" name="image">
+          <div class="span-msg">
+            <input type="file" name="image">
+            <span></span>
+          </div>
           <% if (locals.errors && errors.image) { %>
             <div class="text-danger">
               <%= errors.image.msg %> 
