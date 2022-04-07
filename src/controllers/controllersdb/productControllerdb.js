@@ -1,5 +1,6 @@
 const db = require("../../database/models");
 const { Op } = require("sequelize");
+const {validationResult} = require("express-validator");
 
 const productControllerdb = {
     list: async (req, res) => {
@@ -24,6 +25,22 @@ const productControllerdb = {
         }
     },
     store: async (req, res) => {
+
+        let resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0) {
+            const genders = await db.Gender.findAll({});
+            const brands = await db.Brand.findAll({});
+            const sizes = await db.Size.findAll({});
+            const categories = await db.Category.findAll({});
+            const colors = await db.Color.findAll({});
+            return res.render("products/create", {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                genders, brands, sizes, categories, colors
+            });
+        }
+
         const productStored = await db.Product.create({
             name: req.body.name,
             price: req.body.price,

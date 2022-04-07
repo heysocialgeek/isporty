@@ -1,17 +1,17 @@
-module.exports = function (sequelize, dataTypes) {
+module.exports = function (sequelize, DataTypes) {
     let alias = "Cart";
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING
+            type: DataTypes.STRING
         },
         userId: {
-            type: dataTypes.INTEGER
+            type: DataTypes.INTEGER
         }
     }
 

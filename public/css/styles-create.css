@@ -9,7 +9,7 @@ body {
 }
 
 #h1-create {
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center;
     text-decoration: underline;
 }
@@ -87,4 +87,21 @@ button:hover {
 
 .input-image {
     background-color: white;
+}
+
+.text-danger {
+    color: rgb(229, 16, 16);
+    margin-top: 5px;
+}
+
+@media (min-width:768px) {
+    #h1-create {
+        margin-top: 150px;
+    }
+}
+
+@media (min-width:1200px) {
+    #h1-create {
+        margin-top: 180px;
+    }
 }

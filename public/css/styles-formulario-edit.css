@@ -82,6 +82,14 @@ ul {
     display: none;
 }
 
+.logo-search-and-input {
+    display: flex;
+}
+
+.logo-search-and-input button {
+    margin-right: 3px;
+}
+
 /* main del register*/
 
 .banner {

@@ -4,6 +4,9 @@ const productControllerdb = require("../../controllers/controllersdb/productCont
 //multerProduct
 const upload = require("../../../middlewares/multerProductMiddleware")
 
+//middleware de creacion de productos
+const validations = require("../../../middlewares/validationsProductForm")
+
 //Mostrar todos los productos
 router.get("/list", productControllerdb.list);
 
@@ -12,7 +15,7 @@ router.post("/search", productControllerdb.search);
 
 //Creación de productos
 router.get("/create", productControllerdb.create);
-router.post("/create", upload.single('image'), productControllerdb.store);
+router.post("/create", upload.single('image'), validations, productControllerdb.store);
 
 //detalle de producto
 router.get("/detail/:id", productControllerdb.detail);

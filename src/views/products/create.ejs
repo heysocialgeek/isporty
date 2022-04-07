@@ -13,10 +13,28 @@
         <form action="/products/create" method="POST" enctype="multipart/form-data">
             <div class="form-container-create">
                 <label class="label-title" for="productName">Nombre del producto:</label>
-                <input type="text" id="productName" name="name" placeholder="Ej: zapatilla nike air force">
+                <input 
+                    type="text" 
+                    id="productName" 
+                    name="name" 
+                    placeholder="Ej: zapatilla nike air force" 
+                    value="<%= locals.oldData ? oldData.name : null %>"
+                >
+
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                      <%= errors.name.msg %> 
+                    </div>
+                <% } %>
 
                 <label for="price">Precio:</label>
-                <input type="text" id="price" name="price" placeholder="Escriba el precio">
+                <input type="text" id="price" name="price" placeholder="Escriba el precio" value="<%= locals.oldData ? oldData.price : null %>">
+                
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                      <%= errors.price.msg %> 
+                    </div>
+                <% } %>
 
                 <label for="gender">Género del producto:</label>
                 <select id="gender" name="productGender">
@@ -45,6 +63,12 @@
                     <% } %>
                 </label>
 
+                <% if (locals.errors && errors.productSize) { %>
+                    <div class="text-danger">
+                      <%= errors.productSize.msg %> 
+                    </div>
+                <% } %>
+
                 <label>Color del producto:</label>
                 <label class="productCheckbox">
                     <% for( let i = 0; i < colors.length; i++ ) { %>
@@ -53,6 +77,12 @@
                         </div>
                     <% } %>
                 </label>
+
+                <% if (locals.errors && errors.productColor) { %>
+                    <div class="text-danger">
+                      <%= errors.productColor.msg %> 
+                    </div>
+                <% } %>
 
                 <label>Categoría del producto:</label>
                 <label class="productCheckbox">
@@ -63,11 +93,29 @@
                     <% } %>
                 </label>
 
+                <% if (locals.errors && errors.productCategory) { %>
+                    <div class="text-danger">
+                      <%= errors.productCategory.msg %> 
+                    </div>
+                <% } %>
+
                 <label for="image">Imagen del producto:</label>
                 <input class="input-image" type="file" id="image" name="image">
 
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-danger">
+                      <%= errors.image.msg %> 
+                    </div>
+                <% } %>
+
                 <label for="description">Descripción del producto:</label>
-                <textarea name="description" id="description" cols="40" rows="10">Detalle aún más el producto a publicar...</textarea>
+                <textarea name="description" id="description" cols="40" rows="10" value="<%= locals.oldData ? oldData.description : null %>">Detalle aún más el producto a publicar...</textarea>
+
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-danger">
+                      <%= errors.description.msg %> 
+                    </div>
+                <% } %>
 
                 <button class="button-style" type="submit">Cargar producto</button>
             </div>

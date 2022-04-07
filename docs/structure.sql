@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2022 a las 00:32:48
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.2
+-- Host: localhost
+-- Generation Time: Mar 24, 2022 at 12:45 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,16 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `structure`
+-- Database: `structure`
 --
+
 DROP DATABASE IF EXISTS `structure`;
 CREATE DATABASE `structure`;
 USE `structure`;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `brands`
+-- Table structure for table `brands`
 --
 
 CREATE TABLE `brands` (
@@ -38,7 +37,7 @@ CREATE TABLE `brands` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `brands`
+-- Dumping data for table `brands`
 --
 
 INSERT INTO `brands` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
@@ -52,7 +51,7 @@ INSERT INTO `brands` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `carts`
+-- Table structure for table `carts`
 --
 
 CREATE TABLE `carts` (
@@ -66,7 +65,7 @@ CREATE TABLE `carts` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -77,7 +76,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
@@ -91,7 +90,7 @@ INSERT INTO `categories` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `colors`
+-- Table structure for table `colors`
 --
 
 CREATE TABLE `colors` (
@@ -102,7 +101,7 @@ CREATE TABLE `colors` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `colors`
+-- Dumping data for table `colors`
 --
 
 INSERT INTO `colors` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
@@ -118,7 +117,7 @@ INSERT INTO `colors` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `gender`
+-- Table structure for table `gender`
 --
 
 CREATE TABLE `gender` (
@@ -129,7 +128,7 @@ CREATE TABLE `gender` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `gender`
+-- Dumping data for table `gender`
 --
 
 INSERT INTO `gender` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
@@ -140,7 +139,7 @@ INSERT INTO `gender` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productcart`
+-- Table structure for table `productcart`
 --
 
 CREATE TABLE `productcart` (
@@ -156,7 +155,7 @@ CREATE TABLE `productcart` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productcategory`
+-- Table structure for table `productcategory`
 --
 
 CREATE TABLE `productcategory` (
@@ -168,7 +167,7 @@ CREATE TABLE `productcategory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `productcategory`
+-- Dumping data for table `productcategory`
 --
 
 INSERT INTO `productcategory` (`id`, `productId`, `categoryId`, `createdAt`, `updatedAt`) VALUES
@@ -187,7 +186,7 @@ INSERT INTO `productcategory` (`id`, `productId`, `categoryId`, `createdAt`, `up
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productcolor`
+-- Table structure for table `productcolor`
 --
 
 CREATE TABLE `productcolor` (
@@ -199,7 +198,7 @@ CREATE TABLE `productcolor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `productcolor`
+-- Dumping data for table `productcolor`
 --
 
 INSERT INTO `productcolor` (`id`, `productId`, `colorId`, `createdAt`, `updatedAt`) VALUES
@@ -238,7 +237,7 @@ INSERT INTO `productcolor` (`id`, `productId`, `colorId`, `createdAt`, `updatedA
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -255,7 +254,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `brandId`, `genderId`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
@@ -274,7 +273,7 @@ INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `brandId`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productsize`
+-- Table structure for table `productsize`
 --
 
 CREATE TABLE `productsize` (
@@ -286,7 +285,7 @@ CREATE TABLE `productsize` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `productsize`
+-- Dumping data for table `productsize`
 --
 
 INSERT INTO `productsize` (`id`, `productId`, `sizeId`, `createdAt`, `updatedAt`) VALUES
@@ -339,7 +338,7 @@ INSERT INTO `productsize` (`id`, `productId`, `sizeId`, `createdAt`, `updatedAt`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `sizes`
+-- Table structure for table `sizes`
 --
 
 CREATE TABLE `sizes` (
@@ -350,7 +349,7 @@ CREATE TABLE `sizes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `sizes`
+-- Dumping data for table `sizes`
 --
 
 INSERT INTO `sizes` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
@@ -369,7 +368,7 @@ INSERT INTO `sizes` (`id`, `name`, `createdAt`, `updatedAt`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -385,7 +384,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `image`, `cartId`, `createdAt`, `updatedAt`, `deletedAt`) VALUES
@@ -395,47 +394,45 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `image`, `cartId`, `crea
 (4, 'Facu Mayuri', 'facumayuri@gmail.com', '$2a$10$t/KLwRHPnDi65IuKyF1CNOMJ4wzoinY4KGU0R1tsn3i1HlALqNwv2', '1647483135338_img.jpeg', NULL, '2022-03-17 02:12:15', '2022-03-17 02:12:15', NULL),
 (5, 'juanki', 'juanki@gmail.com', '$2a$10$jHZR5ZgB06kd98bqoXn4aun.F5TFzGkWDWEPwWLR0u2R1b9RbKEsu', '1647483315921_img.jpeg', NULL, '2022-03-17 02:15:16', '2022-03-17 02:15:16', NULL),
 (6, 'Tom caggiano', 'tomcaggiano@gmail.com', '$2a$10$8ygRqhF5yTeOc2ffkEHgX.47FyK23dp9yWuSNcU6SpSyDogO7yS/G', '1647886922356_img.jpeg', NULL, '2022-03-21 18:22:02', '2022-03-21 18:22:02', NULL),
-(7, 'Juan Muñoz', 'juanmunoz9393@gmail.com', '$2a$10$rO/NdhixR5924wtIRkDQnef2.pPyWgYpitIDVOcWuMjr6vJbUe3xO', '1647962024371_img.jpg', NULL, '2022-03-22 15:13:44', '2022-03-22 15:13:44', NULL),
-(8, 'pelusa', 'pelusa@gmail.com', '$2a$10$4nmrHUefWnfKvMcy01FD.emrKJn6pCeH9rUegwmHY4m1w4loeYcB.', '1648762118567_img.jpeg', NULL, '2022-03-31 21:28:38', '2022-03-31 21:28:38', NULL),
-(9, 'Bruce wayne', 'batman@gmail.com', '$2a$10$TROIxkln4rE2dYOKXZ2KSe3ZIUbMP0hDb7GN8vJM3e/LcQMTJqnZC', '1648855339014_img.jpeg', NULL, '2022-04-01 23:22:19', '2022-04-01 23:22:19', NULL);
+(7, 'Juan Muñoz', 'juanmunoz9393@gmail.com', '$2a$10$rO/NdhixR5924wtIRkDQnef2.pPyWgYpitIDVOcWuMjr6vJbUe3xO', '1647962024371_img.jpg', NULL, '2022-03-22 15:13:44', '2022-03-22 15:13:44', NULL);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `brands`
+-- Indexes for table `brands`
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `carts`
+-- Indexes for table `carts`
 --
 ALTER TABLE `carts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `userId` (`userId`);
 
 --
--- Indices de la tabla `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `colors`
+-- Indexes for table `colors`
 --
 ALTER TABLE `colors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `gender`
+-- Indexes for table `gender`
 --
 ALTER TABLE `gender`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `productcart`
+-- Indexes for table `productcart`
 --
 ALTER TABLE `productcart`
   ADD PRIMARY KEY (`id`),
@@ -443,7 +440,7 @@ ALTER TABLE `productcart`
   ADD KEY `cartId` (`cartId`);
 
 --
--- Indices de la tabla `productcategory`
+-- Indexes for table `productcategory`
 --
 ALTER TABLE `productcategory`
   ADD PRIMARY KEY (`id`),
@@ -451,7 +448,7 @@ ALTER TABLE `productcategory`
   ADD KEY `categoryId` (`categoryId`);
 
 --
--- Indices de la tabla `productcolor`
+-- Indexes for table `productcolor`
 --
 ALTER TABLE `productcolor`
   ADD PRIMARY KEY (`id`),
@@ -459,14 +456,14 @@ ALTER TABLE `productcolor`
   ADD KEY `colorId` (`colorId`);
 
 --
--- Indices de la tabla `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `brandId` (`brandId`);
 
 --
--- Indices de la tabla `productsize`
+-- Indexes for table `productsize`
 --
 ALTER TABLE `productsize`
   ADD PRIMARY KEY (`id`),
@@ -474,13 +471,13 @@ ALTER TABLE `productsize`
   ADD KEY `sizeId` (`sizeId`);
 
 --
--- Indices de la tabla `sizes`
+-- Indexes for table `sizes`
 --
 ALTER TABLE `sizes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -488,127 +485,127 @@ ALTER TABLE `users`
   ADD KEY `cartId` (`cartId`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `brands`
+-- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `carts`
+-- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `categories`
+-- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `colors`
+-- AUTO_INCREMENT for table `colors`
 --
 ALTER TABLE `colors`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de la tabla `gender`
+-- AUTO_INCREMENT for table `gender`
 --
 ALTER TABLE `gender`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `productcart`
+-- AUTO_INCREMENT for table `productcart`
 --
 ALTER TABLE `productcart`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `productcategory`
+-- AUTO_INCREMENT for table `productcategory`
 --
 ALTER TABLE `productcategory`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT de la tabla `productcolor`
+-- AUTO_INCREMENT for table `productcolor`
 --
 ALTER TABLE `productcolor`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT de la tabla `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT de la tabla `productsize`
+-- AUTO_INCREMENT for table `productsize`
 --
 ALTER TABLE `productsize`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
--- AUTO_INCREMENT de la tabla `sizes`
+-- AUTO_INCREMENT for table `sizes`
 --
 ALTER TABLE `sizes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT de la tabla `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `carts`
+-- Constraints for table `carts`
 --
 ALTER TABLE `carts`
   ADD CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`);
 
 --
--- Filtros para la tabla `productcart`
+-- Constraints for table `productcart`
 --
 ALTER TABLE `productcart`
   ADD CONSTRAINT `productcart_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `productcart_ibfk_2` FOREIGN KEY (`cartId`) REFERENCES `carts` (`id`);
 
 --
--- Filtros para la tabla `productcategory`
+-- Constraints for table `productcategory`
 --
 ALTER TABLE `productcategory`
   ADD CONSTRAINT `productcategory_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `productcategory_ibfk_2` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`);
 
 --
--- Filtros para la tabla `productcolor`
+-- Constraints for table `productcolor`
 --
 ALTER TABLE `productcolor`
   ADD CONSTRAINT `productcolor_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `productcolor_ibfk_2` FOREIGN KEY (`colorId`) REFERENCES `colors` (`id`);
 
 --
--- Filtros para la tabla `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`brandId`) REFERENCES `brands` (`id`);
 
 --
--- Filtros para la tabla `productsize`
+-- Constraints for table `productsize`
 --
 ALTER TABLE `productsize`
   ADD CONSTRAINT `productsize_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `products` (`id`),
   ADD CONSTRAINT `productsize_ibfk_2` FOREIGN KEY (`sizeId`) REFERENCES `sizes` (`id`);
 
 --
--- Filtros para la tabla `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `cartId` FOREIGN KEY (`cartId`) REFERENCES `carts` (`id`);

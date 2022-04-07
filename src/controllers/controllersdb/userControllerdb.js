@@ -2,16 +2,8 @@ const db = require("../../database/models");
 const bcryptjs = require('bcryptjs')
 const {validationResult} = require("express-validator");
 
-//busco por campo del formulario
-    // let findByField = async (field, text) => {
-    //     let allUsers = await db.User.findAll({});
-    //     let userFound = await allUsers.find(oneUser[field] === text)
-    //     return userFound
-    // }
-
 const userControllerdb = {
     register: (req, res) => {
-        // let allUsers = await db.User.findAll({});
         res.render("users/register")
     },
     processRegister: async (req, res) => {
@@ -24,7 +16,6 @@ const userControllerdb = {
             });
         }
 
-        // let userInDB = findByField("email", req.body.email);
         let isUserInDB = await db.User.findOne({
             where: {
                 email: req.body.email

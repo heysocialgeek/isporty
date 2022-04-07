@@ -30,6 +30,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border-bottom:solid #4678f4 2px;
 }
 
 .burger-and-search {
@@ -82,6 +83,14 @@ ul {
     display: none;
 }
 
+.logo-search-and-input {
+    display: flex;
+}
+
+.logo-search-and-input button {
+    margin-right: 3px;
+}
+
 /* main del register*/
 
 .banner {
@@ -89,7 +98,16 @@ ul {
     margin-left: 0px;
 }
 .main-form {
+    background: linear-gradient(350deg, rgba(117,194,233,1) 26%, rgba(131,204,241,1) 37%, rgba(83,166,243,1) 49%);
+    padding: 20px;
+}
+
+.main-form section form {
+    padding: 20px;
+    border: solid 1px #000000;
+    border-radius: 20px;
     background-color: white;
+    box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.87);
 }
 
 .main-navbar {
@@ -112,6 +130,8 @@ ul {
 
 .create-form {
     padding: 20px 15px;
+    /* max-width: 700px;
+    width: 50%; */
 }
 
 .invalid {
@@ -159,13 +179,13 @@ ul {
 
 .main-form h1 {
     text-align: center;
-    color: #808790;
+    color: black;
     font-size: 25px;
-    margin: 10px 
+    margin-top: 0px 
 }
 
 .create-form h2 {
-    color: #808790;
+    color: black;
 }
 
 .create-form p {
@@ -330,13 +350,9 @@ margin-top: 10px;
 
         
         .main-form section form {
-            width: 95%;
-            max-width: 900px;
+            width: 65%;
             margin: auto;
-            border: solid 1px #808790;
-            border-radius: 20px;
             padding: 15px;
-            background-color: white;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -344,7 +360,6 @@ margin-top: 10px;
     
         .create-form {
             max-width: 700px;
-            flex-direction: row;
             width: 50%;
         }
     
@@ -401,6 +416,11 @@ margin-top: 10px;
 
     .user-circle {
         display: none;
+    }
+
+    /* main */
+    .main-form section form {
+        width: 50%;
     }
 
     /* footer */

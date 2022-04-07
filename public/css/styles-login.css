@@ -83,11 +83,19 @@ ul {
     display: none;
 }
 
+.logo-search-and-input {
+    display: flex;
+}
+
+.logo-search-and-input button {
+    margin-right: 3px;
+}
+
 /* main */
 
 .box-main {
-    background-color: #53a6f3;
-    padding: 10px;
+    background: linear-gradient(350deg, rgba(117,194,233,1) 26%, rgba(131,204,241,1) 37%, rgba(83,166,243,1) 49%);
+    padding: 40px;
 }
 
 .all-login {
