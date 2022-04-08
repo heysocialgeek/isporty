@@ -1,5 +1,17 @@
-
 <header class="main-header">
+  <div id="preloader" class="box">
+    <div class="shadow"></div>
+    <div class="gravity">
+      <div class="ball"></div>
+    </div>
+  </div>
+  <script>
+var loader = document.getElementById('loader');
+
+window.addEventListener ("load", function() {
+setTimeout(function(){loader.style.display = 'none';}, 4000);
+});
+</script>
   <h2 class="title-header">Envío gratis a todo el país en compras mayores a $6500</h2>
   <div class="header-container">
     <div class="burger-and-search">
