@@ -426,6 +426,7 @@ margin-right: auto
 
 .main-section2 h3 {
     text-align: center;
+    margin-top: 30px;
 }
 
 .img-products {
@@ -537,6 +538,7 @@ h3 {
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-around;
+        margin-top: 50px;
     }
 
 

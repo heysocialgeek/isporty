@@ -1,5 +1,5 @@
 
-<header class="main-header">
+<!-- <header class="main-header">
   <h2 class="title-header">Envío gratis a todo el país en compras mayores a $6500</h2>
   <div class="header-container">
     <div class="burger-and-search">
@@ -14,7 +14,7 @@
             </button>
             <input class="search-bar" type="text" name="search" placeholder="Buscar productos..." />
         </div>
-    </form>
+      </form>
     </div>
 
     <nav class="nav-bar">
@@ -38,7 +38,7 @@
           <% if (locals.isLogged) { %>
 
             
-            <a href="/user/profile"><h3 class="nada">Hola, <%= locals.userLogged.name %></h3></a><img class="profileimg" src="/img/users/<%= locals.userLogged.image %>">
+            <a href="/user/profile"><h3>Hola, <%= locals.userLogged.name %></h3></a><img class="profileimg" src="/img/users/<%= locals.userLogged.image %>">
             <a class= "link-login-register" href="/user/logout">Cerrar sesión</a>
 
           <% } else { %>
@@ -54,4 +54,106 @@
       </div>
 
   </div>
+  </header> -->
+
+  <header class="main-header">
+    <h2 class="title-header">Envío gratis a todo el país en compras mayores a $6500</h2>
+
+    <div class="burger-and-logos-header">
+      <div class="burger-menu-header">
+        <!-- <i class="fas fa-bars "></i> -->
+        <span class="span1-burger"></span>
+        <span class="span2-burger"></span>
+        <span class="span3-burger"></span>
+      </div>
+
+      <aside id="aside-burger-id">
+        <nav class="navBar-burger">
+          <ul>
+            <li><a class="links-burger" href="/">Inicio</a></li>
+            <li><a class="links-burger" href="">Hombre</a></li>
+            <li><a class="links-burger" href="">Mujer</a></li>
+            <li><a class="links-burger" href="/products/list">Todos los productos</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="div-logos-header">
+        <a href="/" ><img class="isotipo-header" src="/img/isotipo-isporty.png" alt="logo de isporty"></a>
+        <a href="/" ><img class="logotipo-header" src="/img/logotipo-isporty.png" alt="logo de isporty"></a>
+      </div>
+
+      <div class="div-search-header-768">
+        <form action="/products/search" method="POST">
+          <div class="button-and-input-search-header-768">
+              <button type="submit">
+                  <span><i class="fas fa-search"></i></span>
+              </button>
+              <input class="input-search-header-768" type="text" name="search" placeholder="Buscar productos..." />
+          </div>
+        </form>
+      </div>
+
+      <div class="div-user-header">
+        <a href="/product/cart"><i class="fas fa-shopping-cart logos-fontawesome-header"></i></a>
+
+        <% if (locals.isLogged) { %>
+
+          <a class="links-users-header" href="/user/profile"><h3>Hola, <%= locals.userLogged.name %></h3></a>
+          <img class="profile-image-header" src="/img/users/<%= locals.userLogged.image %>" alt="imagen de perfil">
+          <a class="links-users-header" href="/user/logout">Cerrar sesión</a>
+
+        <% } else { %>
+
+          <a href="/user/login"><i class="far fa-user-circle logos-fontawesome-header"></i></a>
+          <a href="/user/register"><i class="far fa-registered logos-fontawesome-header"></i></a>
+
+          <a class="links-users-header" href="/user/login">Iniciar sesión</a>
+          <a class="links-users-header" href="/user/register">Registrarse</a>
+
+        <% } %> 
+      </div>
+    </div>
+
+    <div class="div-search-header">
+      <form action="/products/search" method="POST">
+        <div class="button-and-input-search-header">
+            <button type="submit">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </button>
+            <input class="input-search-header" type="text" name="search" placeholder="Buscar productos..." />
+        </div>
+      </form>
+    </div>
+
+    <div class="navBar-header">
+      <nav class="main-navbar-header">
+        <ul class="menu" id="menu">
+          <li class="menu-item"><a class="menu-link main-links" href="/">Inicio</a></li>
+          <li class="menu-item container-submenu"><a class="menu-link submenu-btn" href="/products/list">Productos <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="subMenu-header">
+              <li class="menu-item"><a class="menu-link" href="">Running</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Fútbol</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Street</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Verano</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Hockey</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Básquet</a></li>
+            </ul>
+          </li>
+          <li class="menu-item container-submenu"><a class="menu-link submenu-btn" href="/">Marcas <i class="fa-solid fa-angle-down"></i></a>  
+            <ul class="subMenu-header">
+              <li class="menu-item"><a class="menu-link" href="">Nike</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Adidas</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Puma</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Topper</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Fila</a></li>
+              <li class="menu-item"><a class="menu-link" href="">Kappa</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a class="menu-link" href="">Hombre</a></li>
+          <li class="menu-item"><a class="menu-link" href="">Mujer</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+

@@ -45,6 +45,12 @@
                     <% } %>    
                 </select>
 
+                <% if (locals.errors && errors.productGender) { %>
+                    <div class="text-danger">
+                      <%= errors.productGender.msg %> 
+                    </div>
+                <% } %>
+
                 <label for="brand">Marca del producto:</label>
                 <select name="productBrand" id="brand">
                     <% for( let i = 0; i < brands.length; i++ ) { %>
@@ -53,6 +59,12 @@
                         </option>
                     <% } %>
                 </select>
+
+                <% if (locals.errors && errors.productBrand) { %>
+                    <div class="text-danger">
+                      <%= errors.productBrand.msg %> 
+                    </div>
+                <% } %>
 
                 <label>Talle del producto:</label>
                 <label class="productCheckbox">
@@ -123,5 +135,6 @@
     </main>
 
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/burgerMenu.js"></script>
 </body>
 </html>

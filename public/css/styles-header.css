@@ -1,0 +1,254 @@
+/****** HEADER PRUEBA ******/
+
+ul {
+    list-style-type: none;
+}
+.main-header {
+    background-color: white;
+    position: fixed;
+    top:25;
+    width: 100%;
+    z-index: 20;
+    /* padding: 10px; */
+}
+
+.title-header {
+    margin: auto;
+	padding-bottom: 5px;
+	padding-top: 5px;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+	color: rgb(255, 255, 255);
+	background-color: #4678f4;
+}
+
+.div-search-header-768{
+    display: none;
+}
+
+.burger-and-logos-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+/* .div-logos-header{
+    margin-left: 40px;
+} */
+
+.div-search-header{
+    margin-top: 8px;
+}
+
+/* .div-user-header{
+
+} */
+
+.isotipo-header{
+    width: 40px;
+    display: block;
+}
+
+.logotipo-header{
+    width: 15%;
+    display: none;
+}
+
+.button-and-input-search-header{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-search-header{
+    width: 91%;
+    padding: 6px;
+}
+
+.profile-image-header{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.logos-fontawesome-header{
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.links-users-header{
+    display: none;
+}
+
+.navBar-header{
+    display: none;
+}
+
+.burger-menu-header{
+    width: 30px;
+    height: 30px;
+    /* position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(6); */
+    cursor: pointer;
+}
+
+.burger-menu-header span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 400ms;
+}
+
+.activespan1-burger{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activespan2-burger{
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.activespan3-burger{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+/*aside burguer*/
+#aside-burger-id{
+    display: none;
+}
+.aside-burger{
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    width: 100%;
+    min-height: 150px;
+    border-top: 2px solid black;
+     /* Hay que agregarle una transition */
+}
+
+.links-burger{
+    text-decoration: none;
+}
+
+.navBar-burger li {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/****** FIN HEADER PRUEBA ******/
+
+/*Mobile*/
+
+@media (max-width:479px) {
+    .logo {
+        display: none;
+    }
+}
+    
+    /*Ipad*/
+    
+@media (min-width:480px) {
+    .iso {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    /* Header prueba */
+
+    .isotipo-header{
+        display: none;
+    }
+
+    .logotipo-header{
+        display: block;
+        width: 200px;
+    }
+
+    .burger-menu-header{
+        display: none;
+    }
+
+    .div-search-header{
+        display: none;
+    }
+
+    .div-search-header-768{
+        display: block;
+    }
+
+    /*menu desplegable*/
+    .navBar-header{
+        display: block;
+        border-top: 2px solid #53a6f3;
+        /* background-color: #53a6f3; */
+    }
+
+    .menu, .subMenu-header{
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu{
+        background: white;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .menu-link{
+        display: block;
+        padding: 10px;
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .subMenu-header .menu-link:hover{
+        background: rgb(203, 203, 203);
+    }
+
+    .container-submenu{
+        position: relative;
+    }
+
+    .subMenu-header {
+        /* overflow: hidden; */
+        /* overflow: visible; */
+        /* top: 60px; */
+        /* z-index: 10; */
+        height: 0;
+        transition: 0.3s;
+        position: absolute;
+        width: 170px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .subMenu-header .menu-link{
+        background: white;
+        padding-left: 40px;
+    }
+
+    .container-submenu:hover .subMenu-header {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* FIN menu desplegable*/
+
+    /* fin header prueba */
+}

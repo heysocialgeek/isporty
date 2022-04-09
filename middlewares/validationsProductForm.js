@@ -7,13 +7,23 @@ module.exports = [
     body("price")
         .notEmpty().withMessage("Tienes que escribir un precio").bail()
         .isNumeric().withMessage("Solo debes escribir números"),
-    // body("productGender")
-    //     ,
-    // body("productBrand")
-    //     ,
+    body("productGender")
+        .custom((value, { req }) => {
+            if (value === "1") {
+              throw new Error("Tenés que elegir una marca");
+            }
+            return true;
+        }),
+    body("productBrand")
+        .custom((value, { req }) => {
+        if (value === "1") {
+          throw new Error("Tenés que elegir una marca");
+        }
+        return true;
+    }),
     body("productSize")
         .custom((value, { req }) => {
-            if (value.length === 0) {
+            if (value === undefined) {
               throw new Error("Tenés que elegir al menos una talla");
             }
             return true;
@@ -21,7 +31,7 @@ module.exports = [
     body("productColor")
         .custom((value, { req }) => {
 
-            if (value.length === 0) {
+            if (value === undefined) {
               throw new Error("Tenés que elegir al menos un color");
             }
             return true;
@@ -29,7 +39,7 @@ module.exports = [
     body("productCategory")
         .custom((value, { req }) => {
         
-            if (value.length == 0) {
+            if (value === undefined) {
               throw new Error("Tenés que elegir al menos una categoría");
             }
             return true;

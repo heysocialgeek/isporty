@@ -12,6 +12,7 @@ body {
 
 .main-container {
     padding-top: 30px;
+    margin-top: 80px;
 }
 
 .imgProduct {
@@ -183,6 +184,7 @@ main {
 
     .main-container {
         padding-top: 170px;
+        margin-top: 50px;
     }
     .article-style {
         width: 30%;

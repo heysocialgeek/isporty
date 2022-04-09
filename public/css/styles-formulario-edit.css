@@ -10,7 +10,7 @@ body {
 
 /* header */
 
-.main-header {
+/* .main-header {
     background-color: white;
 }
 
@@ -88,9 +88,13 @@ ul {
 
 .logo-search-and-input button {
     margin-right: 3px;
-}
+} */
 
 /* main del register*/
+
+/* #section-edit{
+    margin-top: 100px;
+} */
 
 .banner {
     width: 100vw;
@@ -155,7 +159,6 @@ ul {
     text-align: center;
     color: #808790;
     font-size: 25px;
-    margin: 10px 
 }
 
 .create-form h2 {

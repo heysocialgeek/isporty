@@ -10,7 +10,6 @@ const mainControllerdb = {
         const productsDB = await db.Product.findAll({/*include: ["brands", "categories", "sizes", "gender", "colors"]*/ });
         return res.render("index", { productsDB, genders, brands, sizes, categories, colors })
     }
-
 }
  
 module.exports= mainControllerdb
