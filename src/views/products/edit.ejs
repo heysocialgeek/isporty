@@ -6,7 +6,7 @@
     cssTag: "<link rel='stylesheet' href='/css/styles-formulario-edit.css'> <link rel='stylesheet' href='/css/normalize.css'> <link rel='stylesheet' href='/css/styles-header.css'>"}) %>
 
 <body>
-  <%- include("../partials/header.ejs") %>
+
   <main class="main-form">
     <h1>Editar producto</h1>
     <section id="section-edit">
@@ -17,11 +17,26 @@
           <label>* Modificar el nombre del producto</label>
           <input type="text" name="name" class="control" value="<%= product.name %>">
         </div>
+
+        <% if (locals.errors && errors.name) { %>
+          <div class="text-danger">
+            <%= errors.name.msg %> 
+          </div>
+      <% } %>
+      <br>
         
         <div class="controlador">
           <label>* Editar precio del producto</label>
-          <input type="number" name="price" class="control" value="<%= product.price %>">
+          <input type="text" name="price" class="control" value="<%= product.price %>">
         </div>
+
+        <% if (locals.errors && errors.price) { %>
+          <div class="text-danger">
+            <%= errors.price.msg %> 
+          </div>
+      <% } %>
+
+      <br>
 
         <div class="controlador">
           <label>* Género del producto</label>
@@ -35,6 +50,13 @@
           </select>
         </div>
 
+        <% if (locals.errors && errors.productGender) { %>
+          <div class="text-danger">
+            <%= errors.productGender.msg %> 
+          </div>
+      <% } %>
+      <br>
+
         <div class="controlador">
           <label>* Editar marca</label>
           <select name="productBrand" class="controlador2">
@@ -47,6 +69,13 @@
           </select>
         </div>
 
+        <% if (locals.errors && errors.productBrand) { %>
+          <div class="text-danger">
+            <%= errors.productBrand.msg %> 
+          </div>
+      <% } %>
+      <br>
+
         <div class="controlador">
           <label>* Modificar los talles del producto</label>
           <select name="productSize" multiple class="controlador2">
@@ -58,6 +87,13 @@
             <% }) %>
           </select>
         </div>
+
+        <% if (locals.errors && errors.productSize) { %>
+          <div class="text-danger">
+            <%= errors.productSize.msg %> 
+          </div>
+      <% } %>
+      <br>
 
         <div class="controlador">
           <label>* Modificar los colores del producto</label>
@@ -77,6 +113,13 @@
           </select>
         </div>
 
+        <% if (locals.errors && errors.productColor) { %>
+          <div class="text-danger">
+            <%= errors.productColor.msg %> 
+          </div>
+      <% } %>
+      <br>
+
         <div class="controlador">
           <label>* Editar categoría</label>
           <select name="productCategory"  multiple class="controlador2">
@@ -89,12 +132,25 @@
           </select>
         </div>
 
-        <!-- AGREGAR IMAGEN -->
+        <% if (locals.errors && errors.productCategory) { %>
+          <div class="text-danger">
+            <%= errors.productCategory.msg %> 
+          </div>
+      <% } %>
+      <br>
 
         <div class="controlador">
           <label>* Editar descripción</label>
           <textarea class="controlador2" name="description" id="" cols="30" rows="10"><%= product.description %> </textarea>
         </div>
+
+        <% if (locals.errors && errors.description) { %>
+          <div class="text-danger">
+            <%= errors.description.msg %> 
+          </div>
+      <% } %>
+
+      <br>
 
         <button type="submit" class="boton-formulario">Guardar cambios</button>
         <button type="reset" class="boton-formulario">Cancelar</button>

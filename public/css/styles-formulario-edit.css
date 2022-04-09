@@ -8,6 +8,11 @@ body {
     font-family: "Roboto";
 }
 
+.text-danger {
+    color: rgb(229, 16, 16);
+    margin-top: 5px;
+}
+
 /* header */
 
 /* .main-header {

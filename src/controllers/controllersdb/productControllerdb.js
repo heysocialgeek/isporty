@@ -1,6 +1,6 @@
 const db = require("../../database/models");
 const { Op } = require("sequelize");
-const {validationResult} = require("express-validator");
+const { validationResult } = require("express-validator");
 
 const productControllerdb = {
     list: async (req, res) => {
@@ -75,31 +75,49 @@ const productControllerdb = {
     edit: async (req, res) => {
         const productToEdit = await db.Product.findByPk(req.params.id, { include: ["sizes", "colors", "categories"] })
 
+        let errors = validationResult(req)
 
-        productToEdit.removeSizes(productToEdit.sizes);
-        productToEdit.addSizes(req.body.productSize)
-        productToEdit.removeColors(productToEdit.colors);
-        productToEdit.addColors(req.body.productColor)
-        productToEdit.removeCategories(productToEdit.categories);
-        productToEdit.addCategories(req.body.productCategory)
-        
+        if (errors.isEmpty()) {
+            productToEdit.removeSizes(productToEdit.sizes);
+            productToEdit.addSizes(req.body.productSize)
+            productToEdit.removeColors(productToEdit.colors);
+            productToEdit.addColors(req.body.productColor)
+            productToEdit.removeCategories(productToEdit.categories);
+            productToEdit.addCategories(req.body.productCategory)
 
-        productToEdit.name = req.body.name ? req.body.name : productToEdit.name;
-        productToEdit.price = req.body.price ? req.body.price : productToEdit.price;
-        productToEdit.description = req.body.description;
-        productToEdit.brandId = req.body.productBrand;
-        productToEdit.genderId = req.body.productGender;
-        
-        productToEdit.save()
-        return res.redirect("/products/list")
+
+            productToEdit.name = req.body.name ? req.body.name : productToEdit.name;
+            productToEdit.price = req.body.price ? req.body.price : productToEdit.price;
+            productToEdit.description = req.body.description;
+            productToEdit.brandId = req.body.productBrand;
+            productToEdit.genderId = req.body.productGender;
+
+            productToEdit.save()
+            return res.redirect("/products/list")
+        }
+
+        else {
+            const productID = req.params.id;
+            const product = await db.Product.findByPk(productID, { include: ['categories', 'gender', 'brands', 'colors', 'sizes'] });
+            const genders = await db.Gender.findAll({});
+            const brands = await db.Brand.findAll({});
+            const sizes = await db.Size.findAll({});
+            const categories = await db.Category.findAll({});
+            const colors = await db.Color.findAll({});
+            console.log("error", errors)
+            return res.render("products/edit", { product, genders, brands, sizes, categories, colors, errors : errors.mapped() })
+            
+
+
+        }
     },
     delete: (req, res) => {
         db.Product.destroy({
             where: { id: req.params.id }
-        }).then(a =>{
+        }).then(a => {
             res.redirect("/products/list")
         })
-        
+
         /*async (req, res) => {
         const productID = req.params.id;
         const productToDelete = await db.Product.findByPk(productID, { include: ["categories", "sizes", "colors"]});
@@ -108,14 +126,14 @@ const productControllerdb = {
         productToDelete.removeColors(productToDelete.colors);
         productToDelete.destroy();
         return res.redirect("/products/list");*/
-        },
-    
+    },
+
 
     search: (req, res) => {
         db.Product.findAll({
             where: {
                 name: {
-                    [Op.like] : '%' + req.body.search + '%'
+                    [Op.like]: '%' + req.body.search + '%'
                 }
             },
             include: ['categories', 'sizes', 'colors']
