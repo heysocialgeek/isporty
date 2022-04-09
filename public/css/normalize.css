@@ -20,6 +20,80 @@ html {
  * Remove the margin in all browsers.
  */
 
+ /** loader **/
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display:none;
+  justify-content: center;
+  align-items: center;
+  -moz-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 3s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 3s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation: cssAnimation 3s forwards; 
+    animation: cssAnimation 3s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+}
+  .shadow {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 8s infinite ease;
+  }
+
+.gravity {
+  width: 40px;
+  height: 40px;
+  animation: bounce 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
+}
+.ball {
+  width: 40px;
+  height: 40px;
+  background-image: url('https://cdn2.iconfinder.com/data/icons/activity-5/50/26BD-soccer-ball-128.png');
+  background-size: cover;
+  animation: roll .7s linear infinite;
+}
+
+@keyframes roll {
+  0% {}
+  100% { transform: rotate(360deg) }
+}
+@keyframes bounce {
+  0% {}
+  50% { transform: translateY(100px) }
+  100% {}
+}
+@keyframes shadowScale {
+  0% {}
+  50% { transform: scaleX(1); opacity: .8;}
+  100% {}
+}
+
 body {
   margin: 0;
 }
