@@ -10,7 +10,7 @@
         
         <h1 id="h1-create">Crear producto</h1>
 
-        <form action="/products/create" method="POST" enctype="multipart/form-data">
+        <form action="/products/create" method="POST" enctype="multipart/form-data" id="createform">
             <div class="form-container-create">
                 <label class="label-title" for="productName">Nombre del producto:</label>
                 <input 
@@ -20,7 +20,7 @@
                     placeholder="Ej: zapatilla nike air force" 
                     value="<%= locals.oldData ? oldData.name : null %>"
                 >
-
+                <span></span>
                 <% if (locals.errors && errors.name) { %>
                     <div class="text-danger">
                       <%= errors.name.msg %> 
@@ -29,7 +29,8 @@
 
                 <label for="price">Precio:</label>
                 <input type="text" id="price" name="price" placeholder="Escriba el precio" value="<%= locals.oldData ? oldData.price : null %>">
-                
+                <span></span>
+
                 <% if (locals.errors && errors.name) { %>
                     <div class="text-danger">
                       <%= errors.price.msg %> 
@@ -123,5 +124,7 @@
     </main>
 
     <%- include("../partials/footer.ejs") %>
+    <script src="/js/validationsProductCreate.js"></script>
+    
 </body>
 </html>
