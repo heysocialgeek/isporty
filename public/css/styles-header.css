@@ -5,11 +5,10 @@ ul {
 }
 .main-header {
     background-color: white;
-    position: fixed;
+    position:absolute;
     top:25;
     width: 100%;
     z-index: 20;
-    /* padding: 10px; */
 }
 
 .title-header {
