@@ -41,9 +41,11 @@ ul {
     margin-top: 8px;
 }
 
-/* .div-user-header{
+.div-user-header{
+    display: flex;
+    flex-direction: row;
+}
 
-} */
 
 .isotipo-header{
     width: 40px;
