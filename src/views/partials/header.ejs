@@ -47,13 +47,13 @@ setTimeout(function(){loader.style.display = 'none';}, 4000);
       </div>
 
       <div class="div-user-header">
-        <a href="/product/cart"><i class="fas fa-shopping-cart logos-fontawesome-header"></i></a>
+        <a href="/product/cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
 
-        <% if (locals.isLogged) { %>
-
-          <a class="links-users-header" href="/user/profile"><h3>Hola, <%= locals.userLogged.name %></h3></a>
-          <img class="profile-image-header" src="/img/users/<%= locals.userLogged.image %>" alt="imagen de perfil">
-          <a class="links-users-header" href="/user/logout">Cerrar sesión</a>
+          <% if (locals.isLogged) { %>
+            
+            <a href="/user/profile"><h3 class="nada">Hola, <%= locals.userLogged.name %></h3></a><a href="/user/profile"><img class="profileimg" src="/img/users/<%= locals.userLogged.image %>"></a>
+            <a class= "link-login-register" href="/user/logout">Cerrar sesión</a>
 
         <% } else { %>
 
