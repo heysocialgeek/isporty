@@ -12,14 +12,13 @@ body {
 
 /* Slideshow container */
 .slideshow-container {
-    /* max-width: 1000px; */
+    height: auto;
     position: relative;
-    margin: auto;
   }
   
   /* Hide the images by default */
   .mySlides {
-    display: none;
+
   }
   
   /* Next & previous buttons */
@@ -725,6 +724,10 @@ margin-top: 10px;
 
 @media (min-width:1200px) {
     /* header */
+
+    .slideshow-container {
+        margin-top: -30px;
+      }
 
     .article-mobile {
         display: none
