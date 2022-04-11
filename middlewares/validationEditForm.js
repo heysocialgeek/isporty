@@ -3,7 +3,7 @@ const { body } = require("express-validator");
 module.exports = [
     body("name")
         .notEmpty().withMessage("Tienes que escribir un nombre").bail()
-        .isLength({ min: 3 }).withMessage("El nombre debe contener al menos 3 caracteres"),
+        .isLength({ min: 5 }).withMessage("El nombre debe contener al menos 5 caracteres"),
     body("description")
         .isLength({min: 20}).withMessage("La descripción debe contener al menos 20 caracteres"),
     body("price")

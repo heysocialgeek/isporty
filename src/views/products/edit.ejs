@@ -6,18 +6,20 @@
     cssTag: "<link rel='stylesheet' href='/css/styles-formulario-edit.css'> <link rel='stylesheet' href='/css/normalize.css'> <link rel='stylesheet' href='/css/styles-header.css'>"}) %>
 
 <body>
-
+  <%- include("../partials/header.ejs") %>
   <main class="main-form">
     <h1>Editar producto</h1>
     <section id="section-edit">
 
-      <form action="/products/edit/<%= product.id %>?_method=put" method="post" class="create-form">
+      <form id="editForm" action="/products/edit/<%= product.id %>?_method=put" method="post" class="create-form">
 
         <div class="controlador">
           <label>* Modificar el nombre del producto</label>
           <input type="text" name="name" class="control" value="<%= product.name %>">
+        <span></span>
         </div>
 
+        
         <% if (locals.errors && errors.name) { %>
           <div class="text-danger">
             <%= errors.name.msg %> 
@@ -28,6 +30,7 @@
         <div class="controlador">
           <label>* Editar precio del producto</label>
           <input type="text" name="price" class="control" value="<%= product.price %>">
+          <span></span>
         </div>
 
         <% if (locals.errors && errors.price) { %>
@@ -48,6 +51,7 @@
               </option>
             <% }) %>
           </select>
+          <span></span>
         </div>
 
         <% if (locals.errors && errors.productGender) { %>
@@ -67,6 +71,7 @@
               </option>
             <% }) %>
           </select>
+          <span></span>
         </div>
 
         <% if (locals.errors && errors.productBrand) { %>
@@ -79,13 +84,14 @@
         <div class="controlador">
           <label>* Modificar los talles del producto</label>
           <select name="productSize" multiple class="controlador2">
-            <option value="" >Selecciona una ó más opciones</option>
+            <option value="" >Selecciona una o más opciones</option>
             <% sizes.forEach(oneSize=> { %>
               <option value="<%= oneSize.id %>" <%= oneSize.id === sizes.id ? "selected" : ""  %>>
                 <%= oneSize.name %>
               </option>
             <% }) %>
           </select>
+          <span></span>
         </div>
 
         <% if (locals.errors && errors.productSize) { %>
@@ -98,7 +104,7 @@
         <div class="controlador">
           <label>* Modificar los colores del producto</label>
           <select name="productColor" multiple class="controlador2">
-            <option value="" class="controlador2">Selecciona una ó más opciones</option>
+            <option value="" class="controlador2">Selecciona una o más opciones</option>
             <% for( let i = 0; i < colors.length; i++ ) { %>
               <% if (colors[i].id == product.colorId) { %>
                <option value="<%= colors[i].id %>" selected>
@@ -111,6 +117,7 @@
                 <% } %>  
             <% } %>
           </select>
+          <span></span>
         </div>
 
         <% if (locals.errors && errors.productColor) { %>
@@ -123,13 +130,14 @@
         <div class="controlador">
           <label>* Editar categoría</label>
           <select name="productCategory"  multiple class="controlador2">
-            <option value="" class="controlador2">Selecciona una ó más opciones</option>
+            <option value="" class="controlador2">Selecciona una o más opciones</option>
             <% categories.forEach(oneCategory=> { %>
               <option value="<%= oneCategory.id %>" <%= oneCategory.id === product.categoryId ? "selected" : ""  %>>
                 <%= oneCategory.name %>
               </option>
             <% }) %>
           </select>
+          <span></span>
         </div>
 
         <% if (locals.errors && errors.productCategory) { %>
@@ -142,6 +150,7 @@
         <div class="controlador">
           <label>* Editar descripción</label>
           <textarea class="controlador2" name="description" id="" cols="30" rows="10"><%= product.description %> </textarea>
+          <span></span>
         </div>
 
         <% if (locals.errors && errors.description) { %>
@@ -153,7 +162,7 @@
       <br>
 
         <button type="submit" class="boton-formulario">Guardar cambios</button>
-        <button type="reset" class="boton-formulario">Cancelar</button>
+        <a href="/products/detail/<%= product.id %>" class="boton-formulario" style="text-decoration:none">Deshacer</a>  
       </form>
 
     </section>
@@ -162,6 +171,8 @@
   </main>
   <%- include("../partials/footer.ejs") %>
   <script src="/js/burgerMenu.js"></script>
+  <script src="/js/validationEditForm.js"></script>
+
 </body>
 
 </html>
