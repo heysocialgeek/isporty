@@ -1,4 +1,5 @@
 const { body } = require("express-validator");
+const path = require("path");
 
 module.exports = [
     body("name")
@@ -9,14 +10,14 @@ module.exports = [
         .isNumeric().withMessage("Solo debes escribir números"),
     body("productGender")
         .custom((value, { req }) => {
-            if (value === "1") {
+            if (value === "Selecciona una opción") {
               throw new Error("Tenés que elegir una marca");
             }
             return true;
         }),
     body("productBrand")
         .custom((value, { req }) => {
-        if (value === "1") {
+        if (value === "Selecciona una opción") {
           throw new Error("Tenés que elegir una marca");
         }
         return true;

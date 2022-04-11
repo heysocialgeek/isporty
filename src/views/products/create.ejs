@@ -39,6 +39,7 @@
 
                 <label for="gender">Género del producto:</label>
                 <select id="gender" name="productGender">
+                    <option>Selecciona una opción</option>
                     <% for( let i = 0; i < genders.length; i++ ) { %>
                         <option value="<%= genders[i].id %>">
                             <%= genders[i].name %>  
@@ -54,6 +55,7 @@
 
                 <label for="brand">Marca del producto:</label>
                 <select name="productBrand" id="brand">
+                    <option>Selecciona una opción</option>
                     <% for( let i = 0; i < brands.length; i++ ) { %>
                         <option value="<%= brands[i].id %>">
                             <%= brands[i].name %> 
