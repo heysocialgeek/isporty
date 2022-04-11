@@ -17,9 +17,9 @@ body {
   }
   
   /* Hide the images by default */
-  .mySlides {
+  /* .mySlides {
 
-  }
+  } */
   
   /* Next & previous buttons */
   .prev, .next {
@@ -326,7 +326,7 @@ ul {
 /* main */
 
 .banner {
-    margin-top: 85px;
+    margin-top: 100px;
     width: 100%;
 }
 
@@ -656,7 +656,7 @@ margin-top: 10px;
     /* main */ 
 
     .banner {
-        margin-top: 148px;
+        margin-top: 115px;
     }
 
     .title-news-first {

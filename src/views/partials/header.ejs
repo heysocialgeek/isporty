@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/css/styles-header.css">
-  <header>
   <header class="main-header">
     <h2 class="title-header">Envío gratis a todo el país en compras mayores a $6500</h2>
     <div class="burger-and-logos-header">
@@ -40,9 +39,12 @@
       <div class="div-user-header">
 
           <% if (locals.isLogged) { %>
-            
-            <a href="/user/profile"><h3 class="nada">Hola, <%= locals.userLogged.name %></h3></a><a href="/user/profile"><img class="profileimg" src="/img/users/<%= locals.userLogged.image %>"></a>
-            <a class= "link-login-register" href="/user/logout">Cerrar sesión</a>
+            <div class="profile-container">
+              <a href="/user/profile"><h3 class="nada">Hola, <%= locals.userLogged.name %></h3></a>
+              <a href="/user/profile"><img class="profileimg" src="/img/users/<%= locals.userLogged.image %>"></a>
+              <a class= "link-logout-register" href="/user/logout">Cerrar sesión</a>
+              <a class="link-logout-fontawesome" href="/user/logout"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+            </div>
 
         <% } else { %>
 
@@ -52,8 +54,10 @@
           <a class="links-users-header" href="/user/login">Iniciar sesión</a>
           <a class="links-users-header" href="/user/register">Registrarse</a>
 
-        <% } %> 
-        <a href="/product/cart"><i class="fas fa-shopping-cart"></i></a>
+        <% } %>
+        <div class="cart-header">
+          <a href="/product/cart"><i class="fas fa-shopping-cart"></i></a>
+        </div>
       </div>
       </div>
     </div>
@@ -74,22 +78,22 @@
           <li class="menu-item"><a class="menu-link main-links" href="/">Inicio</a></li>
           <li class="menu-item container-submenu"><a class="menu-link submenu-btn" href="/products/list">Productos <i class="fa-solid fa-angle-down"></i></a>
             <ul class="subMenu-header">
-              <li class="menu-item"><a class="menu-link" href="">Running</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Fútbol</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Street</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Verano</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Hockey</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Básquet</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Running</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Fútbol</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Street</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Verano</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Hockey</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Básquet</a></li>
             </ul>
           </li>
           <li class="menu-item container-submenu"><a class="menu-link submenu-btn" href="/">Marcas <i class="fa-solid fa-angle-down"></i></a>  
             <ul class="subMenu-header">
-              <li class="menu-item"><a class="menu-link" href="">Nike</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Adidas</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Puma</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Topper</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Fila</a></li>
-              <li class="menu-item"><a class="menu-link" href="">Kappa</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Nike</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Adidas</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Puma</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Topper</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Fila</a></li>
+              <li class="menu-item"><a class="menu-link style-link" href="">Kappa</a></li>
             </ul>
           </li>
           <li class="menu-item"><a class="menu-link" href="">Hombre</a></li>

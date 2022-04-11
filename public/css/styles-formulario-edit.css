@@ -15,6 +15,10 @@ body {
 
 /* header */
 
+.main-navbar-header{
+    border-bottom: 2px solid #53a6f3;
+}
+
 /* .main-header {
     background-color: white;
 }
