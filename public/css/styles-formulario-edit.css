@@ -182,10 +182,11 @@ ul {
 .boton-formulario {
     background-color: #4678f4;
     border: none;
-    font-size: 25px;
+    font-size: 18px;
     color: white;
     padding: 10px 10px;
     border-radius: 5px;
+    width: 200px;
 }
 
 .whatsapp {

@@ -8,7 +8,7 @@ body {
     font-family: "Roboto";
 }
 
-/* PRUEBA SLIDER */
+/* SLIDER HEADER*/
 
 /* Slideshow container */
 .slideshow-container {
@@ -95,7 +95,7 @@ body {
     to {opacity: 1}
   }
 
-/* FIN PRUEBA SLIDER */
+/* FIN SLIDER HEADER*/
 
 /****** HEADER PRUEBA ******/
 .main-header {
@@ -323,7 +323,7 @@ ul {
     display: none;
 }
 
-/* main */
+/* MAIN */
 
 .banner {
     margin-top: 100px;
@@ -365,7 +365,6 @@ main {
     width: 200px;
     height: 200px;
     object-fit: scale-down;
-
 }
 
 .product-article {

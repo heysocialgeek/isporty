@@ -194,14 +194,6 @@ ul {
     .logos-fontawesome-header{
         display: none;
     }
-
-    .link-logout-register{
-        display: block;
-    }
-    
-    .link-logout-fontawesome{
-        display: none;
-    }
     
     .links-users-header{
         display: block;
@@ -301,6 +293,15 @@ ul {
     }
 
     /* FIN menu desplegable*/
+    @media (min-width:1200px){
+        .link-logout-register{
+            display: block;
+            margin-right: 7px;
+        }
 
+        .link-logout-fontawesome{
+            display: none;
+        }
+    }
     /* fin header prueba */
 }
