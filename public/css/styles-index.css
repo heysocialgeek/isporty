@@ -346,19 +346,19 @@ main {
 }
 
 .title-news {
-    font-size: 22px;
+    font-size: 40px;
+    font-weight: bold;
     text-align: center;
-    color: rgb(56, 56, 56);
-    border-bottom: solid 2px rgb(56, 56, 56);
-    margin-top: 30px;
+    margin-top: 50px;
+    color: white;
 }
 
 .title-news-first {
-    font-size: 22px;
+    font-size: 40px;
+    font-weight: bold;
     text-align: center;
-    color: rgb(56, 56, 56);
-    border-bottom: solid 2px rgb(56, 56, 56);
     margin-top: 50px;
+    color: white;
 }
 
 .img-products {
