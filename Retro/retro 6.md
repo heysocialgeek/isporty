@@ -38,14 +38,14 @@ Hacer menos: Dejarnos ganar por el bloqueo.
 
 **Retrospectiva Sprint-6/ Juan Carlos Muñoz:**
 
-Seguir haciendo: 
+Seguir haciendo: Utilizar la tarjeta de "comentarios" para mantenernos comunicados.
 
-Hacer más: 
+Hacer más: Buscar recursos e inspiración externa para aprender comparando lo que hacemos y obtener buenas prácticas de otros programadores con experiencia.
 
-Empezar a hacer: 
+Empezar a hacer: Pensar partes reutilizables para implementar partials y optimizar código.
 
-Dejar de hacer: 
+Dejar de hacer: Pensar en la estética primero antes que la funcionalidad.
 
-Hacer menos: 
+Hacer menos: Dejar que la ansiedad por el resultado final visual me bloquee.
 
 
