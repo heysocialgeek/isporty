@@ -8,6 +8,9 @@ const upload = require("../../../middlewares/multerProductMiddleware")
 const validations = require("../../../middlewares/validationsProductForm")
 const validationEdit = require("../../../middlewares/validationEditForm")
 
+//middleware para evitar ir a create sin estar logeado
+const authMiddleware = require("../../../middlewares/authMiddleware")
+
 //Mostrar todos los productos
 router.get("/list", productControllerdb.list);
 
@@ -15,14 +18,14 @@ router.get("/list", productControllerdb.list);
 router.post("/search", productControllerdb.search);
 
 //Creación de productos
-router.get("/create", productControllerdb.create);
+router.get("/create", authMiddleware, productControllerdb.create);
 router.post("/create", upload.single('image'), validations, productControllerdb.store);
 
 //detalle de producto
 router.get("/detail/:id", productControllerdb.detail);
 
 //Editar un producto
-router.get("/edit/:id", productControllerdb.editForm);
+router.get("/edit/:id",authMiddleware, productControllerdb.editForm);
 router.put("/edit/:id", validationEdit, productControllerdb.edit);
 
 //Borrar un producto

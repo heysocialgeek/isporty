@@ -248,6 +248,7 @@ CREATE TABLE `products` (
   `description` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `brandId` int(10) UNSIGNED DEFAULT NULL,
   `genderId` int(10) UNSIGNED DEFAULT NULL,
+  `userId` int(10) UNSIGNED DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL

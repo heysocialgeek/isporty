@@ -64,10 +64,83 @@
 
                 <div class="product-results">
                     <p>+2000 resultados</p>
-                    <p>
-                        <i class="fas fa-chevron-down"></i>
-                        Filtrar</p>
+                    <p>Filtrar <i class="fas fa-chevron-down"></i></p>
                 </div>
+
+                <div class="filter-mobile">
+                    <div class="mobile-container">
+                        <h3 class="h3-filter-mobile">Talle</h3>
+                        <div class="filter-scroll">
+                            <% for( let i = 0; i < sizes.length; i++ ) { %>
+                                <div>
+                                    <%= sizes[i].name %> <input type="checkbox" name="productSize" value="<%= sizes[i].id %>">
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <div class="mobile-container">
+                        <h3 class="h3-filter-mobile">Marca</h3>
+                        <div class="filter-scroll">
+                            <% for( let i = 0; i < brands.length; i++ ) { %>
+                                <div>
+                                    <%= brands[i].name %> <input type="checkbox" name="productBrand" value="<%= brands[i].id %>">
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <div class="mobile-container">
+                        <h3 class="h3-filter-mobile">Género</h3>
+                        <div class="filter-scroll">
+                            <% for( let i = 0; i < genders.length; i++ ) { %>
+                                <div>
+                                    <%= genders[i].name %> <input type="checkbox" name="productGender" value="<%= genders[i].id %>">
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <div class="mobile-container">
+                        <h3 class="h3-filter-mobile">Precio</h3>
+                        <div class="filter-scroll">
+                            <div>
+                                Hasta $6.500 <input type="checkbox" name="productPrice" value="to-6500">
+                            </div>
+                            <div>
+                                $6.500 a $10.000 <input type="checkbox" name="productPrice" value="6500-to-10000">
+                            </div>
+                            <div>
+                                Más de $10.000 <input type="checkbox" name="productPrice" value="10000-or-more">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-container">
+                        <h3 class="h3-filter-mobile">Descuentos</h3>
+                        <div class="filter-scroll">
+                            <div>
+                                5% OFF <input type="checkbox" name="productSale" value="5">
+                            </div>
+                            <div>
+                                10% OFF <input type="checkbox" name="productSale" value="10">
+                            </div>
+                            <div>
+                                15% OFF <input type="checkbox" name="productSale" value="15">
+                            </div>
+                            <div>
+                                20% OFF <input type="checkbox" name="productSale" value="20">
+                            </div>
+                            <div>
+                                25% OFF <input type="checkbox" name="productSale" value="25">
+                            </div>
+                            <div>
+                                30% OFF <input type="checkbox" name="productSale" value="30">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <section class="section-style">
                     <% for (let i = 0; i < products.length; i++) { %>
                     <article class="article-style">

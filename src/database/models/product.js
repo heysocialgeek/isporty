@@ -24,6 +24,9 @@ module.exports = function (sequelize, DataTypes) {
         },
         genderId: {
             type: DataTypes.INTEGER
+        },
+        userId: {
+            type: DataTypes.INTEGER
         }
     }
 
@@ -39,6 +42,10 @@ module.exports = function (sequelize, DataTypes) {
     let Product = sequelize.define(alias, cols, config);
 
     Product.associate = function (models) {
+        Product.belongsTo(models.User, {
+            as: "users",
+            foreignKey: "userId"
+        }),
         Product.belongsTo(models.Brand, {
             as: "brands",
             foreignKey: "brandId"

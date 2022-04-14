@@ -4,7 +4,8 @@ const path = require("path");
 const methodOverride =  require('method-override');
 const session = require("express-session")
 const cookie = require('cookie-parser');
-const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const editAndDeleteOwnProduct = require("./middlewares/editAndDeleteOwnProduct")
 
 app.listen (3003, () => console.log ("Servidor corriendo en puerto 3003"));
 app.use (express.static (path.resolve (__dirname, "./public")))
@@ -19,6 +20,9 @@ app.use(session({
 
 //middleware para que no se muestre iniciar sesion y registrarse cuando estas logeado
 app.use(userLoggedMiddleware); 
+
+//middleware para que un Usuario edita o borre SU producto
+app.use(editAndDeleteOwnProduct);
 
 //requiero el req.body//
 app.use(express.urlencoded({ extended: true }));

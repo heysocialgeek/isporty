@@ -66,13 +66,12 @@
     <div class="alinear">
     <br>
     
-    <!-- <% if (locals.isLogged) { %> -->
+    <% if (locals.userLogged && locals.userLogged.id === product.userId) { %>
       <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
         <a href="/products/edit/<%= product.id %>" class="action-button-delete">EDITAR PRODUCTO</a>
        <button type="submit" class="action-button-delete">BORRAR PRODUCTO</button>
       </form>
-      <!-- <% } %> -->
-      <!-- los botones van en el if que esta justo arriba -->
+    <% } %>
       
       <br>
       </div>

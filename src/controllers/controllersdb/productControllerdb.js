@@ -47,8 +47,10 @@ const productControllerdb = {
             image: req.file ? req.file.filename : "",
             description: req.body.description,
             brandId: req.body.productBrand,
-            genderId: req.body.productGender
+            genderId: req.body.productGender,
+            userId: req.session.userLogged.id
         });
+        // console.log("REQ SESSION",req.session.userLogged);
         productStored.addCategories(req.body.productCategory);
         productStored.addSize(req.body.productSize);
         productStored.addColor(req.body.productColor)
@@ -58,7 +60,7 @@ const productControllerdb = {
     detail: async (req, res) => {
         const productID = req.params.id;
         const product = await db.Product.findByPk(productID, { include: ['categories', 'gender', 'brands', 'colors', 'sizes'] })
-        return res.render('products/detail', { product })
+        return res.render('products/detail', { product, user: req.session.userLogged })
     },
 
     editForm: async (req, res) => {
