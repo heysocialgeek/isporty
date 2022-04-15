@@ -8,12 +8,13 @@
     
     <main>
         
-        <h1 id="h1-create">Crear producto</h1>
+        <h1 id="h1-create">Crear Producto</h1>
 
-        <form action="/products/create" method="POST" enctype="multipart/form-data" id="createform">
-            <div class="form-container-create">
-                <label class="label-title" for="productName">Nombre del producto:</label>
-                <input 
+        <form class="form-container-create" action="/products/create" method="POST" enctype="multipart/form-data" id="createform">
+            
+                <label id="label-title-first" for="productName">Nombre del producto:</label>
+                <input
+                    class="field-style"
                     type="text" 
                     id="productName" 
                     name="name" 
@@ -28,8 +29,8 @@
                     </div>
                 <% } %>
 
-                <label for="price">Precio:</label>
-                <input type="text" id="price" name="price" placeholder="Escriba el precio" value="<%= locals.oldData ? oldData.price : null %>">
+                <label class="label-title" for="price">Precio:</label>
+                <input class="field-style" type="text" id="price" name="price" placeholder="Escriba el precio" value="<%= locals.oldData ? oldData.price : null %>">
                 <span></span>
 
                 <% if (locals.errors && errors.name) { %>
@@ -38,8 +39,8 @@
                     </div>
                 <% } %>
 
-                <label for="gender">Género del producto:</label>
-                <select id="gender" name="productGender">
+                <label class="label-title" for="gender">Género del producto:</label>
+                <select class="field-style" id="gender" name="productGender">
                     <option>Selecciona una opción</option>
                     <% for( let i = 0; i < genders.length; i++ ) { %>
                         <option value="<%= genders[i].id %>">
@@ -55,8 +56,8 @@
                     </div>
                 <% } %>
 
-                <label for="brand">Marca del producto:</label>
-                <select name="productBrand" id="brand">
+                <label class="label-title" for="brand">Marca del producto:</label>
+                <select class="field-style" name="productBrand" id="brand">
                     <option>Selecciona una opción</option>
                     <% for( let i = 0; i < brands.length; i++ ) { %>
                         <option value="<%= brands[i].id %>">
@@ -72,14 +73,15 @@
                     </div>
                 <% } %>
 
-                <label>Talle del producto:</label>
-                <label class="productCheckbox">
+                <label class="label-title">Talle del producto:</label>
+                
+                <div class="scroll-checkbox">
                     <% for( let i = 0; i < sizes.length; i++ ) { %>
-                    <div>
-                        <%= sizes[i].name %> <input type="checkbox" name="productSize" value="<%= sizes[i].id %>">
+                    <div class="productCheckbox">
+                        <p><%= sizes[i].name %></p><input type="checkbox" name="productSize" value="<%= sizes[i].id %>">
                     </div>
                     <% } %>
-                </label>
+                </div>
                 <span></span>
                 
                 <% if (locals.errors && errors.productSize) { %>
@@ -88,14 +90,15 @@
                     </div>
                 <% } %>
 
-                <label>Color del producto:</label>
-                <label class="productCheckbox">
+                <label class="label-title">Color del producto:</label>
+                
+                <div class="scroll-checkbox">
                     <% for( let i = 0; i < colors.length; i++ ) { %>
-                        <div>
-                            <%= colors[i].name %>  <input type="checkbox" name="productColor" value="<%= colors[i].id %>">
+                        <div class="productCheckbox">
+                            <p><%= colors[i].name %> </p> <input type="checkbox" name="productColor" value="<%= colors[i].id %>">
                         </div>
                     <% } %>
-                </label>
+                </div>
                 <span></span>
 
                 <% if (locals.errors && errors.productColor) { %>
@@ -104,14 +107,15 @@
                     </div>
                 <% } %>
 
-                <label>Categoría del producto:</label>
-                <label class="productCheckbox">
+                <label class="label-title">Categoría del producto:</label>
+                
+                <div class="scroll-checkbox">
                     <% for( let i = 0; i < categories.length; i++ ) { %>
-                        <div>
-                            <%= categories[i].name %>  <input type="checkbox" name="productCategory" value="<%= categories[i].id %>">
+                        <div class="productCheckbox">
+                           <p> <%= categories[i].name %> </p> <input type="checkbox" name="productCategory" value="<%= categories[i].id %>">
                         </div>
                     <% } %>
-                </label>
+                </div>
                 <span></span>
 
                 <% if (locals.errors && errors.productCategory) { %>
@@ -120,8 +124,8 @@
                     </div>
                 <% } %>
 
-                <label for="image">Imagen del producto:</label>
-                <input class="input-image" type="file" id="image" name="image">
+                <label class="label-title" for="image">Imagen del producto:</label>
+                <input class="field-img-style" type="file" id="image" name="image">
 
                 <% if (locals.errors && errors.image) { %>
                     <div class="text-danger">
@@ -129,8 +133,8 @@
                     </div>
                 <% } %>
 
-                <label for="description">Descripción del producto:</label>
-                <textarea name="description" id="description" cols="40" rows="10" value="<%= locals.oldData ? oldData.description : null %>">Detalle aún más el producto a publicar...</textarea>
+                <label class="label-title" for="description">Descripción del producto:</label>
+                <textarea class="textarea-style" name="description" id="description" cols="30" rows="10" value="<%= locals.oldData ? oldData.description : null %>">Detalle aún más el producto a publicar...</textarea>
                 <span></span>
                 <% if (locals.errors && errors.description) { %>
                     <div class="text-danger">
@@ -139,7 +143,7 @@
                 <% } %>
 
                 <button class="button-style" type="submit">Cargar producto</button>
-            </div>
+            
         </form>
     </main>
 

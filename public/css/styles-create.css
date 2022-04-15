@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
 
 * {
     box-sizing: border-box;
@@ -18,8 +19,64 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    border: 5px solid black;
+    box-shadow: 8px 8px 20px rgb(39, 39, 39);
+    margin-bottom: 60px;
+}
+
+#label-title-first{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.label-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-top: 1px solid #000000b4;
+}
+
+.field-style, .field-img-style{
+    width: 100%;
+    border: 2px solid #292929c5;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.scroll-checkbox{
+    overflow-y: scroll;
+    height: 130px;
+}
+
+.productCheckbox{
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
+    border: 2px solid #53a6f3;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 120px;
+}
+
+.productCheckbox p {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.textarea-style{
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
 }
 
 .button-style {
@@ -27,66 +84,16 @@ body {
     margin-top: 10px;
     padding: 5px;
     align-self: center;
-    background-color: rgb(46, 83, 131);
+    background-color: #53a6f3;
     color: white;
     border: 3px solid rgb(46, 83, 131);
     border-radius: 10px;
 }
 
 button:hover {
-    background-color: #acd1f3;
-    color: black;
-}
-
-.productCheckbox {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.productCheckbox div {
-    margin: 0px 5px;
-}
-
-/* .pAndCheck {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.productCheckbox p {
-    margin-right: 5px;
-} */
-
-.form-container-create label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    font-size: 20px;
-}
-
-.form-container-create input {
-    max-width: 200px;
-    border: 2px solid #393939;
-    border-radius: 5px;
-    padding: 5px;
-    align-self: center;
-}
-
-.form-container-create select {
-    width: 200px;
-    border: 2px solid #393939;
-    border-radius: 5px;
-    padding: 5px;
-    align-self: center;
-}
-
-.form-container-create textarea {
-    align-self: center;
-}
-
-.input-image {
-    background-color: white;
+    background-color: rgb(46, 83, 131);
+    border: 3px solid rgb(46, 83, 131);
+    color: white;
 }
 
 .text-danger {
@@ -96,12 +103,50 @@ button:hover {
 
 @media (min-width:768px) {
     #h1-create {
-        margin-top: 200px;
+        margin-top: 160px;
+    }
+
+    .form-container-create{
+        width: 600px;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+
+    .productCheckbox{
+        width: 200px;
+    }
+
+    .field-style{
+        width: 70%;
+        margin: auto;
+    }
+
+    .field-img-style {
+        width: 50%;
+        margin: auto;
+    }
+
+    .textarea-style {
+        width: 70%;
+        height: 150px;
+        margin: auto;
     }
 }
 
 @media (min-width:1200px) {
     #h1-create {
-        margin-top: 210px;
+        margin-top: 180px;
+    }
+
+    .form-container-create{
+        width: 850px;
+    }
+
+    .field-style, .field-img-style, .textarea-style {
+        font-size: 18px;
+    }
+
+    .field-img-style {
+        width: 40%;
     }
 }
