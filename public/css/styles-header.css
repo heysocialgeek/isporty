@@ -46,7 +46,6 @@ ul {
     flex-direction: row;
 }
 
-
 .isotipo-header{
     width: 40px;
     display: block;
@@ -161,7 +160,7 @@ ul {
      /* Hay que agregarle una transition */
 }
 
-.links-burger{
+.links-burger, .links-of-profile{
     text-decoration: none;
 }
 
@@ -169,6 +168,37 @@ ul {
     margin-top: 10px;
     font-size: 18px;
 }
+
+/* aside profile */
+    #menu-profile-id{
+        display: none;
+    }
+
+    .navbar-menu-profile li {
+        margin-top: 10px;
+        font-size: 18px;
+        text-align: center;
+        margin-left: -40px;
+        border-bottom: 1px solid #53a6f3;
+    }
+
+    .aside-profile{
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 13;
+        width: 50%;
+        padding: 5px;
+        /* min-height: 150px; */
+        border: 2px solid black;
+    }
+
+    .profileimg{
+        cursor: pointer;
+    }
+
+/* FIN aside profile */
 
 /****** FIN HEADER PRUEBA ******/
 
@@ -236,8 +266,7 @@ ul {
 
     .menu, .subMenu-header{
         padding: 0;
-        margin: 0;
-        
+        margin: 0; 
     }
 
     .menu{
@@ -292,8 +321,21 @@ ul {
         visibility: visible;
     }
 
+    /* aside profile */
+    .aside-profile{
+        width: 30%;
+        /* right: 0; */
+    }
+    /* Fin aside profile */
+
     /* FIN menu desplegable*/
     @media (min-width:1200px){
+    /* aside profile */
+        .aside-profile{
+            width: 20%;
+            right: 115px;
+        }
+    /* Fin aside profile */
         .link-logout-register{
             display: block;
             margin-right: 7px;
@@ -302,6 +344,15 @@ ul {
         .link-logout-fontawesome{
             display: none;
         }
+    }
+
+    @media (min-width:1920px){
+        /* aside profile */
+        .aside-profile{
+            width: 10%;
+            right: 260px;
+        }
+    /* Fin aside profile */
     }
     /* fin header prueba */
 }

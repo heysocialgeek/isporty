@@ -41,7 +41,18 @@
           <% if (locals.isLogged) { %>
             <div class="profile-container">
               <a href="/user/profile"><h3 class="nada">Hola, <%= locals.userLogged.name %></h3></a>
-              <a href="/user/profile"><img class="profileimg" src="/img/users/<%= locals.userLogged.image %>"></a>
+              <div>
+                <img class="profileimg" src="/img/users/<%= locals.userLogged.image %>">
+                <aside id="menu-profile-id">
+                  <nav class="navbar-menu-profile">
+                    <ul>
+                      <li><a class="links-of-profile" href="/user/profile">Ver perfil</a></li>
+                      <li><a class="links-of-profile" href="/products/create">Crear producto</a></li>
+                      <!-- <li><a class="links-of-profile" href="">Mis productos</a></li> -->
+                    </ul>
+                  </nav>
+                </aside>
+              </div>
               <a class= "link-logout-register" href="/user/logout">Cerrar sesión</a>
               <a class="link-logout-fontawesome" href="/user/logout"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </div>
