@@ -92,7 +92,7 @@ main{
     text-align: center;
 }
 
-button:hover {
+.button-style:hover {
     background-color: rgb(46, 83, 131);
     border: 3px solid rgb(46, 83, 131);
     color: white;
