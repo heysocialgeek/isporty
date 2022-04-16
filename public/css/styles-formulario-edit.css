@@ -19,175 +19,86 @@ body {
     border-bottom: 2px solid #53a6f3;
 }
 
-/* .main-header {
-    background-color: white;
+/* PROBANDO ESTILOS */
+main{
+    background: linear-gradient(350deg, rgba(117,194,233,1) 26%, rgba(131,204,241,1) 37%, rgba(83,166,243,1) 49%);
+    padding: 20px 0px;
 }
 
-.title-header {
-    margin: auto;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-size: 13px;
+#edit-title{
     text-align: center;
-    display: none;
-    color: rgb(255, 255, 255);
-    background-color: #4678f4;
+    font-size: 40px;
+    font-weight: bold;
 }
 
-.header-container {
+.form-container-create {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.burger-and-search {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 15px;
-}
-
-.burger-menu {
-    margin: 0px 10px;
-}
-
-.search-bar{
-    display: none;
-}
-
-.nav-bar {
-    display: none;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.ul-bar {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.iso {
-    width: 40px;
-}
-
-.logo {
-    width: 10%;
-}
-
-.carrito-login {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 15px;
-}
-
-.shopping-cart {
-    margin-right: 10px;
-}
-
-.link-login-register {
-    display: none;
-}
-
-.logo-search-and-input {
-    display: flex;
-}
-
-.logo-search-and-input button {
-    margin-right: 3px;
-} */
-
-/* main del register*/
-
-/* #section-edit{
-    margin-top: 100px;
-} */
-
-.banner {
-    width: 100vw;
-    margin-left: 0px;
-}
-.main-form {
+    flex-direction: column;
+    justify-content: center;
     background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    border: 5px solid black;
+    box-shadow: 8px 8px 20px rgb(39, 39, 39);
+    margin-bottom: 60px;
 }
 
-.main-navbar {
-    display: none
+.label-title-first {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
-.main-navbar ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px
+.label-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-top: 1px solid #000000b4;
 }
 
-.main-navbar a {
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;
-    padding: 5px 0px;
-    font-size: 17px;
-}
-
-.create-form {
-    padding: 20px 15px;
-}
-
-.controlador {
-    margin-bottom: 15px;
-}
-
-.controlador label {
-    margin-bottom: 5px;
-    font-style: italic;
-    display: block;
-}
-
-.controlador-comentario {
-    margin-bottom: 5px;
+.field-style{
     width: 100%;
-    padding: 8px;
-    border: 1px solid rgb(196, 196, 196);
-    height: 100px
-}
-
-.control {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid rgb(196, 196, 196)
-}
-
-.controlador2 {
-    width: 100%;
-    border: 1px solid rgb(196, 196, 196)
-}
-
-.main-form h1 {
-    text-align: center;
-    color: #808790;
-    font-size: 25px;
-}
-
-.create-form h2 {
-    color: #808790;
-}
-
-.create-form p {
-    text-align: right;
-}
-
-
-.boton-formulario {
-    background-color: #4678f4;
-    border: none;
-    font-size: 18px;
-    color: white;
-    padding: 10px 10px;
+    border: 2px solid #292929c5;
     border-radius: 5px;
-    width: 200px;
+    padding: 5px;
 }
+
+.textarea-style{
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.buttons-edit {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.button-style {
+    width: 200px;
+    margin-top: 10px;
+    padding: 5px;
+    align-self: center;
+    background-color: #53a6f3;
+    color: white;
+    border: 3px solid rgb(46, 83, 131);
+    border-radius: 10px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(46, 83, 131);
+    border: 3px solid rgb(46, 83, 131);
+    color: white;
+}
+
+/* PROBANDO ESTILOS */
 
 .whatsapp {
     position:fixed;
@@ -260,108 +171,32 @@ ul {
     color: white
 }
 
-/*Mobile*/
-
-@media (max-width:479px) {
-
-    .logo {
-        display: none;
-    }
-    
-    }
-    
-    /*Ipad*/
-    
-@media (min-width:480px) {
-    
-    .iso {
-    display: none;
-        }
-        
-    }
 
 @media (min-width:768px) {
-    /* header */
-    .title-header {
-        display: block;
-    }
-
-    .logo {
-        width: 150px;
-    }
-
-    .burger-menu {
-        display: none;
-    }
-
-    .nav-bar {
-        display: block;
-        margin-left: -45px;
-    }
-
-    .ul-bar li {
-        margin: 0px 10px;
-    }
-
-    .link-login {
-        display: block;
-    }
-
-    .user-circle {
-        margin-left: 20px;
-        margin-right: 10px;
-    }
-
-    .logo {
-        order: -1;
-    }
 
     /* main */ 
 
-    @media (min-width: 768px){
+    .form-container-create{
+        width: 600px;
+        margin: auto;
+        margin-bottom: 70px;
+    }
 
-        
-        .main-form section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 95%;
-            max-width: 1500px;
-            border-radius: 20px;
-            padding: 15px;
-            background-color: white;
-            margin: auto
-    
-        }
-    
-        .create-form {
-            max-width: 700px;
-            flex-direction: row;
-            margin: auto;
-            width: 100%;
-        }
-    
-        .boton {
-            align-self: flex-end;
-            padding: 50px
-        }
+    .field-style{
+        width: 70%;
+        margin: auto;
+    }
 
-        .main-form {
-            padding-bottom: 50px
-        }
+    .textarea-style {
+        width: 70%;
+        height: 150px;
+        margin: auto;
+    }
 
-        .boton-formulario {
-            background-color: #4678f4;
-            border: none;
-            font-size: 25px;
-            color: white;
-            padding: 10px 10px;
-            border-radius: 5px;
-            margin: 0px 30px;
-            width: 40%
-            
-        }
-    
+    .buttons-edit {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
     }
     
     /* footer */
@@ -383,29 +218,14 @@ ul {
 }
 
 @media (min-width:1200px) {
-    /* header */
+    /* main */
 
-    .search-bar {
-        display: block;
+    .form-container-create{
+        width: 850px;
     }
 
-    .features-search {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .features-search i {
-        margin-left: 5px;
-    }
-
-    .link-login-register {
-        display: block;
-        margin-right: 10px;
-    }
-
-    .user-circle {
-        display: none;
+    .field-style, .textarea-style {
+        font-size: 18px;
     }
 
     /* footer */

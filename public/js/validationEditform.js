@@ -16,10 +16,12 @@ window.addEventListener("load", function () {
         if (field.value.trim().length < 6) {
             field.style.border = 'red 2px solid';
             TagError.innerText = `El campo nombre debe contener al menos 5 caracteres (front)`;
-            TagError.style.color = "red"
+            TagError.style.color = "red";
+            TagError.style.margin = "auto"
         } else {
             field.style.border = 'green 2px solid';
             TagError.style.color = "green";
+            TagError.style.margin = "auto"
             TagError.innerText = "válido (front)"
 
         }
@@ -31,10 +33,12 @@ window.addEventListener("load", function () {
         if (field.value.trim().length < 21) {
             field.style.border = 'red 2px solid';
             TagError.innerText = `El campo descripción debe contener al menos 20 caracteres (front)`;
-            TagError.style.color = "red"
+            TagError.style.color = "red";
+            TagError.style.margin = "auto";
         } else {
             field.style.border = 'green 2px solid';
             TagError.style.color = "green";
+            TagError.style.margin = "auto";
             TagError.innerText = "válido (front)"
 
         }
@@ -48,9 +52,11 @@ window.addEventListener("load", function () {
             field.style.border = 'red 2px solid';
             TagError.innerText = `Debes ingresar solo números (front)`;
             TagError.style.color = "red";
+            TagError.style.margin = "auto";
         } else {
             field.style.border = 'green 2px solid';
             TagError.style.color = "green";
+            TagError.style.margin = "auto";
             TagError.innerText = "válido (front)";
 
         }
@@ -63,10 +69,12 @@ window.addEventListener("load", function () {
         if (field.value === "Selecciona una opción") {
             TagError.innerText = `Debes seleccionar una opción (front)`;
             field.style.border = 'red 2px solid';
-            TagError.style.color = "red"
+            TagError.style.color = "red";
+            TagError.style.margin = "auto";
         } else {
             field.style.border = 'green 2px solid';
             TagError.style.color = "green";
+            TagError.style.margin = "auto";
             TagError.innerText = "Opción válida (front)"
 
         }
@@ -80,10 +88,12 @@ window.addEventListener("load", function () {
         if (field.value === "") {
             TagError.innerText = `Debes seleccionar una opción (front)`;
             field.style.border = 'red 2px solid';
-            TagError.style.color = "red"
+            TagError.style.color = "red";
+            TagError.style.margin = "auto";
         } else {
             field.style.border = 'green 2px solid';
             TagError.style.color = "green";
+            TagError.style.margin = "auto";
             TagError.innerText = `Opción válida (front)`
 
         }
@@ -104,7 +114,8 @@ window.addEventListener("load", function () {
         formFields.forEach(oneField => {
             const TagError = oneField.nextElementSibling;
             if (oneField.value.trim() === '') {
-                TagError.style.color = "red"
+                TagError.style.color = "red";
+                TagError.style.margin = "auto";
                 oneField.style.border = 'red 2px solid';
                 TagError.innerText = "Este campo es obligatorio";
                 thereAreErrors++;

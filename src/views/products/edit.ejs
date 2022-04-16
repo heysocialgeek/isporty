@@ -8,42 +8,39 @@
 <body>
   <%- include("../partials/header.ejs") %>
   <main class="main-form">
-    <h1>Editar producto</h1>
-    <section id="section-edit">
+    <h1 id="edit-title">Editar producto</h1>
+    <!-- <section id="section-edit"> -->
 
-      <form id="editForm" action="/products/edit/<%= product.id %>?_method=put" method="post" class="create-form">
+      <form class="form-container-create" id="editForm" action="/products/edit/<%= product.id %>?_method=put" method="post">
 
-        <div class="controlador">
-          <label>* Modificar el nombre del producto</label>
-          <input type="text" name="name" class="control" value="<%= product.name %>">
-        <span></span>
-        </div>
+        <!-- <div class="controlador"> -->
+          <label class="label-title-first">* Nombre del producto</label>
+          <input type="text" name="name" class="field-style" value="<%= product.name %>">
+          <span></span>
+        <!-- </div> -->
 
         
         <% if (locals.errors && errors.name) { %>
           <div class="text-danger">
             <%= errors.name.msg %> 
           </div>
-      <% } %>
-      <br>
+        <% } %>
         
-        <div class="controlador">
-          <label>* Editar precio del producto</label>
-          <input type="text" name="price" class="control" value="<%= product.price %>">
+        <!-- <div class="controlador"> -->
+          <label class="label-title">* Precio del producto</label>
+          <input type="text" name="price" class="field-style" value="<%= product.price %>">
           <span></span>
-        </div>
+        <!-- </div> -->
 
         <% if (locals.errors && errors.price) { %>
           <div class="text-danger">
             <%= errors.price.msg %> 
           </div>
-      <% } %>
+        <% } %>
 
-      <br>
-
-        <div class="controlador">
-          <label>* Género del producto</label>
-          <select name="productGender" class="controlador2">
+        <!-- <div class="controlador"> -->
+          <label class="label-title">* Género del producto</label>
+          <select name="productGender" class="field-style">
             <option>Selecciona una opción</option>
             <% genders.forEach(oneGender=> { %>
               <option value="<%= oneGender.id %>" <%= oneGender.id === product.genderId ? "selected" : ""  %> >
@@ -52,18 +49,18 @@
             <% }) %>
           </select>
           <span></span>
-        </div>
+        <!-- </div> -->
 
         <% if (locals.errors && errors.productGender) { %>
           <div class="text-danger">
             <%= errors.productGender.msg %> 
           </div>
-      <% } %>
-      <br>
+        <% } %>
+      
 
-        <div class="controlador">
-          <label>* Editar marca</label>
-          <select name="productBrand" class="controlador2">
+        <!-- <div class="controlador"> -->
+          <label class="label-title">* Marca del producto:</label>
+          <select name="productBrand" class="field-style">
             <option>Selecciona una opción</option>
             <% brands.forEach(oneBrand=> { %>
               <option value="<%= oneBrand.id %>" <%= oneBrand.id === product.brandId ? "selected" : "" %>>
@@ -72,18 +69,17 @@
             <% }) %>
           </select>
           <span></span>
-        </div>
+        <!-- </div> -->
 
         <% if (locals.errors && errors.productBrand) { %>
           <div class="text-danger">
             <%= errors.productBrand.msg %> 
           </div>
-      <% } %>
-      <br>
+        <% } %>
 
-        <div class="controlador">
-          <label>* Modificar los talles del producto</label>
-          <select name="productSize" multiple class="controlador2">
+        <!-- <div class="controlador"> -->
+          <label class="label-title">* Talles del producto</label>
+          <select name="productSize" multiple class="field-style">
             <option value="" >Selecciona una o más opciones</option>
             <% sizes.forEach(oneSize=> { %>
               <option value="<%= oneSize.id %>" <%= oneSize.id === sizes.id ? "selected" : ""  %>>
@@ -92,19 +88,18 @@
             <% }) %>
           </select>
           <span></span>
-        </div>
+        <!-- </div> -->
 
         <% if (locals.errors && errors.productSize) { %>
           <div class="text-danger">
             <%= errors.productSize.msg %> 
           </div>
-      <% } %>
-      <br>
+        <% } %>
 
-        <div class="controlador">
-          <label>* Modificar los colores del producto</label>
-          <select name="productColor" multiple class="controlador2">
-            <option value="" class="controlador2">Selecciona una o más opciones</option>
+        <!-- <div class="controlador"> -->
+          <label class="label-title">* Colores del producto</label>
+          <select name="productColor" multiple class="field-style">
+            <option value="">Selecciona una o más opciones</option>
             <% for( let i = 0; i < colors.length; i++ ) { %>
               <% if (colors[i].id == product.colorId) { %>
                <option value="<%= colors[i].id %>" selected>
@@ -118,19 +113,18 @@
             <% } %>
           </select>
           <span></span>
-        </div>
+        <!-- </div> -->
 
         <% if (locals.errors && errors.productColor) { %>
           <div class="text-danger">
             <%= errors.productColor.msg %> 
           </div>
-      <% } %>
-      <br>
+        <% } %>
 
-        <div class="controlador">
-          <label>* Editar categoría</label>
-          <select name="productCategory"  multiple class="controlador2">
-            <option value="" class="controlador2">Selecciona una o más opciones</option>
+        <!-- <div class="controlador"> -->
+          <label class="label-title">* Categoría del producto</label>
+          <select name="productCategory"  multiple class="field-style">
+            <option value="">Selecciona una o más opciones</option>
             <% categories.forEach(oneCategory=> { %>
               <option value="<%= oneCategory.id %>" <%= oneCategory.id === product.categoryId ? "selected" : ""  %>>
                 <%= oneCategory.name %>
@@ -138,34 +132,33 @@
             <% }) %>
           </select>
           <span></span>
-        </div>
+        <!-- </div> -->
 
         <% if (locals.errors && errors.productCategory) { %>
           <div class="text-danger">
             <%= errors.productCategory.msg %> 
           </div>
-      <% } %>
-      <br>
+        <% } %>
 
-        <div class="controlador">
-          <label>* Editar descripción</label>
-          <textarea class="controlador2" name="description" id="" cols="30" rows="10"><%= product.description %> </textarea>
+        <!-- <div class="controlador"> -->
+          <label class="label-title">* Descripción del producto</label>
+          <textarea class="textarea-style" name="description" id="" cols="30" rows="10"><%= product.description %> </textarea>
           <span></span>
-        </div>
+        <!-- </div> -->
 
         <% if (locals.errors && errors.description) { %>
           <div class="text-danger">
             <%= errors.description.msg %> 
           </div>
-      <% } %>
-
-      <br>
-
-        <button type="submit" class="boton-formulario">Guardar cambios</button>
-        <a href="/products/detail/<%= product.id %>" class="boton-formulario" style="text-decoration:none">Deshacer</a>  
+        <% } %>
+        
+        <div class="buttons-edit">
+          <button type="submit" class="button-style">Guardar cambios</button>
+          <a href="/products/detail/<%= product.id %>" class="button-style" style="text-decoration:none">Deshacer</a>  
+        </div>
       </form>
 
-    </section>
+    <!-- </section> -->
     <a href="https://wa.me/5491127682598?text=Me%20gustar%C3%ADa%20contactar%20con%20un%20asesor%20comercial"
       class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
   </main>

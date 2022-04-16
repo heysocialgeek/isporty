@@ -12,7 +12,9 @@ body {
 #h1-create {
     margin-top: 120px;
     text-align: center;
-    text-decoration: underline;
+    font-size: 40px;
+    font-weight: bold;
+    /* color: white; */
 }
 
 .form-container-create {

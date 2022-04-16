@@ -20,11 +20,13 @@ window.addEventListener("load", function () {
     if (field.value.trim().length <6){
         field.style.border ='red 2px solid';
         spanTagError.innerText= `El campo nombre es obligatorio y debe tener al menos 6 caracteres`;
-        spanTagError.style.color="red"
+        spanTagError.style.color="red";
+        spanTagError.style.margin = "auto";
     }else{
         field.style.border ='green 2px solid';
         spanTagError.style.color="green";
-        spanTagError.innerText="valido"   
+        spanTagError.innerText="valido";
+        spanTagError.style.margin = "auto";   
           
         }
     }); 
@@ -36,11 +38,13 @@ window.addEventListener("load", function () {
     if (isNaN(price) || price.trim() === ""){
         field.style.border ='red 2px solid';
         spanTagError.innerText= `El campo precio es obligatorio y debes ingresar solo numeros`;
-        spanTagError.style.color="red"
+        spanTagError.style.color="red";
+        spanTagError.style.margin = "auto";
     }else{
         field.style.border ='green 2px solid';
         spanTagError.style.color="green";
-        spanTagError.innerText="valido";         
+        spanTagError.innerText="valido";
+        spanTagError.style.margin = "auto";         
         }
     });
 
@@ -51,11 +55,13 @@ window.addEventListener("load", function () {
         if (field.value.trim().length < 21) {
             field.style.border = 'red 2px solid';
             spanTagError.innerText = `El campo descripción debe contener al menos 20 caracteres`;
-            spanTagError.style.color = "red"
+            spanTagError.style.color = "red";
+            spanTagError.style.margin = "auto";
         } else {
             field.style.border = 'green 2px solid';
             spanTagError.style.color = "green";
-            spanTagError.innerText = "válido"
+            spanTagError.innerText = "válido";
+            spanTagError.style.margin = "auto";
 
         }
     });
@@ -67,11 +73,13 @@ window.addEventListener("load", function () {
         if (field.value === "Selecciona una opción") {
             spanTagError.innerText = `Debes seleccionar una opción`;
             field.style.border = 'red 2px solid';
-            spanTagError.style.color = "red"
+            spanTagError.style.color = "red";
+            spanTagError.style.margin = "auto";
         } else {
             field.style.border = 'green 2px solid';
             spanTagError.style.color = "green";
-            spanTagError.innerText = "Opción válida"
+            spanTagError.innerText = "Opción válida";
+            spanTagError.style.margin = "auto";
 
         }
     }
@@ -91,11 +99,13 @@ window.addEventListener("load", function () {
             if(!image.match(allowedExtensions)){
             spanTagError.innerText = `La imagen debe ser formato .jpg, .jpeg, .png o .gif`;
             field.style.border = 'red 2px solid';
-            spanTagError.style.color = "red"
+            spanTagError.style.color = "red";
+            spanTagError.style.margin = "auto";
             }else{
                 spanTagError.innerText = `La imagen es correcta`;
                 field.style.border = 'green 2px solid';
-                spanTagError.style.color = "green"
+                spanTagError.style.color = "green";
+                spanTagError.style.margin = "auto";
             }
     });
 
@@ -110,13 +120,15 @@ window.addEventListener("load", function () {
             if (oneField.value.trim() === "") {
                 field.style.border ='red 2px solid';
                 spanTagError.innerText= `El campo es obligatorio`;
-                spanTagError.style.color="red"
+                spanTagError.style.color="red";
+                spanTagError.style.margin = "auto";
                 
                 Error++;
             } else {
                 field.style.border ='green 2px solid';
             spanTagError.style.color="green";
-            spanTagError.innerText="valido"
+            spanTagError.innerText="valido";
+            spanTagError.style.margin = "auto";
             }
         })
         if (Error>0){
