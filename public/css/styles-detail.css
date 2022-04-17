@@ -28,7 +28,7 @@ h2 {
     background-color: white;
     padding: 15px;
     border-radius: 15px;
-    border: 3px solid black;
+    border: 3px solid rgb(203, 203, 203);
     margin-bottom: 50px;
     margin-top: 30px;
 }
@@ -44,7 +44,7 @@ h2 {
 
 .img-detail img {
     width: 250px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(169, 169, 169);
 }
 
 .h1-title {
@@ -70,7 +70,7 @@ h2 {
 }
 
 .price-title, .color-container, .size-container, .sizes-map, .features, .description-box, .interested-people, .form-ask-questions {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(169, 169, 169);
 }
 
 .color-style-p {
@@ -98,7 +98,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(169, 169, 169);
 }
 
 .button-style {
@@ -257,7 +257,7 @@ h2 {
         width: 30%;
         padding: 15px;
         border-radius: 15px;
-        border: 3px solid black;
+        border: 3px solid rgb(203, 203, 203);
         margin-bottom: 50px;
         margin-top: 30px;
     }
@@ -279,7 +279,7 @@ h2 {
     }
 
     .free-devolution, .guarantee, .payment-methods {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgb(169, 169, 169);
     }
 
     .devolution-p, .guarantee-p, .payment-p{
