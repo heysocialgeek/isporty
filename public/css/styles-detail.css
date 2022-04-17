@@ -4,128 +4,187 @@
     box-sizing: border-box;
 }
 
+/* #53a6f3 */
+
 body {
     font-family: "Roboto";
 }
 
-/* header */
-
-.main-navbar-header{
-    border-bottom: 2px solid #53a6f3;
+h2 {
+    font-size: 22px
 }
 
-/* .main-header {
+/* MAIN */
+
+.detail-container-box{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: linear-gradient(350deg, rgba(117,194,233,1) 26%, rgba(131,204,241,1) 37%, rgba(83,166,243,1) 49%);
+}
+
+.detail-main{
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 3px solid black;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.detail-info{
+    display: none;
     background-color: white;
 }
 
-.title-header {
-    margin: auto;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    font-size: 13px;
+.img-detail{
     text-align: center;
-    display: none;
-    color: rgb(255, 255, 255);
-    background-color: #4678f4;
 }
 
-.header-container {
+.img-detail img {
+    width: 250px;
+    border-bottom: 1px solid black;
+}
+
+.h1-title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.edit-a {
+    text-decoration: none;
+}
+
+.form-edit-and-delete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.form-edit-and-delete a, .form-edit-and-delete button {
+    width: 45%;
+    text-align: center;
+}
+
+.price-title, .color-container, .size-container, .sizes-map, .features, .description-box, .interested-people, .form-ask-questions {
+    border-bottom: 1px solid black;
+}
+
+.color-style-p {
+    background-color: #ededed;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.size-style, .ask-input {
+    border: 2px solid #292929c5;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: #ededed;
+    margin-bottom: 20px;
+}
+
+.ask-input::placeholder {
+    color: black;
+}
+
+.buttons-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    border-bottom:solid #4678f4 2px;
+    border-bottom: 1px solid black;
 }
 
-.burger-and-search {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 15px;
+.button-style {
+    padding: 8px;
+    background-color: #53a6f3;
+    color: white;
+    border: 3px solid rgb(46, 83, 131);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.action-button-delete {
-display: flex;
-display:inline-block;
-padding:0.3em 1.2em;
-margin:0 0.1em 0.1em 0;
-border:0.16em solid #4678f4;
-border-radius:2em;
-box-sizing: border-box;
-text-decoration:none;
-font-family:'Roboto',sans-serif;
-font-weight:300;
-color:#4678f4;
-text-align:center;
-transition: all 0.2s;
+.button-style:hover {
+    background-color: rgb(46, 83, 131);
+    border: 3px solid rgb(46, 83, 131);
+    color: white;
 }
 
-.burger-menu {
-    margin: 0px 10px;
+.interested-people h2 {
+    font-size: 20px;
 }
 
-.search-bar {
+.ask-button {
+    width: 100%;
+    padding: 8px;
+    background-color: #53a6f3;
+    color: white;
+    border: 3px solid rgb(46, 83, 131);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.ask-button:hover {
+    background-color: rgb(46, 83, 131);
+    border: 3px solid rgb(46, 83, 131);
+    color: white;
+}
+
+.sizes-768px{
     display: none;
 }
 
-.nav-bar {
-    display: none;
-}
+/* CSS DE LA TABLA DE TALLES */
+    .table-sizes, .features-table {
+        margin-bottom: 20px;
+    }
 
-ul {
-    list-style-type: none;
-}
+    .span-sizes{
+        color: #53a6f3;
+        font-weight: 600;
+    }
 
-.ul-bar {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
+    /* Funcionalidad para ocultarlo */
+    .hidden {
+        display: none;
+      }
+    
+    .table-sizes {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 6rem;
+        border-radius: 5px;
+        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+        z-index: 20;
+        width: 500px;
+    }
 
-.iso {
-    width: 40px;
-}
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        z-index: 5;
+      }
+    /* Fin de la funcionalidad */
 
-.logo {
-    width: 10%;
-}
+/* FIN CSS DE LA TABLA DE TALLES */
 
-.carrito-login {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 15px;
-}
+/* FIN MAIN */
 
-.shopping-cart {
-    margin-right: 10px;
-}
-
-.link-login-register {
-    display: none;
-}
-
-.logo-search-and-input {
-    display: flex;
-}
-
-.logo-search-and-input button {
-    margin-right: 3px;
-} */
-
-.whatsapp {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 48px;
-
-}
-
-/* footer */
+/* FOOTER */
 
 .h3-footer-desktop {
     display: none
@@ -185,64 +244,113 @@ ul {
     color: white
 }
 
-/*Mobile*/
+/* FIN FOOTER */
 
-@media (max-width:479px) {
+@media (min-width:768px){
+    /* MAIN */
+    .detail-main{
+        width: 70%;
+    }
 
-    .logo {
+    .detail-info{
+        display: block;
+        width: 30%;
+        padding: 15px;
+        border-radius: 15px;
+        border: 3px solid black;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    .details-of-product-Mobile{
         display: none;
     }
 
-}
-
-/*Ipad*/
-
-@media (min-width:480px) {
-
-    .iso {
-        display: none;
+    .price-768px{
+        font-size: 20px;
     }
 
-}
+    .span-sizes {
+        font-size: 16px;
+    }
 
-@media (min-width:768px) {
+    .buttons-container {
+        flex-direction: column;
+    }
 
-    /* header */
-    /* .title-header {
+    .free-devolution, .guarantee, .payment-methods {
+        border-bottom: 1px solid black;
+    }
+
+    .devolution-p, .guarantee-p, .payment-p{
+        /* background-color: #f3f3f3; */
+        padding: 10px;
+        border: 2px solid #53a6f3;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .devolution-1{
+        text-align: start;
+    }
+
+    .payment-p p {
+        text-align: start;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .credit-container, .debit-container, .cash-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .visa {
+        width: 40%;
+    }
+
+    .visa-debito {
+        width: 40%;
+    }
+
+    .mastercard-debito{
+        width: 30%;
+    }
+
+    .cabal{
+        width: 25%;
+    }
+
+    .rapipago {
+        width: 50%;
+    }
+
+    .pagoFacil {
+        width: 20%;
+    }
+
+    .sizes-768px{
         display: block;
     }
 
-    .logo {
-        width: 150px;
+    /* Funcionalidad para ocultar el table sizes */
+    .table-sizes {
+        top: 50%;
     }
 
-    .burger-menu {
-        display: none;
-    }
+    .overlay {
+        height: 100%;
+      }
+    /* Funcionalidad para ocultar el table sizes */
 
-    .nav-bar {
-        display: block;
-        margin-left: -45px;
-    }
+    /* FIN MAIN */
 
-    .ul-bar li {
-        margin: 0px 10px;
-    }
-
-    .link-login {
-        display: block;
-    }
-
-    .user-circle {
-        margin-left: 20px;
-        margin-right: 10px;
-    }
-
-    .logo {
-        order: -1;
-    } */
-
-    /* footer */
+    /* FOOTER */
 
     .email {
         width: 300px;
@@ -258,27 +366,100 @@ ul {
         align-items: center;
         justify-content: center;
     }
+
+    /* FIN FOOTER */
 }
 
 @media (min-width:1200px) {
-    /* header */
+    /* MAIN */
 
-    .search-bar {
-        display: block;
+    h2 {
+        font-size: 28px;
+    }
+    .size-style {
+        width: 50%;
     }
 
-    .features-search {
-        display: flex;
-        flex-wrap: wrap;
+    .ask-input{
+        width: 55%;
+    }
+
+    .ask-button{
+        width: 40%;
+        padding: 5px;
+    }
+
+    .span-sizes {
+        font-size: 18px;
+    }
+
+    .size-style, .ask-input, .ask-button, .description-box p {
+        font-size: 18px;
+    }
+
+    .price-768px {
+        font-size: 22px;
+    }
+
+    .color-style-p {
+        font-size: 18px;
+    }
+
+    .buttons-container{
         align-items: center;
     }
 
-    .features-search i {
-        margin-left: 5px;
+    .button-style{
+        width: 70%;
     }
 
-    /* footer */
+    .devolution-p p, .guarantee-p {
+        font-size: 16px;
+    }
 
+    .payment-p p {
+        font-size: 20px;
+    }
+
+    .visa {
+        width: 30%;
+    }
+
+    .mastercard {
+        width: 15%;
+    }
+
+    .naranja {
+        width: 10%;
+    }
+
+    .visa-debito {
+        width: 30%;
+    }
+
+    .mastercard-debito, .cabal {
+        width: 20%;
+    }
+
+    .rapipago {
+        width: 30%;
+    }
+
+    .pagoFacil {
+        width: 10%;
+    }
+
+    /* Table features */
+
+    .th-styles-features {
+        font-size: 18px;
+    }
+
+    /* Fin table features */
+
+    /* FIN DEL MAIN */
+
+    /* FOOTER */
 
     .title-suscription {
         display: block;
@@ -343,308 +524,5 @@ ul {
     .box-footer form {
         max-width: 350px;
     }
-
-}
-
-/*************************************************/
-
-* {
-    box-sizing: border-box;
-}
-
-.main-container {
-    width: 95%;
-    margin: auto;
-    border-radius: 50px;
-    max-width: 400px;
-}
-
-.top-box {
-    text-align: center;
-}
-
-.encabezado {
-    text-align: center;
-}
-
-.descripcion {
-    text-align: justify;
-    padding: 10px;
-    max-width: 800px;
-    border: 1px solid black
-}
-
-.imagenproducto img {
-    max-width: 300px;
-}
-
-.botoncarrito {
-    display: flex;
-display:inline-block;
-padding:0.3em 1.2em;
-margin:0 0.1em 0.1em 0;
-border:0.16em solid #4678f4;
-border-radius:2em;
-box-sizing: border-box;
-text-decoration:none;
-font-family:'Roboto',sans-serif;
-font-weight:300;
-color:#4678f4;
-text-align:center;
-transition: all 0.2s;
-display: block;
-margin-top: 10px;
-margin-left: auto;
-margin-right: auto
-}
-
-.alinear {
-    display: flex;
-display:inline-block;
-padding:0.3em 1.2em;
-margin:0 0.1em 0.1em 0;
-border-radius:2em;
-box-sizing: border-box;
-text-decoration:none;
-font-family:'Roboto',sans-serif;
-font-weight:300;
-color:#4678f4;
-text-align:center;
-transition: all 0.2s;
-display: block;
-margin-top: 10px;
-margin-left: auto;
-margin-right: auto
-}
-
-
-.talles {
-    text-align: center;
-}
-
-.top-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-section2 h3 {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.img-products {
-    width: 200px;
-}
-
-.product-article {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.product-article i {
-    font-size: 24px;
-}
-
-.product-container {
-    background-color: white;
-    padding: 8px;
-    margin-bottom: 20px;
-    box-shadow: 10px 10px 10px rgb(31, 31, 31);
-    max-width: 300px;
-    margin: auto;
-    margin-bottom: 20px;
-    border-radius: 15px;
-}
-
-.suscription-box {
-    border: solid 2px black;
-    padding-bottom: 15px;
-    padding-right: 10px;
-    padding-left: 10px;
-    background-color: white;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.suscription-input {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-.suscription-box button {
-    position: absolute;
-    left: 250px;
-    bottom: 50px;
-    border-radius: 8px;
-}
-
-.suscription-box button:hover {
-    background-color: #53a6f3;
-    color: white;
-}
-
-.suscription-input input {
-    margin: 5px 0px;
-    width: 60%
-}
-
-.suscription-box h2 {
-    font-size: 16px;
-    text-align: center;
-}
-
-.actividad {
-    font-size: 22px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    max-width: 450px;
-    margin: auto;
-
-}
-
-.article-ipad {
-    display: none
-}
-
-.article-desktop {
-    display: none
-}
-
-h3 {
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-
-    .main-container {
-        max-width: 1200px;
-        padding: 10px;
-        border-radius: 20px;
-        margin-bottom: 40px;
-    }
-
-    .main-section {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .main-section2 {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-top: 50px;
-    }
-
-
-    .top-box2 {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        align-self: center;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width:768px) {
-
-    .title-news-first {
-        margin-top: 90px;
-    }
-
-    .article-ipad {
-        display: block
-    }
-
-    .productos {
-        display: flex;
-        justify-content: space-around;
-        width: 750px;
-        margin: auto
-    }
-
-    .productos2 {
-        display: flex;
-        justify-content: space-around;
-        width: 750px;
-        margin: auto
-    }
-
-    .suscription-box h2 {
-        font-size: 20px;
-    }
-
-    .suscription-input {
-        align-items: center;
-    }
-
-    .suscription-input input {
-        width: 50%;
-    }
-
-    .suscription-box button {
-        left: 600px;
-    }
-
-}
-
-@media (min-width:1200px) {
-
-    /*header*/
-    .link-login-register {
-        display: block;
-        margin-right: 10px;
-    }
-
-    .user-circle {
-        display: none;
-    }
-
-    /* main */
-
-    .title-news-first {
-        margin-top: 100px;
-    }
-
-    .article-ipad {
-        display: block
-    }
-
-    .article-desktop {
-        display: block
-    }
-
-    .productos {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        max-width: 1200px;
-        padding-top: 15px
-    }
-
-    .suscription-box h2 {
-        font-size: 24px;
-    }
-
-    .suscription-input {
-        align-items: center;
-    }
-
-    .suscription-input input {
-        width: 40%;
-    }
-
-    .suscription-box button {
-        left: 900px;
-    }
-
+    /* FIN FOOTER */
 }
