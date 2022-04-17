@@ -22,6 +22,9 @@ router.get("/create", authMiddleware, productControllerdb.create);
 router.post("/create", upload.single('image'), validations, productControllerdb.store);
 
 //detalle de producto
+// router.get("/detail/:id", productControllerdb.detail);
+
+//Detail Prueba
 router.get("/detail/:id", productControllerdb.detail);
 
 //Editar un producto

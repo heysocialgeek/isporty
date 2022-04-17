@@ -14,7 +14,7 @@ body {
     border-bottom: 2px solid #53a6f3;
 }
 
-.main-header {
+/* .main-header {
     background-color: white;
 }
 
@@ -109,7 +109,7 @@ ul {
 
 .logo-search-and-input button {
     margin-right: 3px;
-}
+} */
 
 .whatsapp {
     position: fixed;
@@ -208,7 +208,7 @@ ul {
 @media (min-width:768px) {
 
     /* header */
-    .title-header {
+    /* .title-header {
         display: block;
     }
 
@@ -240,7 +240,7 @@ ul {
 
     .logo {
         order: -1;
-    }
+    } */
 
     /* footer */
 
