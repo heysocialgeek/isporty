@@ -3,42 +3,16 @@ const { Op } = require("sequelize");
 
 const controllerProduct = {
     showProducts: (req, res) => {
-        db.Product.findAll({include: ["brands"]})
-        .then(products => {
+        db.Product.findAll()
+        .then(async products => {
+            const brands = await db.Brand.findAll({include: ["products"]})
+            let productsByBrand = {}
+            for (let i = 0; i < brands.length; i++) {
+                productsByBrand[brands[i].name] = brands[i].products.length
+            }
             return res.status(200).json({
                 total: products.length,
-                countByBrand: {
-                    nike: products.filter(product => {
-                        if(product.brandId == 1){
-                            return product
-                        }
-                    }).length,
-                    adidas: products.filter(product => {
-                        if(product.brandId == 2){
-                            return product
-                        }
-                    }).length,
-                    topper: products.filter(product => {
-                        if(product.brandId == 3){
-                            return product
-                        }
-                    }).length,
-                    puma: products.filter(product => {
-                        if(product.brandId == 4){
-                            return product
-                        }
-                    }).length,
-                    fila: products.filter(product => {
-                        if(product.brandId == 5){
-                            return product
-                        }
-                    }).length,
-                    kappa: products.filter(product => {
-                        if(product.brandId == 6){
-                            return product
-                        }
-                    }).length
-                },
+                countByBrand: {...productsByBrand},
                 data: {
                     product: products.map(product => {
                         delete product.dataValues.createdAt
