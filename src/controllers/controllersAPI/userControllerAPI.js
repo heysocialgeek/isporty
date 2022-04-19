@@ -7,13 +7,15 @@ const controllerUser = {
             // delete users.password;
             return res.status(200).json({
                 total: users.length,
-                users: users.map(user => { 
+                users:
+                    users.map(user => { 
                     delete user.dataValues.password
                     delete user.dataValues.image
                     delete user.dataValues.cartId
                     delete user.dataValues.createdAt
                     delete user.dataValues.updatedAt
                     delete user.dataValues.deletedAt
+                    user.dataValues.detailURl = `http://localhost:3003/api/users/${user.id}`
                     return user}),
                 status: 200
             })
@@ -23,7 +25,6 @@ const controllerUser = {
         db.User.findByPk(req.params.id)
         .then(user => {
             delete user.dataValues.password
-            delete user.dataValues.image
             return res.status(200).json({
                 data: user,
                 URL: `http://localhost:3003/img/users/${user.image}`
