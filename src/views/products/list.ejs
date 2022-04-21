@@ -10,58 +10,6 @@
         <main>
             <div class="main-container">
                 <div class="filter-container">
-                    <div class="talle-container">
-                        <h3>Talle</h3>
-                        <% for( let i = 0; i < sizes.length; i++ ) { %>
-                            <span><%= sizes[i].name %> </span>
-                        <% } %>
-                    </div>
-
-                    <div class="marca-container">
-                        <h3>Marca</h3>
-                        <% for( let i = 0; i < brands.length; i++ ) { %>
-                            <span><%= brands[i].name %> </span>
-                        <% } %>
-                    </div>
-
-                    <div class="genero-container">
-                        <h3>Género</h3>
-                        <% for( let i = 0; i < genders.length; i++ ) { %>
-                            <span><%= genders[i].name %> </span>
-                        <% } %>
-                    </div>
-
-                    <div class="precio-container">
-                        <h3>Precio</h3>
-                        <span>Hasta $6.500</span>
-                        <span>$6.500 a $10.000</span>
-                        <span>Más de $10.000</span>
-                        <form action="/productList" class="price-form">
-                            <input type="text" name="Mínimo" placeholder="Mínimo">
-                            <input type="text" name="Máximo" placeholder="Máximo">
-                        </form>
-                    </div>
-
-                    <div class="descuentos-container">
-                        <h3>Descuentos</h3>
-                        <span>5% OFF</span>
-                        <span>10% OFF</span>
-                        <span>15% OFF</span>
-                        <span>20% OFF</span>
-                        <span>25% OFF</span>
-                        <span>30% OFF</span>
-                    </div>
-
-                    <div class="ubicacion-container">
-                        <h3>Ubicación</h3>
-                        <span>Bs.As.</span>
-                        <span>Córdoba</span>
-                        <span>Santa Fe</span>
-                        <span>Tucumán</span>
-                    </div>
-                </div>
-
-
                 <div class="product-results">
                     <p>+2000 resultados</p>
                     <div class="filter-section">
@@ -141,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
                     <form action="">
                         <button class="button-filter-mobile">Filtrar</button>
                         <button class="button-filter-mobile">Cancelar</button>
