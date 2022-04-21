@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include("../partials/head.ejs", {
         pageTitle: "Detalle del producto Prueba",
-        cssTag: "<link rel='stylesheet' href='/css/styles-detail.css'> <link rel='stylesheet' href='/css/styles-header.css'> <link rel='stylesheet' href='/css/normalize.css'>"}) %>
+        cssTag: "<link rel='stylesheet' href='/css/styles-detail.css'> <link rel='stylesheet' href='/css/styles-header.css'> <link rel='stylesheet' href='/css/normalize.css'> <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'> <link rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>"}) %>
 <body>
     <%- include("../partials/header.ejs") %>
 
@@ -200,6 +200,17 @@
 
                 <div class="interested-people">
                     <h2>Personas interesadas en este producto también vieron:</h2>
+
+                    <!-- HACER EL CARRUSEL -->
+
+                    <div class="your-class">
+                        <div>your content</div>
+                        <div>your content</div>
+                        <div>your content</div>
+                    </div>
+
+                    <!-- FIN CARRUSEL -->
+
                 </div>
 
                 <div>
@@ -283,6 +294,13 @@
     </main>
 
     <%- include("../partials/footer.ejs") %>
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CDN -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="/js/carrusel.js"></script>
 
     <!-- Funcionalidades -->
     <script src="/js/burgerMenu.js"></script>

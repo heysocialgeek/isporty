@@ -8,9 +8,10 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
+            <img class="banner-sin-interes" src="/img/banner-sin-interes.png" alt="">
             <div class="main-container">
                 <div class="product-results">
-                    <p>Cantidad de productos:<%= products.length  %></p>
+                    <p class="product-amount">Cantidad de productos: <%= products.length %></p>
                     <div class="filter-section">
                         <p id="filter-p">Filtrar <i class="fas fa-chevron-down"></i></p>
                     </div>
@@ -51,6 +52,17 @@
                     </div>
 
                     <div class="mobile-container">
+                        <h3 class="h3-filter-mobile">Colores</h3>
+                        <div class="filter-scroll">
+                            <% for( let i = 0; i < colors.length; i++ ) { %>
+                                <div>
+                                    <%= colors[i].name %> <input type="checkbox" name="productColor" value="<%= colors[i].id %>">
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <div class="mobile-container">
                         <h3 class="h3-filter-mobile">Precio</h3>
                         <div class="filter-scroll">
                             <div>
@@ -65,29 +77,6 @@
                         </div>
                     </div>
 
-                    <div class="mobile-container">
-                        <h3 class="h3-filter-mobile">Descuentos</h3>
-                        <div class="filter-scroll">
-                            <div>
-                                5% OFF <input type="checkbox" name="productSale" value="5">
-                            </div>
-                            <div>
-                                10% OFF <input type="checkbox" name="productSale" value="10">
-                            </div>
-                            <div>
-                                15% OFF <input type="checkbox" name="productSale" value="15">
-                            </div>
-                            <div>
-                                20% OFF <input type="checkbox" name="productSale" value="20">
-                            </div>
-                            <div>
-                                25% OFF <input type="checkbox" name="productSale" value="25">
-                            </div>
-                            <div>
-                                30% OFF <input type="checkbox" name="productSale" value="30">
-                            </div>
-                        </div>
-                    </div>
                     <form action="">
                         <div class="buttons-filter">
                             <button class="button-filter-mobile">Filtrar</button>
@@ -103,7 +92,7 @@
                         <a href="/products/detail/<%= products[i].id %> "><img class="imgProduct" src="/img/products/<%= products[i].image %>" alt="<%= products[i].name %>"></a>
                         <div class="product-description">
                             <h2><%= products[i].name %></h2>
-                            <p>$<%= products[i].price %></p>
+                            <p class="price-style">$<%= products[i].price %></p>
                         </div>
                         <i class="far fa-heart"></i>
                         <div class="shoppingcart">
