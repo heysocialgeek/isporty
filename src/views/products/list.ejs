@@ -10,12 +10,12 @@
         <main>
             <div class="main-container">
                 <div class="product-results">
-                    <p>+2000 resultados</p>
+                    <p>Cantidad de productos:<%= products.length  %></p>
                     <div class="filter-section">
-                        <p>Filtrar <i class="fas fa-chevron-down"></i></p>
+                        <p id="filter-p">Filtrar <i class="fas fa-chevron-down"></i></p>
                     </div>
                 </div>
-                <div class="filter-container">
+                <div class="filter-container hidden">
                 <div class="filter-mobile">
                     <div class="mobile-container">
                         <h3 class="h3-filter-mobile">Talle</h3>
@@ -88,11 +88,13 @@
                             </div>
                         </div>
                     </div>
+                    <form action="">
+                        <div class="buttons-filter">
+                            <button class="button-filter-mobile">Filtrar</button>
+                            <button class="button-filter-mobile">Atrás</button>
+                        </div>
+                    </form>
                 </div>
-                <form action="">
-                    <button class="button-filter-mobile">Filtrar</button>
-                    <button class="button-filter-mobile">Atrás</button>
-                </form>
                 </div>
 
                 <section class="section-style">
@@ -115,5 +117,6 @@
         <%- include("../partials/footer.ejs") %>
         <script src="/js/burgerMenu.js"></script>
         <script src="/js/profileMenu.js"></script>
+        <script src="/js/filterMenu.js"></script>
     </body>
 </html>
