@@ -2,7 +2,7 @@
 <html lang="es">
 <%- include("./partials/head.ejs", {
     pageTitle: "Inicio",
-    cssTag: "<link rel='stylesheet' href='/css/styles-index.css'>"}) %>
+    cssTag: "<link rel='stylesheet' href='/css/styles-index.css'> <link rel='stylesheet' type='text/css' href='/css/slick.css'> <link rel='stylesheet' type='text/css' href='/css/slick-themeIndex.css'>"}) %>
 
 
 <body>
@@ -54,7 +54,45 @@
       
     <!-- <img class="banner" width="100%" src="/img/banner.png" alt="banner"> -->
     <h2 class="title-news-first">Nuevos lanzamientos</h2>
-    <section class="productos">
+
+    <div class="responsive">
+      <% for( let i = 0; i < productsDB.length; i++ ) { %>
+          <div class="carrusel-container">
+              <i class="far fa-heart fav-heart"></i>
+              
+              <a href="/products/detail/<%= productsDB[i].id %>"><img class="img-carrusel" src="/img/products/<%= productsDB[i].image %> " alt="<%= productsDB[i].name %>"></a>
+              
+              <div class="info-carrusel">
+
+                  <h2><%= productsDB[i].name %></h2>
+
+                  <div class="price-carrusel">
+                      <p>$ <%= productsDB[i].price %></p>
+                  </div>
+
+                  <% if (productsDB[i].price > 6000) { %>
+                      <div class="envio">
+                          <span>Envío gratis</span>     
+                      </div>                                    
+                  <% } %>
+
+                  <div class="description-carrusel">
+                      <% if (productsDB[i].description.length > 0 && productsDB[i].description.length < 50) { %>
+                          <p><%= productsDB[i].description %></p>              
+                      <% } else { %>
+                          <a href="/products/detail/<%= productsDB[i].id %>"><p>Leer sobre este producto</p></a>
+                      <% } %> 
+                  </div>
+                  
+              </div>
+              
+              <!-- <i class="fas fa-cart-arrow-down cart-carrusel"></i> -->
+          </div>
+      <% } %>
+  </div>
+  <!-- FIN CARRUSEL -->
+
+    <!-- <section class="productos">
 
       <article class="article-mobile">
 
@@ -131,7 +169,7 @@
       <article class="article-desktop">
 
 
-    </section>
+    </section> -->
 
     <h2 class="title-news">Los más buscados</h2>
 
@@ -321,12 +359,12 @@
   </main>
   <%- include("./partials/footer.ejs") %>
   
-  <!-- SLICK -->
-  <script src="/js/jquery-3.6.0.min.js"></script>
-  <script src="/js/slick.min.js"></script>
-  <script src="/js/sliderProduct.js"></script>
-  <!-- <script type="text/javascript" src="/js/code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="/js/code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <!-- slick -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="/js/slick.min.js"></script>
+  
+  <script src="/js/carrusel.js"></script>
   
   <script src="/js/sliderIndex.js"></script>
   <script src="/js/burgerMenu.js"></script>
