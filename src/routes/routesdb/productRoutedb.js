@@ -14,6 +14,9 @@ const authMiddleware = require("../../../middlewares/authMiddleware")
 //Mostrar todos los productos
 router.get("/list", productControllerdb.list);
 
+//Mostrar productos por marca
+router.get("/listbybrand/:id", productControllerdb.listByBrand);
+
 //Buscar un producto
 router.post("/search", productControllerdb.search);
 

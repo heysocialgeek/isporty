@@ -12,6 +12,18 @@ const productControllerdb = {
         const products = await db.Product.findAll({/*include: ["brands", "categories", "sizes", "gender", "colors"]*/ });
         return res.render("products/list", { genders, brands, sizes, categories, colors, products })
     },
+
+    listByBrand: async (req, res) =>{
+        
+        const genders = await db.Gender.findAll({});
+        const brands = await db.Brand.findAll({});
+        const sizes = await db.Size.findAll({});
+        const categories = await db.Category.findAll({});
+        const colors = await db.Color.findAll({});
+        const products = await db.Product.findAll({ where: { brandId : req.params.id } });
+        return res.render("products/list", { genders, brands, sizes, categories, colors, products })
+    },
+
     create: async (req, res) => {
         try {
             const genders = await db.Gender.findAll({});
