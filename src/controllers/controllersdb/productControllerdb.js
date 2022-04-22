@@ -60,7 +60,9 @@ const productControllerdb = {
     detail: async (req, res) => {
         const productID = req.params.id;
         const product = await db.Product.findByPk(productID, { include: ['categories', 'gender', 'brands', 'colors', 'sizes'] })
-        return res.render('products/detail', { product, user: req.session.userLogged })
+        const allProducts = await db.Product.findAll();
+        console.log("TODOS LOS PRODUCTOS",allProducts)
+        return res.render('products/detail', { product, allProducts, user: req.session.userLogged })
     },
 
     editForm: async (req, res) => {

@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include("../partials/head.ejs", {
         pageTitle: "Detalle del producto Prueba",
-        cssTag: "<link rel='stylesheet' href='/css/styles-detail.css'> <link rel='stylesheet' href='/css/styles-header.css'> <link rel='stylesheet' href='/css/normalize.css'> <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'> <link rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css'>"}) %>
+        cssTag: "<link rel='stylesheet' href='/css/styles-detail.css'> <link rel='stylesheet' href='/css/styles-header.css'> <link rel='stylesheet' href='/css/normalize.css'> <link rel='stylesheet' type='text/css' href='/css/slick.css'>"}) %>
 <body>
     <%- include("../partials/header.ejs") %>
 
@@ -203,12 +203,14 @@
 
                     <!-- HACER EL CARRUSEL -->
 
-                    <div class="your-class">
-                        <div>your content</div>
-                        <div>your content</div>
-                        <div>your content</div>
+                    <div class="responsive">
+                        <% for( let i = 0; i < allProducts.length; i++ ) { %>
+                            <div>
+                                <img src="/img/products/<%= allProducts[i].dataValues.image %> " alt="" width="200px">
+                                <p><%= allProducts[i].dataValues.name %> </p>   
+                            </div>
+                        <% } %>
                     </div>
-
                     <!-- FIN CARRUSEL -->
 
                 </div>
@@ -295,10 +297,16 @@
 
     <%- include("../partials/footer.ejs") %>
 
-    <!-- JQUERY -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- CDN -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/slick.min.js"></script>
+
+    <!-- <script type="text/javascript">
+        $(document).ready(function(){
+        $('.responsive').slick();
+        });
+    </script> -->
 
     <script src="/js/carrusel.js"></script>
 
