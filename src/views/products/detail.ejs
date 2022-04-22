@@ -218,9 +218,11 @@
                                         <p>$ <%= allProducts[i].price %></p>
                                     </div>
 
-                                    <div class="envio">
-                                        <span>Envío gratis</span>     
-                                    </div>
+                                    <% if (allProducts[i].price > 6000) { %>
+                                        <div class="envio">
+                                            <span>Envío gratis</span>     
+                                        </div>                                    
+                                    <% } %>
 
                                     <div class="description-carrusel">
                                         <% if (allProducts[i].description.length > 0 && allProducts[i].description.length < 50) { %>

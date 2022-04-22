@@ -93,6 +93,9 @@
                         <div class="product-description">
                             <h2><%= products[i].name %></h2>
                             <p class="price-style">$<%= products[i].price %></p>
+                            <% if (products[i].price > 6000) { %>
+                                <span class="envio">Envío gratis</span>  
+                            <% } %>
                         </div>
                         <i class="far fa-heart"></i>
                         <div class="shoppingcart">

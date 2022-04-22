@@ -93,6 +93,8 @@ main {
 
 .product-description h2 {
     font-size: 20px;
+    font-weight: 400;
+    padding: 5px;
 }
 
 .section-style img {
@@ -105,15 +107,16 @@ main {
     text-align: center;
     margin-bottom: 20px;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .article-style {
     position: relative;
     background-color: white;
-    box-shadow: 10px 10px 10px rgb(31, 31, 31);
+    /* box-shadow: 10px 10px 10px rgb(31, 31, 31); */
     width: 310px;
     margin: auto;
+    border: 2px solid #bfbfbf;
 }
 
 .article-style i {
@@ -136,15 +139,23 @@ main {
 }
 
 .article-style:hover {
-    box-shadow: 10px 10px 10px rgb(31 31 31);
+    box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.84);
+    border: none;
 }
 
-.article-style p {
+.article-style p, .article-style span {
     display: none;
 }
 
-.article-style:hover p {
+.article-style:hover p, .article-style:hover span {
     display: block;
+}
+
+.envio {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: rgb(0, 173, 0);
+    font-weight: 500;
 }
 
 .product-description {
@@ -156,6 +167,7 @@ main {
 
 .price-style {
     font-size: 18px;
+    font-weight: 600;
 }
 
 .product-amount {
