@@ -84,7 +84,6 @@ const productControllerdb = {
         const productID = req.params.id;
         const product = await db.Product.findByPk(productID, { include: ['categories', 'gender', 'brands', 'colors', 'sizes'] })
         const allProducts = await db.Product.findAll();
-        console.log("TODOS LOS PRODUCTOS",allProducts)
         return res.render('products/detail', { product, allProducts, user: req.session.userLogged })
     },
 
@@ -133,9 +132,6 @@ const productControllerdb = {
             const colors = await db.Color.findAll({});
             console.log("error", errors)
             return res.render("products/edit", { product, genders, brands, sizes, categories, colors, errors : errors.mapped() })
-            
-
-
         }
     },
     delete: (req, res) => {

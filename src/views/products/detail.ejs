@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include("../partials/head.ejs", {
         pageTitle: "Detalle del producto Prueba",
-        cssTag: "<link rel='stylesheet' href='/css/styles-detail.css'> <link rel='stylesheet' href='/css/styles-header.css'> <link rel='stylesheet' href='/css/normalize.css'> <link rel='stylesheet' type='text/css' href='/css/slick.css'>"}) %>
+        cssTag: "<link rel='stylesheet' href='/css/styles-detail.css'> <link rel='stylesheet' href='/css/styles-header.css'> <link rel='stylesheet' href='/css/normalize.css'> <link rel='stylesheet' type='text/css' href='/css/slick.css'> <link rel='stylesheet' type='text/css' href='/css/slick-theme.css'>"}) %>
 <body>
     <%- include("../partials/header.ejs") %>
 
@@ -205,9 +205,34 @@
 
                     <div class="responsive">
                         <% for( let i = 0; i < allProducts.length; i++ ) { %>
-                            <div>
-                                <img src="/img/products/<%= allProducts[i].dataValues.image %> " alt="" width="200px">
-                                <p><%= allProducts[i].dataValues.name %> </p>   
+                            <div class="carrusel-container">
+                                <i class="far fa-heart fav-heart"></i>
+                                
+                                <a href="/products/detail/<%= allProducts[i].id %>"><img class="img-carrusel" src="/img/products/<%= allProducts[i].image %> " alt=""></a>
+                                
+                                <div class="info-carrusel">
+
+                                    <h2><%= allProducts[i].name %></h2>
+
+                                    <div class="price-carrusel">
+                                        <p>$ <%= allProducts[i].price %></p>
+                                    </div>
+
+                                    <div class="envio">
+                                        <span>Envío gratis</span>     
+                                    </div>
+
+                                    <div class="description-carrusel">
+                                        <% if (allProducts[i].description.length > 0 && allProducts[i].description.length < 50) { %>
+                                            <p><%= allProducts[i].description %></p>              
+                                        <% } else { %>
+                                            <a href="/products/detail/<%= allProducts[i].id %>"><p>Leer sobre este producto</p></a>
+                                        <% } %> 
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!-- <i class="fas fa-cart-arrow-down cart-carrusel"></i> -->
                             </div>
                         <% } %>
                     </div>

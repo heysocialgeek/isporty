@@ -185,7 +185,93 @@ h2 {
 
 /* CARRUSEL */
 
+.carrusel-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #bfbfbf;
+    border-radius: 5px;
+    position: relative;
+    margin: 20px 20px;
+}
 
+.carrusel-container i, .description-carrusel {
+    display: none;
+}
+
+.carrusel-container:hover i, .carrusel-container:hover .description-carrusel {
+    display: block;
+}
+
+.carrusel-container:hover {
+    box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.84);
+}
+
+.carrusel-container:hover .description-carrusel {
+    display: block;
+}
+
+.fav-heart {
+    position: absolute;
+    left: 85%;
+    top: 15px;
+    font-size: 25px;
+}
+
+.fav-heart:hover {
+    color: red;
+}
+
+/* .cart-carrusel {
+    position: absolute;
+    font-size: 22px;
+    bottom: 90px;
+    left: 70%;
+    color: #53a6f3;
+} */
+
+.img-carrusel {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.info-carrusel h2{
+    text-align: center;
+    font-weight: 400;
+    padding: 5px;
+}
+
+.price-carrusel, .envio {
+    margin-left: 20px;
+}
+
+.price-carrusel p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.envio {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: rgb(0, 173, 0);
+    font-weight: 500;
+}
+
+.description-carrusel p{
+    padding: 0px 10px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.description-carrusel a {
+    text-decoration: none;
+    color: #53a6f3;
+}
 
 /* FIN CARRUSEL */
 
@@ -355,6 +441,15 @@ h2 {
         height: 100%;
       }
     /* Funcionalidad para ocultar el table sizes */
+
+    /* Carrusel */
+
+    .fav-heart {
+        left: 82%;
+        font-size: 22px;
+    }
+
+    /* Fin carrusel */
 
     /* FIN MAIN */
 
