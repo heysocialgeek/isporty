@@ -22,7 +22,7 @@ const controllerProduct = {
                         delete product.dataValues.createdAt
                         delete product.dataValues.updatedAt
                         delete product.dataValues.deletedAt
-                        delete product.dataValues.price
+                        // delete product.dataValues.price
                         product.dataValues.image = `http://localhost:3003/img/products/${product.image}`
                         delete product.dataValues.genderId
                         delete product.dataValues.userId
