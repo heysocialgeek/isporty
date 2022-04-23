@@ -522,10 +522,13 @@ margin-top: 10px;
 } */
 
 .img-carrusel {
-    width: 200px;
     padding: 20px;
     margin: auto;
     border-bottom: 1px solid #cfcfcf;
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: contain;
 }
 
 .info-carrusel h2{
