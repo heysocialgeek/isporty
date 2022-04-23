@@ -80,11 +80,15 @@
 .slick-prev
 {
     left: 0px;
+    position:absolute;
+    z-index:1;
+
 }
 [dir='rtl'] .slick-prev
 {
     right: -25px;
     left: auto;
+    
 }
 .slick-prev:before
 {
