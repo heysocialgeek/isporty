@@ -272,8 +272,9 @@ main {
     .section-style {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
         align-items: center;
+        justify-content: center;
+        padding-bottom: 300px;
     }
 }
 
