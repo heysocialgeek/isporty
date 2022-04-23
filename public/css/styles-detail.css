@@ -233,10 +233,12 @@ h2 {
 } */
 
 .img-carrusel {
-    width: 100%;
     padding: 20px;
     margin: auto;
     border-bottom: 1px solid #cfcfcf;
+    width:  200px;
+    height: 200px;
+    object-fit: contain;
 }
 
 .info-carrusel h2{
