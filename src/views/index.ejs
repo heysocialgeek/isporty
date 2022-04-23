@@ -77,7 +77,7 @@
                   <% } %>
 
                   <div class="description-carrusel">
-                      <% if (productsDB[i].description.length > 0 && productsDB[i].description.length < 50) { %>
+                      <% if (productsDB[i].description.length > 0 && productsDB[i].description.length < 20) { %>
                           <p><%= productsDB[i].description %></p>              
                       <% } else { %>
                           <a href="/products/detail/<%= productsDB[i].id %>"><p>Leer sobre este producto</p></a>
