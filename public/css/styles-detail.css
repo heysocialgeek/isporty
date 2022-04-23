@@ -27,7 +27,7 @@ h2 {
     width: 100%;
     background-color: white;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 3px solid rgb(203, 203, 203);
     margin-bottom: 50px;
     margin-top: 30px;
@@ -352,7 +352,7 @@ h2 {
         display: block;
         width: 30%;
         padding: 15px;
-        border-radius: 15px;
+        border-radius: 5px;
         border: 3px solid rgb(203, 203, 203);
         margin-bottom: 50px;
         margin-top: 30px;
