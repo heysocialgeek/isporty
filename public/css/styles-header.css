@@ -157,6 +157,7 @@ ul {
     width: 100%;
     min-height: 150px;
     border-top: 2px solid black;
+    border-bottom: 2px solid black;
      /* Hay que agregarle una transition */
 }
 
