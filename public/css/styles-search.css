@@ -212,8 +212,6 @@ main {
     background-color: white;
     padding: 8px;
     margin-bottom: 20px;
-    box-shadow: 10px 10px 10px rgb(31, 31, 31);
-    margin-bottom: 20px;
     border-radius: 5px;
     min-height: 300px;
 }
@@ -222,6 +220,14 @@ main {
     display: flex;
     flex-direction: row;
 
+}
+
+.article-style i {
+    position: absolute;
+    left: 86%;
+    bottom:90%;
+    font-size: 1.5em;
+    display: none;
 }
 
 
@@ -234,6 +240,19 @@ main {
 }
 
 .article-style:hover p {
+    display: block;
+}
+
+.article-style:hover {
+    box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.84);
+    border: none;
+}
+
+.article-style p, .article-style span {
+    display: none;
+}
+
+.article-style:hover p, .article-style:hover span {
     display: block;
 }
 
