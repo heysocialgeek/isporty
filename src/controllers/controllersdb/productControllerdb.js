@@ -179,9 +179,9 @@ const productControllerdb = {
             })
 
             const allProducts = await db.Product.findAll()
-        
+            console.log(allProducts)
             return res.render('products/searchResults', { array: products, allProducts });
-                
+            
         }
 
 }
