@@ -2,7 +2,7 @@
 <html lang="en">
     <%- include("../partials/head.ejs", {
         pageTitle: "Resultado de la búsqueda",
-        cssTag: "<link rel='stylesheet' href='/css/styles-search.css'> <link rel='stylesheet' href='/css/styles-detail.css'>"}) %>        
+        cssTag: "<link rel='stylesheet' href='/css/styles-search.css'> <link rel='stylesheet' href='/css/styles-detail.css'> <link rel='stylesheet' type='text/css' href='/css/slick.css'> <link rel='stylesheet' type='text/css' href='/css/slick-theme.css'>"}) %>        
 <body>
     <%- include("../partials/header.ejs") %>
 
@@ -17,7 +17,7 @@
                                 </a>
                                 <div class="product-description">
                                 <div class=line>
-                                    <div class="shipping"><i class="fas fa-truck"></i> Envío gratis</div>
+                                    <div class="shipping"><i class="fas fa-truck"></i> Envío gratis </div>
                                     <div class="box-text">
                                         <div class="price">
                                             AR $<%= product.price %>
@@ -33,12 +33,58 @@
                     </div>
                 <% }); %>
             </article>
-            <h2>¿No era lo que buscabas? Mira algunas sugerencias</h2>
+
+            <!-- CARRUSEL -->
+
+            <div class="responsive">
+                <% for( let i = 0; i < allProducts.length; i++ ) { %>
+                    <div class="carrusel-container">
+                        <i class="far fa-heart fav-heart"></i>
+                        
+                        <a href="/products/detail/<%= allProducts[i].id %>"><img class="img-carrusel" src="/img/products/<%= allProducts[i].image %> " alt=""></a>
+                        
+                        <div class="info-carrusel">
+
+                            <h2><%= allProducts[i].name %></h2>
+
+                            <div class="price-carrusel">
+                                <p>$ <%= allProducts[i].price %></p>
+                            </div>
+
+                            <% if (allProducts[i].price > 6000) { %>
+                                <div class="envio">
+                                    <span>Envío gratis</span>     
+                                </div>                                    
+                            <% } %>
+
+                            <div class="description-carrusel">
+                                <% if (allProducts[i].description.length > 0 && allProducts[i].description.length < 50) { %>
+                                    <p><%= allProducts[i].description %></p>              
+                                <% } else { %>
+                                    <a href="/products/detail/<%= allProducts[i].id %>"><p>Leer sobre este producto</p></a>
+                                <% } %> 
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- <i class="fas fa-cart-arrow-down cart-carrusel"></i> -->
+                    </div>
+                <% } %>
+            </div>
+            <!-- FIN CARRUSEL -->
             
         </section>
     </main>
 
     <%- include("../partials/footer.ejs") %>
+
+    <!-- slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/slick.min.js"></script>
+
+    <script src="/js/carrusel.js"></script>
+
     <script src="/js/burgerMenu.js"></script>
     <script src="/js/profileMenu.js"></script>
 </body>

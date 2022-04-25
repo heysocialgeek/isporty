@@ -152,19 +152,37 @@ const productControllerdb = {
     },
 
 
-    search: (req, res) => {
-        db.Product.findAll({
-            where: {
-                name: {
-                    [Op.like]: '%' + req.body.search + '%'
-                }
-            },
-            include: ['categories', 'sizes', 'colors']
-        })
-            .then(products => {
-                return res.render('products/searchResults', { array: products });
+    // search: (req, res) => {
+        
+    //     db.Product.findAll({
+    //         where: {
+    //             name: {
+    //                 [Op.like]: '%' + req.body.search + '%'
+    //             }
+    //         },
+    //         include: ['categories', 'sizes', 'colors']
+    //     })
+    //         .then(products => {
+    //             return res.render('products/searchResults', { array: products });
+    //         })
+    // }
+
+    search: async (req, res) => {
+
+            const products = await db.Product.findAll({
+                where: {
+                    name: {
+                        [Op.like]: '%' + req.body.search + '%'
+                    }
+                },
+                include: ['categories', 'sizes', 'colors']
             })
-    }
+
+            const allProducts = await db.Product.findAll()
+        
+            return res.render('products/searchResults', { array: products, allProducts });
+                
+        }
 
 }
 
