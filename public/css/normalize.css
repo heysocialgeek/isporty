@@ -71,6 +71,15 @@ html {
   height: 40px;
   animation: bounce 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
 }
+
+.bannerazul {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: -10px;
+  background-color: #4678f4;
+  margin: auto;
+  color: #f2f2f2;
+}
 .ball {
   width: 40px;
   height: 40px;
