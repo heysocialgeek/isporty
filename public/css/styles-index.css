@@ -609,12 +609,30 @@ margin-top: 10px;
     color: white
  }
 
+ .bannerazul {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: -10px;
+    background-color: #4678f4;
+    margin: auto;
+    color: #f2f2f2;
+}
+
 /*Mobile*/
 
 @media (max-width:479px) {
     .logo {
         display: none;
        }
+    }
+
+    .bannerazul {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: -10px;
+        background-color: #4678f4;
+        margin: auto;
+        color: #f2f2f2;
     }
     
     /*Ipad*/
@@ -623,6 +641,15 @@ margin-top: 10px;
     .iso {
     display: none;
         }
+    }
+
+    .bannerazul {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: -10px;
+        background-color: #4678f4;
+        margin: auto;
+        color: #f2f2f2;
     }
 
 @media (min-width:768px) {
@@ -713,12 +740,17 @@ margin-top: 10px;
     /* fin header prueba */
 
     /* header */
-    .title-header {
-        display: block;
-    }
 
     .logo {
         width: 150px;
+    }
+    .bannerazul {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: -10px;
+        background-color: #4678f4;
+        margin: auto;
+        color: #f2f2f2;
     }
 
     .burger-menu {
