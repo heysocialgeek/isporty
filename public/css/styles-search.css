@@ -25,6 +25,10 @@ body {
     background-color: white;
 }
 
+.shipping {
+    color: green;
+}
+
 .carrusel-container i, .description-carrusel {
     display: none;
 }
