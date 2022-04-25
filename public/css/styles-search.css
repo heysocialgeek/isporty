@@ -66,6 +66,22 @@ body {
     object-fit: scale-down;
 }
 
+.title-news-first {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.title-news-first2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
 .info-carrusel h2{
     text-align: center;
     font-weight: 400;
