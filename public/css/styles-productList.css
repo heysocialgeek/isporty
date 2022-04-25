@@ -16,8 +16,8 @@ body {
 }
 
 .imgProduct {
-    width:  400px;
-    height: 400px;
+    width: 100%;
+    height: 15vw;
     object-fit: scale-down;
 }
 
