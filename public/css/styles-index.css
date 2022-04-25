@@ -327,7 +327,7 @@ ul {
 /* MAIN */
 
 .banner {
-    margin-top: 80px;
+    margin-top: 100px;
     width: 100%;
 }
 
@@ -397,7 +397,7 @@ main {
     padding-right: 10px;
     padding-left: 10px;
     background-color: white;
-    margin: 30px 0px;
+    margin: 70px 0px;
 }
 
 .botonsuscribite {
@@ -521,7 +521,7 @@ margin-top: 10px;
 
 .img-carrusel {
     width: 100%;
-    height: 15vw;
+    height: 40vw;
     object-fit: scale-down;
 }
 
@@ -529,6 +529,7 @@ margin-top: 10px;
     text-align: center;
     font-weight: 400;
     padding: 5px;
+    font-size: 18px;
 }
 
 .price-carrusel, .envio {
@@ -749,6 +750,12 @@ margin-top: 10px;
     .fav-heart {
         left: 82%;
         font-size: 22px;
+    }
+
+    .img-carrusel {
+        
+        height: 15vw;
+        
     }
 
     /* Fin carrusel */

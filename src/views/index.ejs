@@ -173,84 +173,42 @@
 
     <h2 class="title-news">Los más buscados</h2>
 
-    <section class="productos2">
+    <div class="responsive">
+      <% for( let i = 0; i < productsDB.length; i++ ) { %>
+          <div class="carrusel-container">
+              <i class="far fa-heart fav-heart"></i>
+              
+              <a href="/products/detail/<%= productsDB[i].id %>"><img class="img-carrusel" src="/img/products/<%= productsDB[i].image %> " alt="<%= productsDB[i].name %>"></a>
+              
+              <div class="info-carrusel">
 
-      <article class="article-mobile">
+                  <h2><%= productsDB[i].name %></h2>
 
-        <div class="product-container">
-          <div class="product-article">
-            <i class="fas fa-chevron-circle-left"></i>
-            
-            <a href="/products/detail/<%= productsDB[2].id %>"><img class="img-products"
-                src="/img/products/<%= productsDB[2].image %>" alt="zapatillas adidas mujer nuevas"></a>
+                  <div class="price-carrusel">
+                      <p>$ <%= productsDB[i].price %></p>
+                  </div>
 
-            <i class="fas fa-chevron-circle-right"></i>
+                  <% if (productsDB[i].price > 6000) { %>
+                      <div class="envio">
+                          <span>Envío gratis</span>     
+                      </div>                                    
+                  <% } %>
+
+                  <div class="description-carrusel">
+                      <% if (productsDB[i].description.length > 0 && productsDB[i].description.length < 20) { %>
+                          <p><%= productsDB[i].description %></p>              
+                      <% } else { %>
+                          <a href="/products/detail/<%= productsDB[i].id %>"><p>Leer sobre este producto</p></a>
+                      <% } %> 
+                  </div>
+                  
+              </div>
+              
+              <!-- <i class="fas fa-cart-arrow-down cart-carrusel"></i> -->
           </div>
-
-          <ul>
-            <a href="/products/detail/<%= productsDB[2].id %>">
-              <li><%= productsDB[2].name %> </li>
-            </a>
-            <li>$<%= productsDB[2].price %> </li>
-
-          </ul>
-
-        </div>
-
-      </article>
-
-      <article class="article-ipad">
-
-        <div class="product-container">
-          <div class="product-article">
-            <i class="fas fa-chevron-circle-left"></i>
-            
-            <a href="/products/detail/<%= productsDB[3].id %>"><img class="img-products"
-                src="/img/products/<%= productsDB[3].image %>" alt="zapatillas adidas mujer nuevas"></a>
-
-            <i class="fas fa-chevron-circle-right"></i>
-          </div>
-
-          <ul>
-            <a href="/products/detail/<%= productsDB[3].id %>">
-              <li><%= productsDB[3].name %> </li>
-            </a>
-            <li>$<%= productsDB[3].price %> </li>
-
-          </ul>
-
-        </div>
-
-      </article>
-
-      <% for (let i=4; i < 9; i++) { %>
-      <article class="article-desktop">
-
-        <div class="product-container">
-          <div class="product-article">
-            <i class="fas fa-chevron-circle-left"></i>
-
-            <a href="/products/detail/<%= productsDB[i].id %>"><img class="img-products"
-                src="/img/products/<%= productsDB[i].image %>" alt="zapatillas adidas mujer nuevas"></a>
-
-            <i class="fas fa-chevron-circle-right"></i>
-          </div>
-
-          <ul>
-            <a href="/products/detail/<%= productsDB[i].id %>">
-              <li><%= productsDB[i].name %> </li>
-            </a>
-            <li>$<%= productsDB[i].price %> </li>
-
-          </ul>
-
-        </div>
-      </article>
       <% } %>
-
-
-
-    </section>
+    </div>
+  <!-- FIN CARRUSEL -->
 
 
 
@@ -270,88 +228,44 @@
 
     </div>
 
-    <section>
-
       <h2 class="title-news">Elegí tus favoritas</h2>
 
-      <section class="productos">
-
-        <article class="article-mobile">
-
-          <div class="product-container">
-            <div class="product-article">
-              <i class="fas fa-chevron-circle-left"></i>
-              
-              <a href="/products/detail/<%= productsDB[4].id %>"><img class="img-products"
-                  src="/img/products/<%= productsDB[4].image %>" alt="zapatillas adidas mujer nuevas"></a>
+      <div class="responsive">
+        <% for( let i = 0; i < productsDB.length; i++ ) { %>
+            <div class="carrusel-container">
+                <i class="far fa-heart fav-heart"></i>
+                
+                <a href="/products/detail/<%= productsDB[i].id %>"><img class="img-carrusel" src="/img/products/<%= productsDB[i].image %> " alt="<%= productsDB[i].name %>"></a>
+                
+                <div class="info-carrusel">
   
-              <i class="fas fa-chevron-circle-right"></i>
+                    <h2><%= productsDB[i].name %></h2>
+  
+                    <div class="price-carrusel">
+                        <p>$ <%= productsDB[i].price %></p>
+                    </div>
+  
+                    <% if (productsDB[i].price > 6000) { %>
+                        <div class="envio">
+                            <span>Envío gratis</span>     
+                        </div>                                    
+                    <% } %>
+  
+                    <div class="description-carrusel">
+                        <% if (productsDB[i].description.length > 0 && productsDB[i].description.length < 20) { %>
+                            <p><%= productsDB[i].description %></p>              
+                        <% } else { %>
+                            <a href="/products/detail/<%= productsDB[i].id %>"><p>Leer sobre este producto</p></a>
+                        <% } %> 
+                    </div>
+                    
+                </div>
+                
+                <!-- <i class="fas fa-cart-arrow-down cart-carrusel"></i> -->
             </div>
-  
-            <ul>
-              <a href="/products/detail/<%= productsDB[4].id %>">
-                <li><%= productsDB[4].name %> </li>
-              </a>
-              <li>$<%= productsDB[4].price %> </li>
-  
-            </ul>
-  
-          </div>
-
-        </article>
-
-        <article class="article-ipad">
-
-          <div class="product-container">
-            <div class="product-article">
-              <i class="fas fa-chevron-circle-left"></i>
-              
-              <a href="/products/detail/<%= productsDB[5].id %>"><img class="img-products"
-                  src="/img/products/<%= productsDB[5].image %>" alt="zapatillas adidas mujer nuevas"></a>
-  
-              <i class="fas fa-chevron-circle-right"></i>
-            </div>
-  
-            <ul>
-              <a href="/products/detail/<%= productsDB[5].id %>">
-                <li><%= productsDB[5].name %> </li>
-              </a>
-              <li>$<%= productsDB[5].price %> </li>
-  
-            </ul>
-  
-          </div>
-
-        </article>
-
-        <% for (let i=5; i < 9; i++) { %>
-        <article class="article-desktop">
-
-          <div class="product-container">
-            <div class="product-article">
-              <i class="fas fa-chevron-circle-left"></i>
-
-              <a href="/products/detail/<%= productsDB[i].id %>"><img class="img-products"
-                  src="/img/products/<%= productsDB[i].image %>" alt="zapatillas adidas mujer nuevas"></a>
-
-              <i class="fas fa-chevron-circle-right"></i>
-            </div>
-
-            <ul>
-              <a href="/products/detail/<%= productsDB[i].id %>">
-                <li><%= productsDB[i].name %> </li>
-              </a>
-              <li>$<%= productsDB[i].price %> </li>
-
-            </ul>
-
-          </div>
-        </article>
         <% } %>
-
-
-
-      </section>
+    </div>
+    <!-- FIN CARRUSEL -->
 
       <a href="https://wa.me/5491127682598?text=Me%20gustar%C3%ADa%20contactar%20con%20un%20asesor%20comercial"
         class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a>
