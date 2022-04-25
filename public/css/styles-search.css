@@ -258,6 +258,12 @@ main {
         font-size: 22px;
     }
 
+    .img-carrusel {
+        width: 100%;
+        /* height: 60vw; */
+        object-fit: scale-down;
+    }
+
     /* Fin carrusel */
 
     .main-container {
@@ -283,6 +289,12 @@ main {
 @media (min-width: 1200px) {
     .product-results {
         display: none;
+    }
+
+    .img-carrusel {
+        width: 100%;
+        /* height: 60vw; */
+        object-fit: scale-down;
     }
 
     .main-container {
