@@ -171,7 +171,7 @@ main {
         padding-top: 170px;
     }
     .article-style {
-        width: 30%;
+        width: auto;
     }
 
     .main-container {
