@@ -93,7 +93,7 @@ const userControllerdb = {
             }
         })
     },
-    profile: async (req, res) => {
+    profile: (req, res) => {
         // const user = await db.User.findByPk(req.params.id);
         res.render("users/profile", {user: req.session.userLogged})
     },

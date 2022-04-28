@@ -17,28 +17,25 @@ function autoLogMiddleware (req, res, next) {
 module.exports = autoLogMiddleware;*/
 
 
+//Middleware de recordar usuario
+
 const db = require("../src/database/models")
 const userDB = db.User
 
-function autoLogMiddleware(req, res, next) {
+const autoLogMiddleware = async function (req, res, next) {
     let emailInCookie = req.cookies.userEmail
-    console.log("holaaaaaaaaaa", emailInCookie)
+
     if (emailInCookie != undefined) {
-        userDB.findOne({
+        const userToLogin = await userDB.findOne({
             where: {
                 email: emailInCookie
             }
         })
-            .then(userFromCookie => {
-                req.session.userLogged = userFromCookie
-                next();
-
-            })
-        }else {
-            next();
-        }
-
+        req.session.userLogged = userToLogin
     }
+    next();
+
+}
 
 
 module.exports = autoLogMiddleware

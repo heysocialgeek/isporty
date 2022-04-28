@@ -274,7 +274,13 @@
                     <p>Cantidad</p>
                     <div class="buttons-container">
                         <button class="button-style">Comprar ahora</button>
-                        <button class="button-style">Agregar al carrito</button>
+                        <% if (locals.userLogged) { %>
+                            <form class="addCart" action="/products/addCart/<%= product.id %>" method="post">
+                                <button class="button-style">Agregar al carrito</button>
+                            </form>
+                        <% } else { %>
+                            <a href="/user/login">Debe iniciar sesión para agregar un producto</a>
+                        <% } %>
                     </div>
 
                 </div>

@@ -18,9 +18,6 @@ module.exports = function (sequelize, DataTypes) {
         },
         image: {
             type: DataTypes.STRING
-        },
-        cartId: {
-            type: DataTypes.INTEGER
         }
     }
 
@@ -40,9 +37,9 @@ module.exports = function (sequelize, DataTypes) {
             as: "products",
             foreignKey: "userId"
         }),
-        User.belongsTo(models.Cart, {
+        User.hasMany(models.Cart, {
             as: "carts",
-            foreignKey: "cartId"
+            foreignKey: "userId"
         })
     }
 

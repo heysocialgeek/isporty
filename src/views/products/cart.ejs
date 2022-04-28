@@ -3,45 +3,37 @@
 
   <%- include("../partials/head.ejs", {
     pageTitle: "Carrito de compra", 
-    cssTag: "<link rel='stylesheet' type='text/css' href='/css/styles-cart.css'>"}) %>
+    cssTag: "<link rel='stylesheet' type='text/css' href='/css/styles-cart.css'> <link rel='stylesheet' href='/css/styles-header.css'>"}) %>
     
 <body>
   <%- include("../partials/header.ejs") %>
     <main>
       <div class="all-main">
       <section>
+        <% for( let i = 0; i < cart.products.length; i++ ) { %>
+          <article>
+            <div class="product-article">  
+              <img src="/img/products/<%= cart.products[i].dataValues.image %> " alt="pantalón nike">
 
-            <article>
-             <div class="product-article">  
-                <img src="/img/products/pantalon-nike.jpeg" alt="pantalón nike">
               <div class="description-article">
-                <h3>Pantalón Nike D-line</h3>
-                <h3>M</h3>
-               <div class="add-subtract">
-                <p class="btn">+</p>
-                <p>1</p>
-                <p class="btn">-</p>
-               </div>
-              </div>
-              <p>$7.700</p>
-             </div>
-            </article>
+                <h3><%= cart.products[i].dataValues.name %></h3>
 
-            <article>
-                <div class="product-article">  
-                   <img src="/img/products/remeratraininggirl.jpeg" alt="remera nike mujer">
-                 <div class="description-article">
-                   <h3>Remera Nike Mujer</h3>
-                   <h3>L</h3>
-                  <div class="add-subtract">
-                   <p class="btn">+</p>
-                   <p>1</p>
-                   <p class="btn">-</p>
-                  </div>
-                 </div>
-                   <p>$5.500</p>
+                <div class="add-subtract">
+                  <button id='aumentar'>+</button>
+                  <input type='text' id="cantidad" value="0">
+                  <button id='disminuir'>-</button>
                 </div>
-               </article>
+                
+                <div class="price-cart">
+                  <h3>Precio/unidad:</h3>
+                  <p id="priceId"><%= cart.products[i].dataValues.price %></p>
+                </div>
+
+              </div>
+              
+            </div>
+          </article>
+        <% } %>
 
         </section>
 
@@ -55,20 +47,22 @@
             
             <div class="amount">
               <p>Subtotal</p>
-              <p>$13.200</p>
+              <p class="subTotal"></p>
             </div>
             <div class="amount">
               <p>Envío</p>
-              <p>$0</p>
+              <p class="envio"></p>
             </div>
             <div class="amount">
               <p>Total</p>
-              <p>$13.200</p>
+              <p class="total"></p>
             </div>
         </div>
       </div>  
     </main>
     <%- include("../partials/footer.ejs") %>
+
+    <script src="/js/addOrRemove.js"></script>
     <script src="/js/burgerMenu.js"></script>
     <script src="/js/profileMenu.js"></script>
 </body>

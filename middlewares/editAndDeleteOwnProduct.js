@@ -1,3 +1,5 @@
+// Middleware para editar y eliminar producto propio
+
 function editAndDeleteOwnProduct (req, res, next) {
 	res.locals.userLogged = null;
 

@@ -11,6 +11,9 @@ const validationEdit = require("../../../middlewares/validationEditForm")
 //middleware para evitar ir a create sin estar logeado
 const authMiddleware = require("../../../middlewares/authMiddleware")
 
+//middleware del carrito
+const cartMiddleware = require("../../../middlewares/cartMiddleware")
+
 //Mostrar todos los productos
 router.get("/list", productControllerdb.list);
 
@@ -33,6 +36,10 @@ router.get("/detail/:id", productControllerdb.detail);
 //Editar un producto
 router.get("/edit/:id",authMiddleware, productControllerdb.editForm);
 router.put("/edit/:id", validationEdit, productControllerdb.edit);
+
+//carrito
+router.get("/cart", productControllerdb.cart)
+router.post("/addCart/:id", cartMiddleware, productControllerdb.addCart)
 
 //Borrar un producto
 router.delete("/delete/:id", productControllerdb.delete);

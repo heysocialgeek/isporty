@@ -148,6 +148,7 @@ h2 {
     .span-sizes{
         color: #53a6f3;
         font-weight: 600;
+        cursor: pointer;
     }
 
     /* Funcionalidad para ocultarlo */
@@ -371,6 +372,10 @@ h2 {
         flex-direction: column;
     }
 
+    .addCart .button-style {
+        width: 100%;
+    }
+
     .free-devolution, .guarantee, .payment-methods {
         border-bottom: 1px solid rgb(169, 169, 169);
     }
@@ -512,6 +517,10 @@ h2 {
     }
 
     .button-style{
+        width: 70%;
+    }
+
+    .addCart {
         width: 70%;
     }
 

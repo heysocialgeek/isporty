@@ -73,7 +73,6 @@ const productControllerdb = {
             genderId: req.body.productGender,
             userId: req.session.userLogged.id
         });
-        // console.log("REQ SESSION",req.session.userLogged);
         productStored.addCategories(req.body.productCategory);
         productStored.addSize(req.body.productSize);
         productStored.addColor(req.body.productColor)
@@ -130,7 +129,7 @@ const productControllerdb = {
             const sizes = await db.Size.findAll({});
             const categories = await db.Category.findAll({});
             const colors = await db.Color.findAll({});
-            console.log("error", errors)
+            // console.log("error", errors)
             return res.render("products/edit", { product, genders, brands, sizes, categories, colors, errors : errors.mapped() })
         }
     },
@@ -151,22 +150,6 @@ const productControllerdb = {
         return res.redirect("/products/list");*/
     },
 
-
-    // search: (req, res) => {
-        
-    //     db.Product.findAll({
-    //         where: {
-    //             name: {
-    //                 [Op.like]: '%' + req.body.search + '%'
-    //             }
-    //         },
-    //         include: ['categories', 'sizes', 'colors']
-    //     })
-    //         .then(products => {
-    //             return res.render('products/searchResults', { array: products });
-    //         })
-    // }
-
     search: async (req, res) => {
 
             const products = await db.Product.findAll({
@@ -179,10 +162,39 @@ const productControllerdb = {
             })
 
             const allProducts = await db.Product.findAll()
-            console.log(allProducts)
             return res.render('products/searchResults', { array: products, allProducts });
             
+    },
+
+    addCart: async (req, res) => {
+        let cartId = req.session.cartId;
+        const cart = await db.Cart.findByPk(cartId, {include: "products"})
+        const user = req.session.userLogged;
+        const product = await db.Product.findByPk(req.params.id)
+        const productToCart = {
+            userId: user.id,
+            product: product
         }
+        console.log("BEFORE IF", req.session.cartId)
+        if(req.session.cartCreated){
+            cart.addProduct(product) 
+        console.log("INSIDE IF", req.session.cartId)
+        } else {
+            const createCart = await db.Cart.create(productToCart)
+            createCart.addProduct(product)
+            req.session.cartId = createCart.id
+            // console.log("LLEGUE AL ELSE")
+        }      
+        console.log("OUTSIDE IF", req.session.cartId)
+        res.redirect('/products/cart')
+    },
+
+    cart: async (req, res) => {
+        const cart = await db.Cart.findByPk(req.session.cartId, {include: "products"})
+        // console.log("carrito en GET",cart);
+        // console.log("PRODUCT",cart.products);
+        return res.render("products/cart", {cart})
+    }
 
 }
 

@@ -1,3 +1,5 @@
+// Middleware para que no se muestre los logos iniciar sesion y registrarse cuando estas logeado
+
 function userLoggedMiddleware (req, res, next) {
     res.locals.isLogged = false;
 
