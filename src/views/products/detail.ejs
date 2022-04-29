@@ -10,7 +10,7 @@
         <div class="detail-container-box">
             <div class="detail-main">
                 <div class="img-detail">
-                    <img src="/img/products/<%= product.image%>" alt="">
+                    <img id="img-Storage" src="/img/products/<%= product.image%>" alt="">
                 </div>
 
                 <!-- Botones de editar y borrar -->
@@ -22,13 +22,13 @@
                 <% } %>
 
                 <div class="details-of-product-Mobile">
-                    <h1 class="h1-title"><%= product.name %></h1>
+                    <h1 id="titleStorage" class="h1-title"><%= product.name %></h1>
 
 
                     <p>Opiniones(poner logo con estrellas de favoritismo)</p>
 
                     <div class="price-title">
-                        <h2>$ <%= product.price %></h2>
+                        <h2 id="priceStorage">$ <%= product.price %></h2>
                     </div>
 
                     <div class="color-container">
@@ -53,11 +53,25 @@
                     </div>
 
                     <p>Cantidad (agregar funcionalidad)</p>
-
+                    
                     <div class="buttons-container">
+                    <% if (locals.userLogged) { %>
+                        <form class="addCart" action="/products/addCart/<%= product.id %>" method="post">
+                            <button class="button-style">Agregar al carrito</button>
+                        </form>
+                    <% } else { %>
+                        <button class="button-style">Comprar ahora</button>
+                        <button id="button-storage" class="button-style">Agregar al carrito(localS)</button>
+                        
+                        <a href="/user/login">Para mejor experiencia de Usuario inicie sesión</a>
+                    <% } %>
+                    </div>
+
+                    <!-- <div class="buttons-container">
                         <button class="button-style">Comprar ahora</button>
                         <button class="button-style">Agregar al carrito</button>
-                    </div>
+                        <button id="button-storage" class="button-style">Agregar al carrito(localS)</button>
+                    </div> -->
                 </div>
 
                 <div class="sizes-map">
@@ -254,12 +268,12 @@
 
             <div class="detail-info">
                 <div class="details-of-product-PC">
-                    <h1 class="h1-title"><%= product.name %></h1>
+                    <h1 id="titleStorage" class="h1-title"><%= product.name %></h1>
 
                     <p>Opiniones (poner logo con estrellas de favoritismo)</p>
 
                     <div class="price-title">
-                        <h3 class="price-768px">$ <%= product.price %></h3>
+                        <h3 id="priceStorage" class="price-768px">$ <%= product.price %></h3>
                     </div>
 
                     <div class="color-container">
@@ -279,7 +293,10 @@
                                 <button class="button-style">Agregar al carrito</button>
                             </form>
                         <% } else { %>
-                            <a href="/user/login">Debe iniciar sesión para agregar un producto</a>
+                            
+                            <button id="button-storage" class="button-style">Agregar al carrito(localS)</button>
+                            
+                            <a href="/user/login">Para mejor experiencia de Usuario inicie sesión</a>
                         <% } %>
                     </div>
 
@@ -347,5 +364,6 @@
     <script src="/js/burgerMenu.js"></script>
     <script src="/js/profileMenu.js"></script>
     <script src="/js/sizesMap.js"></script>
+    <script src="/js/cartStorage.js"></script>
 </body>
 </html>

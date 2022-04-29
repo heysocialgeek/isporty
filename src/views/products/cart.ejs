@@ -10,30 +10,34 @@
     <main>
       <div class="all-main">
       <section>
-        <% for( let i = 0; i < cart.products.length; i++ ) { %>
-          <article>
-            <div class="product-article">  
-              <img src="/img/products/<%= cart.products[i].dataValues.image %> " alt="pantalón nike">
-
-              <div class="description-article">
-                <h3><%= cart.products[i].dataValues.name %></h3>
-
-                <div class="add-subtract">
-                  <button id='aumentar'>+</button>
-                  <input type='text' id="cantidad" value="0">
-                  <button id='disminuir'>-</button>
+        <% if (cart) { %>
+          <% for( let i = 0; i < cart.products.length; i++ ) { %>
+            <article>
+              <div class="product-article">  
+                <img src="/img/products/<%= cart.products[i].dataValues.image %> " alt="pantalón nike">
+  
+                <div class="description-article">
+                  <h3><%= cart.products[i].dataValues.name %></h3>
+  
+                  <div class="add-subtract">
+                    <button id='aumentar'>+</button>
+                    <input type='text' id="cantidad" value="0">
+                    <button id='disminuir'>-</button>
+                  </div>
+                  
+                  <div class="price-cart">
+                    <h3>Precio/unidad:</h3>
+                    <p id="priceId"><%= cart.products[i].dataValues.price %></p>
+                  </div>
+  
                 </div>
                 
-                <div class="price-cart">
-                  <h3>Precio/unidad:</h3>
-                  <p id="priceId"><%= cart.products[i].dataValues.price %></p>
-                </div>
-
               </div>
-              
-            </div>
-          </article>
-        <% } %>
+            </article>
+          <% } %> 
+        <% } else { %>
+          <p>No hay productos agregados</p>
+        <% } %> 
 
         </section>
 

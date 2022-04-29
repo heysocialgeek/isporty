@@ -185,7 +185,7 @@ const productControllerdb = {
             req.session.cartId = createCart.id
             // console.log("LLEGUE AL ELSE")
         }      
-        console.log("OUTSIDE IF", req.session.cartId)
+        // console.log("OUTSIDE IF", req.session.cartId)
         res.redirect('/products/cart')
     },
 
